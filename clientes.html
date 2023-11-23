@@ -286,7 +286,7 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="clientes.html">
                     <i class="bi bi-gender-neuter"></i>
-                    <span>Clientes</span>
+                    <span>Consultas</span>
                 </a>
             </li>
             <li class="nav-item">
@@ -326,12 +326,12 @@
     <main id="main" class="main">
 
         <div class="pagetitle">
-            <h1>Clientes</h1>
+            <h1>Consultas</h1>
             <nav>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="inicio.html">Inicio</a></li>
-                    <li class="breadcrumb-item">Mis mascotas</li>
-                    <li class="breadcrumb-item">Ver</li>
+                    <li class="breadcrumb-item">Consultas</li>
+                    <li class="breadcrumb-item">Clientes</li>
                 </ol>
             </nav>
         </div><!-- End Page Title -->
@@ -355,8 +355,8 @@
                                 data-bs-target="#profile-overview">Consultar clientes</button>
                         </li>
                         <li class="nav-item">
-                            <button class="nav-link" data-bs-toggle="tab"
-                                data-bs-target="#profile-edit">Modificar</button>
+                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-edit">Consultar
+                                mascotas</button>
                         </li>
                     </ul>
                     <div class="tab-content pt-2">
@@ -366,21 +366,30 @@
                                 <form>
 
                                     <div id="contenidoTabla">
-                                        <table class="table table-bordered text-center">
+                                        <table class="table table-bordered text-center table-striped table-hover">
                                             <thead>
                                                 <div class="titulo mb-3">Lista de mascotas</div>
-                                                <tr>
+                                                <tr class="table-dark">
                                                     <th scope="col">Nombre</th>
-                                                    <th scope="col">Fecha</th>
-                                                    <th scope="col">Servicio</th>
-                                                    <th scope="col">Historial</th>
+                                                    <th scope="col">Apellidos</th>
+                                                    <th scope="col">Identificación</th>
+                                                    <th scope="col">Teléfono</th>
+                                                    <th scope="col">Dirección</th>
+                                                    <th scope="col">Email</th>
+                                                    <th scope="col">Mascotas</th>
+                                                    <td></td>
+
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <th scope="row">Kira</th>
-                                                    <td>2023-09-12</td>
-                                                    <td>Baño</td>
+                                                    <td>Esteban </td>
+                                                    <td>Carvajal</td>
+                                                    <td>1080290320</td>
+                                                    <td>3214508739</td>
+                                                    <td>Crr 24 A #40-53</td>
+                                                    <td>Esteban@gmail.com</td>
+                                                    <td>2</td>
                                                     <td>
                                                         <div>
                                                             <a href="historialMascota.html" class="btn  btn-sm"
@@ -391,12 +400,16 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <th scope="row">Gatusin</th>
-                                                    <td>2023-10-10</td>
-                                                    <td>Cirugía</td>
+                                                    <td>Esteban </td>
+                                                    <td>Carvajal</td>
+                                                    <td>1080290320</td>
+                                                    <td>3214508739</td>
+                                                    <td>Crr 24 A #40-53</td>
+                                                    <td>Esteban@gmail.com</td>
+                                                    <td>1</td>
                                                     <td>
                                                         <div>
-                                                            <a href="" class="btn  btn-sm"
+                                                            <a href="historialMascota.html" class="btn  btn-sm"
                                                                 title="Upload new profile image"><img class=""
                                                                     src="./img/productos_servicios/ver.png" alt=""
                                                                     style="width: 25px ;"></a>
@@ -404,18 +417,23 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <th scope="row">Kiara</th>
-                                                    <td>2023-10-02</td>
-                                                    <td>Urgencias</td>
+                                                    <td>Esteban </td>
+                                                    <td>Carvajal</td>
+                                                    <td>1080290320</td>
+                                                    <td>3214508739</td>
+                                                    <td>Crr 24 A #40-53</td>
+                                                    <td>Esteban@gmail.com</td>
+                                                    <td>2</td>
                                                     <td>
                                                         <div>
-                                                            <a href="" class="btn  btn-sm"
+                                                            <a href="historialMascota.html" class="btn  btn-sm"
                                                                 title="Upload new profile image"><img class=""
                                                                     src="./img/productos_servicios/ver.png" alt=""
                                                                     style="width: 25px ;"></a>
                                                         </div>
                                                     </td>
                                                 </tr>
+                                               
                                             </tbody>
                                         </table>
                                 </form><!-- End Change Password Form -->
@@ -426,14 +444,20 @@
 
                         </div>
                     </div>
-
+                    <!-- tabla modificar  -->
                     <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
 
                         <form>
-
                             <div id="contenidoTabla">
                                 <table class="table table-bordered text-center">
                                     <thead>
+                                        <!-- search  -->
+                                        <!-- <div class="input-group rounded">
+                                            <input style="height:30px; width: 20px;" type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                                            <span class="input-group-text border-0" id="search-addon">
+                                              <i class="bi bi-gender-neuter"></i>
+                                            </span>
+                                          </div> -->
                                         <div class="titulo mb-3">Lista de mascotas</div>
                                         <tr>
                                             <th scope="col">Nombre</th>
