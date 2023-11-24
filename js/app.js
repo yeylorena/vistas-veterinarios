@@ -14,3 +14,4 @@ prevBtn.addEventListener('click', () => {
   counter = Math.max(counter - 1, 0);
   carousel.style.transform = `translateX(-${counter * cardWidth}px)`;
 });
+

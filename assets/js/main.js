@@ -325,3 +325,45 @@ function agregarCarrito() {
   }
 
 })();
+
+//Función eliminar proveedor
+function eliminarProv() {
+  Swal.fire({
+    title: "Eliminar proveedor",
+    text: "¿Está seguro de eliminarlo?",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "¡Si, eliminar!"
+  }).then((result) => {
+    if (result.isConfirmed) {
+      Swal.fire({
+        title: "Eliminado!",
+        text: "Proveedor eliminado",
+        icon: "success"
+      });
+    }
+  });
+}
+
+//Función eliminar factura
+function eliminarFact() {
+  Swal.fire({
+    title: "Eliminar factura",
+    text: "¿Está seguro de eliminarla?",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "¡Si, eliminar!"
+  }).then((result) => {
+    if (result.isConfirmed) {
+      Swal.fire({
+        title: "Eliminada!",
+        text: "Factura eliminada",
+        icon: "success"
+      });
+    }
+  });
+}
