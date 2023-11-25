@@ -39,6 +39,7 @@
     <!-- ======= Header ======= -->
     <header id="header" class="header fixed-top d-flex align-items-center">
 
+
         <div class="d-flex align-items-center justify-content-between">
             <a href="index.html" class="logo d-flex align-items-center">
                 <img src="assets/img/logoGesVet.png">
@@ -48,6 +49,12 @@
         </div><!-- End Logo -->
 
 
+        <div class="search-bar">
+            <form class="search-form d-flex align-items-center" method="POST" action="#">
+                <input type="text" name="query" placeholder="Buscar" title="Enter search keyword">
+                <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+            </form>
+        </div><!-- End Search Bar -->
 
         <nav class="header-nav ms-auto">
             <ul class="d-flex align-items-center">
@@ -203,7 +210,7 @@
 
                     <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
                         <img src="./img/image 20.png" alt="Profile" class="rounded-circle">
-                        <span class="d-none d-md-block dropdown-toggle ps-2">E. Carvajal</span>
+                        <span class="d-none d-md-block dropdown-toggle ps-2">H.Puentes</span>
                     </a><!-- End Profile Iamge Icon -->
 
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
@@ -273,7 +280,7 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link collapsed" href="clientes.html">
-                    <i class="bi bi-gender-neuter"></i>
+                    <i class="bi bi-search"></i>
                     <span>Consultas</span>
                 </a>
             </li>
@@ -317,7 +324,7 @@
 
             <div class="card">
                 <div class="card-body pt-3">
-                    <!-- Bordered Tabs -->
+                    <!-- los dos div blancos -->
                     <ul class="nav nav-tabs nav-tabs-bordered">
 
                         <li class="nav-item">
@@ -325,164 +332,395 @@
                                 data-bs-target="#profile-overview">Consultar clientes</button>
                         </li>
                         <li class="nav-item">
-                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-edit">Consultar
-                                mascotas</button>
+                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-edit">
+                                Consultar mascotas</button>
                         </li>
                     </ul>
                     <div class="tab-content pt-2">
+                        <br>
+                        <!-- inicio de Consultar clientes  -->
+
                         <div class="tab-pane fade show active profile-overview" id="profile-overview">
-                            <div class="row mt-5">
-                                <!--inicio tabla-->
-                                <form>
-
-                                    <div id="contenidoTabla">
-                                        <table class="table table-bordered text-center table-striped table-hover">
-                                            <thead>
-                                                <div class="titulo mb-3">Lista de mascotas</div>
-                                                <tr class="table-dark">
-                                                    <th scope="col">Nombre</th>
-                                                    <th scope="col">Apellidos</th>
-                                                    <th scope="col">Identificación</th>
-                                                    <th scope="col">Teléfono</th>
-                                                    <th scope="col">Dirección</th>
-                                                    <th scope="col">Email</th>
-                                                    <th scope="col">Mascotas</th>
-                                                    <td></td>
-
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>Esteban </td>
-                                                    <td>Carvajal</td>
-                                                    <td>1080290320</td>
-                                                    <td>3214508739</td>
-                                                    <td>Crr 24 A #40-53</td>
-                                                    <td>Esteban@gmail.com</td>
-                                                    <td>2</td>
-                                                    <td>
-                                                        <div>
-                                                            <a href="historialMascota.html" class="btn  btn-sm"
-                                                                title="Upload new profile image"><img class=""
-                                                                    src="./img/productos_servicios/ver.png" alt=""
-                                                                    style="width: 25px ;"></a>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Esteban </td>
-                                                    <td>Carvajal</td>
-                                                    <td>1080290320</td>
-                                                    <td>3214508739</td>
-                                                    <td>Crr 24 A #40-53</td>
-                                                    <td>Esteban@gmail.com</td>
-                                                    <td>1</td>
-                                                    <td>
-                                                        <div>
-                                                            <a href="historialMascota.html" class="btn  btn-sm"
-                                                                title="Upload new profile image"><img class=""
-                                                                    src="./img/productos_servicios/ver.png" alt=""
-                                                                    style="width: 25px ;"></a>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Esteban </td>
-                                                    <td>Carvajal</td>
-                                                    <td>1080290320</td>
-                                                    <td>3214508739</td>
-                                                    <td>Crr 24 A #40-53</td>
-                                                    <td>Esteban@gmail.com</td>
-                                                    <td>2</td>
-                                                    <td>
-                                                        <div>
-                                                            <a href="historialMascota.html" class="btn  btn-sm"
-                                                                title="Upload new profile image"><img class=""
-                                                                    src="./img/productos_servicios/ver.png" alt=""
-                                                                    style="width: 25px ;"></a>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                               
-                                            </tbody>
-                                        </table>
-                                </form><!-- End Change Password Form -->
-
-                                <!--fin tabla-->
-
+                            <div class="container-fluid mt-3">
+                                <p class="textoNeon">Clientes</p>
                             </div>
+                            <div class="container-fluid">
+                                <div>
+                                    <!--diseño negro-->
+                                    <div class="table-responsive">
+                                        <div class="card-body">
+                                            <div class="search-bar">
+                                                <form class="search-form d-flex align-items-center">
+                                                    <input type="text" name="query" placeholder="Buscar cliente"
+                                                        title="Enter search keyword">
+                                                    <button class="btn" type="submit" title="Search"><i
+                                                            class="bi bi-search"></i></button>
+                                                </form>
+                                            </div>
+
+                                            <!-- Inicio Tabla -->
+                                            <table class="table table-striped text-start table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">Nombre</th>
+                                                        <th scope="col">Apellidos</th>
+                                                        <th scope="col">Identificación</th>
+                                                        <th scope="col">Teléfono</th>
+                                                        <th scope="col">Dirección</th>
+                                                        <th scope="col">Email</th>
+                                                        <th scope="col">Mascotas</th>
+                                                        <th scope="col">Ver</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Andrea</td>
+                                                        <td>Rojas</td>
+                                                        <td>55190519</td>
+                                                        <td>3144378402</td>
+                                                        <td>Av los angeles</td>
+                                                        <td>andrea@gmail.com2</td>
+                                                        <td>2</td>
+                                                        <td>
+                                                            <button type="button" class="btn btn-success"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#staticBackdrop"><i
+                                                                    class="fas fa-eye"></i></button>
+
+                                                            <!-- Modal editar fila 1-->
+                                                            <div class="modal fade" id="staticBackdrop"
+                                                                data-bs-backdrop="static" data-bs-keyboard="false"
+                                                                tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                                                aria-hidden="true">
+                                                                <div class="modal-dialog">
+                                                                    <div class="modal-content">
+                                                                        <div class="modal-header"
+                                                                            style="background: #9FAFE8;">
+                                                                            <h1 class="modal-title fs-5"
+                                                                                id="staticBackdropLabel">Modificar
+                                                                            </h1>
+                                                                            <button type="button" class="btn-close"
+                                                                                data-bs-dismiss="modal"
+                                                                                aria-label="Close"></button>
+                                                                        </div>
+                                                                        <div class="modal-body">
+
+                                                                            <img src="./img/imagen_cliente_cita/perro.png"
+                                                                                class="mx-auto d-block img-fluid"
+                                                                                style="height: 100px; width: 100px;">
+                                                                            <div class="row my-2">
+
+                                                                                <div class="col-6">
+                                                                                    <label
+                                                                                        class="form-label">Nombre:</label>
+                                                                                    <input class="form-control"
+                                                                                        type="text" name="txtId"
+                                                                                        id="txtId" value="David"
+                                                                                        readonly>
+                                                                                </div>
+                                                                                <div class="col-6">
+                                                                                    <label
+                                                                                        class="form-label">Edad:</label>
+                                                                                    <input class="form-control"
+                                                                                        type="text" name="txtId"
+                                                                                        id="txtId" value="1 año"
+                                                                                        readonly>
+                                                                                </div>
+
+                                                                            </div>
+                                                                            <div class="row my-2">
+                                                                                <div class="col-6">
+                                                                                    <label
+                                                                                        class="form-label">Género:</label>
+                                                                                    <input class="form-control"
+                                                                                        type="text" name="txtId"
+                                                                                        id="txtId" value="Macho"
+                                                                                        readonly>
+                                                                                </div>
+                                                                                <div class="col-6">
+                                                                                    <label
+                                                                                        class="form-label">Color:</label>
+                                                                                    <input class="form-control"
+                                                                                        type="text" name="txtId"
+                                                                                        id="txtId" value="Cafe y blanco"
+                                                                                        readonly>
+                                                                                </div>
+
+                                                                            </div>
+                                                                            <div class="row my-2">
+                                                                                <div class="col-6">
+                                                                                    <label
+                                                                                        class="form-label">Especie:</label>
+                                                                                    <input class="form-control"
+                                                                                        type="text" name="txtId"
+                                                                                        id="txtId" value="Perro"
+                                                                                        readonly>
+                                                                                </div>
+                                                                                <!-- boton de descargar el hsitorial medico  -->
+                                                                                <div class="col-6">
+                                                                                    <div class="container mt-5">
+                                                                                        <h5>Historia médica</h5>
+                                                                                        <!-- Botón de descarga -->
+                                                                                        <a href="historialMedico.html" class="btn btn-secondary" id="descargarHistorial">Descargar</a>
+                                                                                      </div>
+ 
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- fila 2  -->
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Maria</td>
+                                                        <td>Rojas</td>
+                                                        <td>55190519</td>
+                                                        <td>3144378402</td>
+                                                        <td>Av los angeles</td>
+                                                        <td>maria@gmail.com2</td>
+                                                        <td>1</td>
+                                                        <td>
+
+                                                            <button type="button" class="btn btn-success"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#staticBackdrop"><i
+                                                                    class="fas fa-eye"></i></button>
+
+                                                            <!-- Modal editar fila 2-->
+                                                            <div class="modal fade" id="staticBackdrop"
+                                                                data-bs-backdrop="static" data-bs-keyboard="false"
+                                                                tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                                                aria-hidden="true">
+                                                                <div class="modal-dialog">
+                                                                    <div class="modal-content">
+                                                                        <div class="modal-header">
+                                                                            <h1 class="modal-title fs-5"
+                                                                                id="staticBackdropLabel">Modal title
+                                                                            </h1>
+                                                                            <button type="button" class="btn-close"
+                                                                                data-bs-dismiss="modal"
+                                                                                aria-label="Close"></button>
+                                                                        </div>
+                                                                        <div class="modal-body">
+                                                                            ...
+                                                                        </div>
+                                                                        <div class="modal-footer">
+                                                                            <button type="button"
+                                                                                class="btn btn-secondary"
+                                                                                data-bs-dismiss="modal">Close</button>
+                                                                            <button type="button"
+                                                                                class="btn btn-primary">Understood</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <!-- fila 3  -->
+                                                        <td>Andrea</td>
+                                                        <td>Rojas</td>
+                                                        <td>55190519</td>
+                                                        <td>3144378402</td>
+                                                        <td>Av los angeles</td>
+                                                        <td>andrea@gmail.com2</td>
+                                                        <td>1</td>
+                                                        <td>
+
+                                                            <button type="button" class="btn btn-success"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#staticBackdrop"><i
+                                                                    class="fas fa-eye"></i></button>
+
+                                                            <!-- Modal editar fila 3-->
+                                                            <div class="modal fade" id="staticBackdrop"
+                                                                data-bs-backdrop="static" data-bs-keyboard="false"
+                                                                tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                                                aria-hidden="true">
+                                                                <div class="modal-dialog">
+                                                                    <div class="modal-content">
+                                                                        <div class="modal-header">
+                                                                            <h1 class="modal-title fs-5"
+                                                                                id="staticBackdropLabel">Modal title
+                                                                            </h1>
+                                                                            <button type="button" class="btn-close"
+                                                                                data-bs-dismiss="modal"
+                                                                                aria-label="Close"></button>
+                                                                        </div>
+                                                                        <div class="modal-body">
+                                                                            ...
+                                                                        </div>
+                                                                        <div class="modal-footer">
+                                                                            <button type="button"
+                                                                                class="btn btn-secondary"
+                                                                                data-bs-dismiss="modal">Close</button>
+                                                                            <button type="button"
+                                                                                class="btn btn-primary">Understood</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- tabla modificar  -->
+
+                            </div><!-- End Bordered Tabs -->
 
                         </div>
+                        <!-- final de Consultar clientes  -->
+
+                        <!-- inicio de consultar mascotas  -->
+                      
+                        <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
+
+                            <div class="container-fluid mt-3">
+                                <p class="textoNeon">Mascotas</p>
+                            </div>
+                            <table class="table table-striped text-start table-hover">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Nombre</th>
+                                        <th scope="col">Apellidos</th>
+                                        <th scope="col">Identificación</th>
+                                        <th scope="col">Teléfono</th>
+                                        <th scope="col">Dirección</th>
+                                        <th scope="col">Email</th>
+                                        <th scope="col">Mascotas</th>
+                                        <th scope="col">Ver</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Andrea</td>
+                                        <td>Rojas</td>
+                                        <td>55190519</td>
+                                        <td>3144378402</td>
+                                        <td>Av los angeles</td>
+                                        <td>andrea@gmail.com2</td>
+                                        <td>2</td>
+                                        <td>
+                                            <button type="button" class="btn btn-success"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#staticBackdrop"><i
+                                                    class="fas fa-eye"></i></button>
+
+                                            <!-- Modal ver fila 1-->
+                                            <div class="modal fade" id="staticBackdrop"
+                                            data-bs-backdrop="static" data-bs-keyboard="false"
+                                            tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                            aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header"
+                                                        style="background: #9FAFE8;">
+                                                        <h1 class="modal-title fs-5"
+                                                            id="staticBackdropLabel">Modificar
+                                                        </h1>
+                                                        <button type="button" class="btn-close"
+                                                            data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+
+                                                        <img src="./img/imagen_cliente_cita/perro.png"
+                                                            class="mx-auto d-block img-fluid"
+                                                            style="height: 100px; width: 100px;">
+                                                        <div class="row my-2">
+
+                                                            <div class="col-6">
+                                                                <label
+                                                                    class="form-label">Nombre:</label>
+                                                                <input class="form-control"
+                                                                    type="text" name="txtId"
+                                                                    id="txtId" value="David"
+                                                                    readonly>
+                                                            </div>
+                                                            <div class="col-6">
+                                                                <label
+                                                                    class="form-label">Edad:</label>
+                                                                <input class="form-control"
+                                                                    type="text" name="txtId"
+                                                                    id="txtId" value="1 año"
+                                                                    readonly>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="row my-2">
+                                                            <div class="col-6">
+                                                                <label
+                                                                    class="form-label">Género:</label>
+                                                                <input class="form-control"
+                                                                    type="text" name="txtId"
+                                                                    id="txtId" value="Macho"
+                                                                    readonly>
+                                                            </div>
+                                                            <div class="col-6">
+                                                                <label
+                                                                    class="form-label">Color:</label>
+                                                                <input class="form-control"
+                                                                    type="text" name="txtId"
+                                                                    id="txtId" value="Cafe y blanco"
+                                                                    readonly>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="row my-2">
+                                                            <div class="col-6">
+                                                                <label
+                                                                    class="form-label">Especie:</label>
+                                                                <input class="form-control"
+                                                                    type="text" name="txtId"
+                                                                    id="txtId" value="Perro"
+                                                                    readonly>
+                                                            </div>
+                                                            <!-- boton de descargar el hsitorial medico  -->
+                                                            <div class="col-6">
+                                                                <div class="container mt-5">
+                                                                    <h5>Historia médica</h5>
+                                                                    <!-- Botón de descarga -->
+                                                                    <a href="historialMedico.html" class="btn btn-secondary" id="descargarHistorial">Descargar</a>
+                                                                  </div>
+
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    
+                                </tbody>
+                            </table>
+
+
+                        </div>
+
                     </div>
-                    <!-- tabla modificar  -->
-                    <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
+                </div>
+                <!-- tabla modificar  -->
 
-                        <form>
-                            <div id="contenidoTabla">
-                                <table class="table table-bordered text-center">
-                                    <thead>
-                                        <!-- search  -->
-                                        <!-- <div class="input-group rounded">
-                                            <input style="height:30px; width: 20px;" type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
-                                            <span class="input-group-text border-0" id="search-addon">
-                                              <i class="bi bi-gender-neuter"></i>
-                                            </span>
-                                          </div> -->
-                                        <div class="titulo mb-3">Lista de mascotas</div>
-                                        <tr>
-                                            <th scope="col">Nombre</th>
-                                            <th scope="col">Fecha</th>
-                                            <th scope="col">Servicio</th>
-                                            <th scope="col">Historial</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <th scope="row">Kira</th>
-                                            <td>2023-09-12</td>
-                                            <td>Baño</td>
-                                            <td>
-                                                <div>
-                                                    <a href="historialMascota.html" class="btn  btn-sm"
-                                                        title="Upload new profile image"><img class=""
-                                                            src="./img/productos_servicios/ver.png" alt=""
-                                                            style="width: 25px ;"></a>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">Gatusin</th>
-                                            <td>2023-10-10</td>
-                                            <td>Cirugía</td>
-                                            <td>
-                                                <div>
-                                                    <a href="" class="btn  btn-sm" title="Upload new profile image"><img
-                                                            class="" src="./img/productos_servicios/ver.png" alt=""
-                                                            style="width: 25px ;"></a>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">Kiara</th>
-                                            <td>2023-10-02</td>
-                                            <td>Urgencias</td>
-                                            <td>
-                                                <div>
-                                                    <a href="" class="btn  btn-sm" title="Upload new profile image"><img
-                                                            class="" src="./img/productos_servicios/ver.png" alt=""
-                                                            style="width: 25px ;"></a>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                        </form><!-- End Change Password Form -->
+            </div><!-- End Bordered Tabs -->
 
+        </div>
+                        </div>
+                        <!-- final de consultar mascotas  -->
                     </div>
-                </div><!-- End Bordered Tabs -->
-
-            </div>
-            </div>
         </section>
 
     </main><!-- End #main -->
