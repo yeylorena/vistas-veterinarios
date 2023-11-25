@@ -46,3 +46,85 @@
   height: auto; /* Mantener la proporción original de la imagen */
   border-radius: 30px; /* Si se desea mantener el borde redondeado */
 }
+
+#perfil {
+  max-width: 12rem;
+  margin: 0 auto;
+  height:auto; /* Por ejemplo, establecer una altura de 10rem */
+}
+
+
+.card-img{
+  background-image: url('../img/imagenes_inicio/Diseño\ sin\ título\ \(32\).png');
+}
+.card-img-2{
+  background-image: url('../img/imagenes_inicio/Diseño\ sin\ título\ \(33\).png');
+}
+#card-left {
+  text-align: left;
+  color: black;
+  font-size: 13px; /* Puedes ajustar el valor según el tamaño deseado */
+
+}
+
+#masinfo {
+  width: 191px; /* Puedes ajustar el valor según el ancho deseado */
+}
+
+.img-green{
+  background-image: url('../img/imagenes_inicio/Diseño\ sin\ título\ \(29\).png');
+ 
+}
+.img-green-2{
+  background-image: url('../img/imagenes_inicio/Diseño\ sin\ título\ \(31\).png');
+ 
+}
+.img-yellow{
+  background-image: url('../img/imagenes_inicio/Diseño\ sin\ título\ \(20\).png');
+ 
+}
+.img-yellow-2{
+  background-image: url('../img/imagenes_inicio/Diseño\ sin\ título\ \(21\).png');
+ 
+}
+.img-red{
+  background-image: url('../img/imagenes_inicio/Diseño\ sin\ título\ \(17\).png');
+ 
+}
+.img-red-2{
+  background-image: url('../img/imagenes_inicio/Diseño\ sin\ título\ \(19\).png');
+ 
+}
+.img-gris{
+  background-image: url('../img/imagenes_inicio/Diseño\ sin\ título\ \(24\).png');
+ 
+}
+.img-gris-2{
+  background-image: url('../img/imagenes_inicio/Diseño\ sin\ título\ \(26\).png');
+ 
+}
+
+#idmaximizar{
+  color: #f8f8f8;
+  background-color: #00695c;
+  
+}
+
+#toggleIcon{
+  float: right;
+}
+#idmaximizar2{
+  color: #f8f8f8;
+  background-color: #00695c;
+  
+}
+#toggleIcon2{
+  float: right;
+}
+.card-hover {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.card-hover:hover {
+  transform: scale(1.05);
+  box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.8);
+}
