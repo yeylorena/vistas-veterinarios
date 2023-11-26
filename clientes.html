@@ -285,17 +285,24 @@
                 </a>
             </li>
             <li class="nav-item">
+                <a class="nav-link collapsed" href="Gestion_Productos_Servicios.html">
+                  <i class="bi bi-box2-heart"></i>
+                  <span>Gestión productos_servicios</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link collapsed" href="Gestion_Compras.html">
+                  <i class="bi bi-bag-plus"></i>
+                  <span>Gestión Compras</span>
+                </a>
+              </li>
+            <li class="nav-item">
                 <a class="nav-link collapsed" href="gestionveterinaria.html">
                     <i class="bi bi-chat-dots"></i>
                     <span>Gestión veterinaria</span>
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="productos_servicios.html">
-                    <i class="bi bi-chat-dots"></i>
-                    <span>Gestión proveedores</span>
-                </a>
-            </li><!-- End Dashboard Nav -->
+            
         </ul>
     </aside>
 
@@ -380,7 +387,8 @@
                                                         <td>3144378402</td>
                                                         <td>Av los angeles</td>
                                                         <td>andrea@gmail.com2</td>
-                                                        <td>2</td>
+                                                        <td> <button><img src="./img/imagen_cliente_cita/perro.png" height="30px" width="30px"></button>
+                                                           <button><img src="./img/imagen_cliente_cita/feliz.png" height="30px" width="30px"></button> </td>
                                                         <td>
                                                             <button type="button" class="btn btn-success"
                                                                 data-bs-toggle="modal"
@@ -397,7 +405,7 @@
                                                                         <div class="modal-header"
                                                                             style="background: #9FAFE8;">
                                                                             <h1 class="modal-title fs-5"
-                                                                                id="staticBackdropLabel">Modificar
+                                                                                id="staticBackdropLabel">Ver mascotas
                                                                             </h1>
                                                                             <button type="button" class="btn-close"
                                                                                 data-bs-dismiss="modal"
@@ -476,6 +484,7 @@
                                                             <!-- fila 2  -->
                                                         </td>
                                                     </tr>
+                                                    
                                                     <tr>
                                                         <td>Maria</td>
                                                         <td>Rojas</td>
@@ -490,7 +499,7 @@
                                                                 data-bs-toggle="modal"
                                                                 data-bs-target="#staticBackdrop"><i
                                                                     class="fas fa-eye"></i></button>
-
+                                                                   
                                                             <!-- Modal editar fila 2-->
                                                             <div class="modal fade" id="staticBackdrop"
                                                                 data-bs-backdrop="static" data-bs-keyboard="false"
@@ -591,34 +600,39 @@
                             <div class="container-fluid mt-3">
                                 <p class="textoNeon">Mascotas</p>
                             </div>
+                            <form class="search-form d-flex align-items-center">
+                                <input type="text" name="query" placeholder="Buscar mascota"
+                                    title="Enter search keyword">
+                                <button class="btn" type="submit" title="Search"><i
+                                        class="bi bi-search"></i></button>
+                            </form>
+                            <br>
                             <table class="table table-striped text-start table-hover">
                                 <thead>
                                     <tr>
+                                        <th scope="col">Foto</th>
                                         <th scope="col">Nombre</th>
-                                        <th scope="col">Apellidos</th>
-                                        <th scope="col">Identificación</th>
-                                        <th scope="col">Teléfono</th>
-                                        <th scope="col">Dirección</th>
-                                        <th scope="col">Email</th>
-                                        <th scope="col">Mascotas</th>
-                                        <th scope="col">Ver</th>
+                                        <th scope="col">Especie</th>
+                                        <th scope="col">Color</th>
+                                        <th scope="col">Edad</th>
+                                        <th scope="col">Género</th>
+                                        <th scope="col">Detalles</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>Andrea</td>
-                                        <td>Rojas</td>
-                                        <td>55190519</td>
-                                        <td>3144378402</td>
-                                        <td>Av los angeles</td>
-                                        <td>andrea@gmail.com2</td>
-                                        <td>2</td>
+                                        <td><img src="./img/imagen_cliente_cita/perro.png"  height="40px" width="40px"></td>
+                                        <td>David</td>
+                                        <td>Perro</td>
+                                        <td>Cafe y blanco</td>
+                                        <td>1 año</td>
+                                        <td>Macho</td>
                                         <td>
-                                            <button type="button" class="btn btn-success"
+                                                <button type="button" class="btn btn-success"
                                                 data-bs-toggle="modal"
                                                 data-bs-target="#staticBackdrop"><i
                                                     class="fas fa-eye"></i></button>
-
+                                        </td>
                                             <!-- Modal ver fila 1-->
                                             <div class="modal fade" id="staticBackdrop"
                                             data-bs-backdrop="static" data-bs-keyboard="false"
