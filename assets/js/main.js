@@ -450,3 +450,24 @@ function eliminarServ() {
     }
   });
 }
+
+/*Aca voy a poner todas las funciones de gestion veterinaria */
+function eliminarVeterinario() {
+  Swal.fire({
+    title: "Eliminar Veterinario",
+    text: "¿Está seguro de eliminarlo?",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "¡Si, eliminar!"
+  }).then((result) => {
+    if (result.isConfirmed) {
+      Swal.fire({
+        title: "Eliminado!",
+        text: "Veterinario eliminado",
+        icon: "success"
+      });
+    }
+  });
+}
