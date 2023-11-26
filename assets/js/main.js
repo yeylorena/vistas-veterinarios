@@ -368,6 +368,26 @@ function eliminarFact() {
   });
 }
 
+//Función eliminar cita historial
+function eliminarcitah() {
+  Swal.fire({
+    title: "Eliminar historial de cita",
+    text: "¿Está seguro de eliminarla?",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "¡Si, eliminar!"
+  }).then((result) => {
+    if (result.isConfirmed) {
+      Swal.fire({
+        title: "Eliminada!",
+        text: "Factura eliminada",
+        icon: "success"
+      });
+    }
+  });
+}
 //Función eliminar categoría
 function eliminarCat() {
   Swal.fire({
