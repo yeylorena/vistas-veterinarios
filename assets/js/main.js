@@ -325,3 +325,128 @@ function agregarCarrito() {
   }
 
 })();
+
+//Función eliminar proveedor
+function eliminarProv() {
+  Swal.fire({
+    title: "Eliminar proveedor",
+    text: "¿Está seguro de eliminarlo?",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "¡Si, eliminar!"
+  }).then((result) => {
+    if (result.isConfirmed) {
+      Swal.fire({
+        title: "Eliminado!",
+        text: "Proveedor eliminado",
+        icon: "success"
+      });
+    }
+  });
+}
+
+//Función eliminar factura
+function eliminarFact() {
+  Swal.fire({
+    title: "Eliminar factura",
+    text: "¿Está seguro de eliminarla?",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "¡Si, eliminar!"
+  }).then((result) => {
+    if (result.isConfirmed) {
+      Swal.fire({
+        title: "Eliminada!",
+        text: "Factura eliminada",
+        icon: "success"
+      });
+    }
+  });
+}
+
+//Función eliminar cita historial
+function eliminarcitah() {
+  Swal.fire({
+    title: "Eliminar historial de cita",
+    text: "¿Está seguro de eliminarla?",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "¡Si, eliminar!"
+  }).then((result) => {
+    if (result.isConfirmed) {
+      Swal.fire({
+        title: "Eliminada!",
+        text: "Factura eliminada",
+        icon: "success"
+      });
+    }
+  });
+}
+//Función eliminar categoría
+function eliminarCat() {
+  Swal.fire({
+    title: "Eliminar Categoría",
+    text: "¿Está seguro de eliminarla?",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "¡Si, eliminar!"
+  }).then((result) => {
+    if (result.isConfirmed) {
+      Swal.fire({
+        title: "Eliminada!",
+        text: "Categoría eliminada",
+        icon: "success"
+      });
+    }
+  });
+}
+
+//Función eliminar producto
+function eliminarProd() {
+  Swal.fire({
+    title: "Eliminar Producto",
+    text: "¿Está seguro de eliminarlo?",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "¡Si, eliminar!"
+  }).then((result) => {
+    if (result.isConfirmed) {
+      Swal.fire({
+        title: "Eliminado!",
+        text: "Producto eliminado",
+        icon: "success"
+      });
+    }
+  });
+}
+
+//Función eliminar servicio
+function eliminarServ() {
+  Swal.fire({
+    title: "Eliminar Servicio",
+    text: "¿Está seguro de eliminarlo?",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "¡Si, eliminar!"
+  }).then((result) => {
+    if (result.isConfirmed) {
+      Swal.fire({
+        title: "Eliminado!",
+        text: "Servicio eliminado",
+        icon: "success"
+      });
+    }
+  });
+}

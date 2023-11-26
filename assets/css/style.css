@@ -381,8 +381,8 @@ h6 {
 
 .textoNeon {
   padding: 5px;
-  background-color: black;
-  color: white;
+  background-color: #5c5db4;
+  color: black;
 
   text-align: center;
   font-size: 1.8em;
@@ -502,7 +502,6 @@ h6 {
 .citas:hover {
   background: lightslategrey;
 }
-
 
 
 
@@ -743,6 +742,10 @@ h6 {
 .header .search-form button i {
   color: #012970;
 }
+
+
+
+
 
 /*--------------------------------------------------------------
 # Header Nav
