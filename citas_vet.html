@@ -75,6 +75,10 @@
             <i class="bi bi-search"></i>
           </a>
         </li><!-- End Search Icon-->
+        <a class="nav-link nav-icon" href="manual-de-usuario.pdf" download="manual-de-usuario.pdf">
+          <i class="bi bi-journal-bookmark-fill"></i>
+          <span class="badge bg-primary badge-number"></span>
+        </a>
 
         <li class="nav-item dropdown">
 
@@ -289,36 +293,48 @@
         </a>
       </li>
       <li class="nav-item">
+        <a class="nav-link collapsed" href="perfil_vet.html" .html>
+          <i class="bi bi-person"></i>
+          <span>Perfil</span>
+        </a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link collapsed" href="clientes.html">
-            <i class="bi bi-gender-neuter"></i>
-            <span>Clientes</span>
+          <i class="bi bi-people"></i>
+          <span>Clientes</span>
         </a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link collapsed" href="Gestion_Productos_Servicios.html">
-            <i class="bi bi-box2-heart"></i>
-            <span>Gestión productos_servicios</span>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="citas_vet.html">
+          <i class="bi bi-calendar-event"></i>
+          <span>Gestión citas</span>
         </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link collapsed" href="citas_vet.html">
-          <i class="bi bi-chat-quote"></i>
-          <span>Citas</span>
-      </a>
-  </li>
-    <li class="nav-item">
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="gestionveterinaria.html">
+          <i class="bi bi-briefcase"></i>
+          <span>Gestión veterinaria</span>
+        </a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link collapsed" href="Gestion_Compras.html">
           <i class="bi bi-bag-plus"></i>
-          <span>Gestión Compras</span>
+          <span>Gestión compras</span>
         </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link collapsed" href="gestionveterinaria.html">
-        <i class="bi bi-chat-dots"></i>
-        <span>Gestión veterinaria</span>
-      </a>
-    </li>
-    
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="Gestion_Productos_Servicios.html">
+          <i class="bi bi-box2-heart"></i>
+          <span>Gestión productos_servicios</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="ayuda.html">
+          <i class="bi bi-question-circle"></i>
+          <span>Servicio de ayuda</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+
       <!-- End Profile Page Nav -->
 
     </ul>
@@ -327,140 +343,142 @@
   <main id="main" class="main" style="background-color: #5c5db4;">
 
     <div class="pagetitle">
-        <h1>Citas</h1>
-        <nav>
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="inicio.html">Inicio</a></li>
-            <li class="breadcrumb-item">citas</li>
-           
-          </ol>
-        </nav>
-      </div><!-- End Page Title -->
-  
-      <section class="section profile">
-        <div class="col-xl-12">
-  
-          <div class="card">
-            <div class="card-body pt-3">
-              <!-- Bordered Tabs -->
-              <ul class="nav nav-tabs nav-tabs-bordered">
-  
-                <li class="nav-item">
-                  <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#profile-overview">Agendar</button>
-                </li>
-  
-                <li class="nav-item">
-                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#facturas">Consultar Historial</button>
-                </li>
-              </ul>
-              <div class="tab-content pt-2">
-  
-  
-                <!--agendar-->
-                <div class="tab-pane fade show active profile-overview" id="profile-overview">
+      <h1>Citas</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="inicio_vet.html">Inicio</a></li>
+          <li class="breadcrumb-item">citas</li>
 
-                  
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
 
-  </div>
-                 
-  
-  
-                <!--historial-->
-                <div class="tab-pane fade pt-3" id="facturas">
+    <section class="section profile">
+      <div class="col-xl-12">
 
-                  
-                  <div class="container-fluid mt-3">
-                    <p class="textoNeon">Historial citas</p>
-                  </div>
-   <div class="search-bar">
-                                        <form class="search-form d-flex align-items-center" method="POST" action="#">
-                                            <input type="text" name="query" placeholder="Buscar mascota"
-                                                title="Enter search keyword">
-                                            <button type="submit" title="Search"><i class="bi bi-search"></i></button>
-                                        </form>
-                                    </div>
-                  
-                  <!-- Inicio tabla histotial -->
-                  <table class="table table-striped table-hover text-start">
-                    <thead>
-                      <tr class="table-secondary">
-                        <th scope="col">#</th>
-                        <th scope="col">Mascota</th>
-                        <th scope="col">Fecha</th>
-                        <th scope="col">Tipo Servicio</th>
-                        <th scope="col">Estado</th>
-                       
-                        <th scope="col">Opciones</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>Paco</td>
-                        <td>2023-10-10</td>
-                        <td>Presencial</td>
-                        <td>A</td>
-                        
-                        <td>
-                            <a href="historialcitas_vet.html" class="btn btn-sm"
-                            title="Upload new profile image" style="display: inline-block; background-color: gray; padding: 5px;">
-                            <img class="" src="./img/productos_servicios/ver.png" alt="" style="width: 25px;">
-                         </a>
-                          <!-- Modal eliminar  -->
-                          <button onclick="eliminarcitah()" type="button" class="btn btn-danger"><i class="bi bi-trash3"></i></button>
-                        </td>
-                      </tr>
-  
-                      <tr>
-                        <th scope="row">2</th>
-                        <td>Paco</td>
-                        <td>2023-10-10</td>
-                        <td>Presencial</td>
-                        <td>A</td>
-                        <td>
+        <div class="card">
+          <div class="card-body pt-3">
+            <!-- Bordered Tabs -->
+            <ul class="nav nav-tabs nav-tabs-bordered">
 
-                            <a href="historialcitas_vet.html" class="btn btn-sm"
-                            title="Upload new profile image" style="display: inline-block; background-color: gray; padding: 5px;">
-                            <img class="" src="./img/productos_servicios/ver.png" alt="" style="width: 25px;">
-                         </a>
-                          
-                        
-                          
-                          <!-- Modal eliminar  -->
-                          <button onclick="eliminarcitah()" type="button" class="btn btn-danger"><i class="bi bi-trash3"></i></button>
-                        </td>
-                      </tr>
-  
-                      <tr>
-                        <th scope="row">3</th>
-                        <td>Paco</td>
-                        <td>2023-10-10</td>
-                        <td>Presencial</td>
-                        <td>A</td>
-                        <td>
-                            <a href="historialcitas_vet.html" class="btn btn-sm"
-                            title="Upload new profile image" style="display: inline-block; background-color: gray; padding: 5px;">
-                            <img class="" src="./img/productos_servicios/ver.png" alt="" style="width: 25px;">
-                         </a>
-                          <!-- Modal eliminar  -->
-                          <button onclick="eliminarcitah()" type="button" class="btn btn-danger"><i class="bi bi-trash3"></i></button>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+              <li class="nav-item">
+                <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#profile-overview">Agendar</button>
+              </li>
+
+              <li class="nav-item">
+                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#facturas">Consultar Historial</button>
+              </li>
+            </ul>
+            <div class="tab-content pt-2">
+
+
+              <!--agendar-->
+              <div class="tab-pane fade show active profile-overview" id="profile-overview">
+
+
+
+              </div>
+
+
+
+              <!--historial-->
+              <div class="tab-pane fade pt-3" id="facturas">
+
+
+                <div class="container-fluid mt-3">
+                  <p class="textoNeon">Historial citas</p>
                 </div>
-  
-              
-  
-  
-              </div><!-- End Bordered Tabs -->
-  
-            </div>
+                <div class="search-bar">
+                  <form class="search-form d-flex align-items-center" method="POST" action="#">
+                    <input type="text" name="query" placeholder="Buscar mascota" title="Enter search keyword">
+                    <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+                  </form>
+                </div>
+
+                <!-- Inicio tabla histotial -->
+                <table class="table table-striped table-hover text-start">
+                  <thead>
+                    <tr class="table-secondary">
+                      <th scope="col">#</th>
+                      <th scope="col">Mascota</th>
+                      <th scope="col">Fecha</th>
+                      <th scope="col">Tipo Servicio</th>
+                      <th scope="col">Estado</th>
+
+                      <th scope="col">Opciones</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Paco</td>
+                      <td>2023-10-10</td>
+                      <td>Presencial</td>
+                      <td>A</td>
+
+                      <td>
+                        <a href="historialcitas_vet.html" class="btn btn-sm" title="Upload new profile image"
+                          style="display: inline-block; background-color: gray; padding: 5px;">
+                          <img class="" src="./img/productos_servicios/ver.png" alt="" style="width: 25px;">
+                        </a>
+                        <!-- Modal eliminar  -->
+                        <button onclick="eliminarcitah()" type="button" class="btn btn-danger"><i
+                            class="bi bi-trash3"></i></button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Paco</td>
+                      <td>2023-10-10</td>
+                      <td>Presencial</td>
+                      <td>A</td>
+                      <td>
+
+                        <a href="historialcitas_vet.html" class="btn btn-sm" title="Upload new profile image"
+                          style="display: inline-block; background-color: gray; padding: 5px;">
+                          <img class="" src="./img/productos_servicios/ver.png" alt="" style="width: 25px;">
+                        </a>
+
+
+
+                        <!-- Modal eliminar  -->
+                        <button onclick="eliminarcitah()" type="button" class="btn btn-danger"><i
+                            class="bi bi-trash3"></i></button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>Paco</td>
+                      <td>2023-10-10</td>
+                      <td>Presencial</td>
+                      <td>A</td>
+                      <td>
+                        <a href="historialcitas_vet.html" class="btn btn-sm" title="Upload new profile image"
+                          style="display: inline-block; background-color: gray; padding: 5px;">
+                          <img class="" src="./img/productos_servicios/ver.png" alt="" style="width: 25px;">
+                        </a>
+                        <!-- Modal eliminar  -->
+                        <button onclick="eliminarcitah()" type="button" class="btn btn-danger"><i
+                            class="bi bi-trash3"></i></button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+
+
+
+            </div><!-- End Bordered Tabs -->
+
           </div>
-  
         </div>
-        </div>
-      </section>
+
+      </div>
+      </div>
+    </section>
   </main><!-- End #main -->
 
 
