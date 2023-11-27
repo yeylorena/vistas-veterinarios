@@ -12,6 +12,8 @@
     <!-- Favicons -->
     <link href="assets/img/logoGesVet.png" rel="icon">
     <link href="assets/img/logoGesVet.png" rel="apple-touch-icon">
+    <!--SweetAlert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- Google Fonts -->
     <link href="https://fonts.gstatic.com" rel="preconnect">
@@ -64,6 +66,10 @@
                         <i class="bi bi-search"></i>
                     </a>
                 </li><!-- End Search Icon-->
+                <a class="nav-link nav-icon" href="manual-de-usuario.pdf" download="manual-de-usuario.pdf">
+                    <i class="bi bi-journal-bookmark-fill"></i>
+                    <span class="badge bg-primary badge-number"></span>
+                </a>
 
                 <li class="nav-item dropdown">
 
@@ -272,29 +278,53 @@
 
         <ul class="sidebar-nav" id="sidebar-nav">
             <li class="nav-item">
-                <a class="nav-link collapsed" href="inicio.html">
+                <a class="nav-link collapsed" href="inicio_vet.html">
                     <i class="bi bi-house"></i>
                     <span>Inicio</span>
                 </a>
             </li>
             <li class="nav-item">
+                <a class="nav-link collapsed" href="perfil_vet.html" .html>
+                    <i class="bi bi-person"></i>
+                    <span>Perfil</span>
+                </a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link collapsed" href="clientes.html">
-                    <i class="bi bi-gender-neuter"></i>
+                    <i class="bi bi-people"></i>
                     <span>Clientes</span>
                 </a>
             </li>
             <li class="nav-item">
+                <a class="nav-link collapsed" href="citas_vet.html">
+                    <i class="bi bi-calendar-event"></i>
+                    <span>Gestión citas</span>
+                </a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link collapsed" href="gestionveterinaria.html">
-                    <i class="bi bi-chat-dots"></i>
+                    <i class="bi bi-briefcase"></i>
                     <span>Gestión veterinaria</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link collapsed" href="Gestion_Compras.html">
-                    <i class="bi bi-chat-dots"></i>
-                    <span>Gestión Compras</span>
+                    <i class="bi bi-bag-plus"></i>
+                    <span>Gestión compras</span>
                 </a>
-            </li><!-- End Profile Page Nav -->
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="Gestion_Productos_Servicios.html">
+                    <i class="bi bi-box2-heart"></i>
+                    <span>Gestión productos_servicios</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="ayuda.html">
+                    <i class="bi bi-question-circle"></i>
+                    <span>Ayuda y soporte</span>
+                </a>
+            </li><!-- End Dashboard Nav -->
         </ul>
 
     </aside><!-- End Sidebar-->
@@ -305,7 +335,7 @@
             <h1>Gestión veterinaria</h1>
             <nav>
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="inicio.html">Inicio</a></li>
+                    <li class="breadcrumb-item"><a href="inicio_vet.html">Inicio</a></li>
                     <li class="breadcrumb-item">Gestión veterinaria</li>
                     <li class="breadcrumb-item active">Información</li>
                     <li class="breadcrumb-item active">Veterinarios</li>
@@ -335,143 +365,504 @@
                             </ul>
                             <div class="tab-content pt-2">
 
+
                                 <div class="tab-pane fade show active profile-overview" id="profile-overview">
-                                    <!--Informacion-->
+                                    <!-- Informacion -->
                                     <div class="container">
+                                        <br>
                                         <div class="row">
-                                            <p> <strong>Siempre estaremos disponibles para brindarte un gran servicio
-                                                </strong>
-                                            </p>
-                                            <div class="col-md-6">
-                                                <div class="card" style="width: 28rem;">
+                                            <br>
+                                            <br>
+                                            <br>
+                                            <h6><strong>Siempre estaremos disponibles para brindarte un gran
+                                                    servicio</strong></h6>
+                                            <br>
+                                            <div class="col-md-6 ">
+                                                <div class="card row hover-effect" style="width: 28rem;">
                                                     <div class="card-body" style="background-color:#D9D9D9;">
                                                         <p class="card-text">
                                                             <br><br>Ofrecemos atención veterinaria las 24/7, con un
-                                                            equipo altamente
-                                                            capacitado y apasionado por los animales. Tenemos
-                                                            experiencia en diversas especialidades y
-                                                            creemos en la atención personalizada para cada mascota,
-                                                            garantizando nuestra
-                                                            disponibilidad
+                                                            equipo altamente capacitado y apasionado por los
+                                                            animales. Tenemos
+                                                            experiencia en diversas especialidades y creemos en la
+                                                            atención personalizada
+                                                            para cada mascota, garantizando nuestra disponibilidad
                                                             en tus momentos de necesidad.
                                                         </p>
                                                         <br>
                                                     </div>
                                                 </div>
                                             </div>
-
-                                            <div class="col-md-6">
-                                                <div style="width: 28rem;" style="margin-bottom: 10px">
-                                                    <ul class="list-group list-group-flush">
-                                                        <li class="list-group-item"
-                                                            style="background-color:#D9D9D9; margin-bottom: 18px; ">
-                                                            <img src="assets/img/img1.png" alt="Imagen 3"
-                                                                class="img-thumbnail" width="50" height="50">
-
-                                                            Dirección: Calle 49B # 68-18
-                                                            Neiva-Huila, Colombia
+                                            <div class="col-md-6 ">
+                                                <div>
+                                                    <div class="list-group list-group-flush">
+                                                        <div class="list-group-item hover-item row hover-effect justify-content-center"
+                                                            style="background-color:#D9D9D9; margin-bottom: 18px; width: 445px; height: 67px;">
+                                                            <i class="bi bi-geo-alt-fill" style="font-size: 2rem;"></i>
+                                                            Dirección: Calle 49B # 68-18 Neiva-Huila, Colombia
                                                             <br>
-                                                        </li>
-                                                        <li class="list-group-item"
-                                                            style="background-color:#D9D9D9; margin-bottom: 18px;">
-                                                            <img src="assets/img/cel 1.png" alt="Imagen 3"
-                                                                class="img-thumbnail" width="50" height="50">
+                                                        </div>
+                                                        <div class="list-group-item hover-item row hover-effect justify-content-center"
+                                                            style="background-color:#D9D9D9; margin-bottom: 18px; width: 445px; height: 67px;">
+                                                            <i class="bi bi-phone-fill" style="font-size: 2rem;"></i>
+                                                            Línea de atención celular: (+57) 311 291 9198
+                                                        </div>
+                                                        <div class="list-group-item hover-item row hover-effect justify-content-center"
+                                                            style="background-color:#D9D9D9; margin-bottom: 18px; width: 445px; height: 67px;">
+                                                            <i class="bi bi-telephone-fill"
+                                                                style="font-size: 2rem;"></i>
+                                                            Línea de atención telefónica: (604) 322 3785
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-10"></div>
+                                                <div class="col-2">
+                                                    <button type="button"
+                                                        class="btn btn-success btn-outline-dark justify-content-end"
+                                                        data-bs-toggle="modal" data-bs-target="#editarModal"
+                                                        style="background-color: #D9D9D9; color: black;"><i
+                                                            class="bi bi-pencil-square"></i> Editar</button>
 
-                                                            Línea de atención celular:
-                                                            (+57) 311 291 9198
-                                                        </li>
-
-                                                        <li class="list-group-item"
-                                                            style="background-color:#D9D9D9; margin-bottom: 18px;">
-                                                            <img src="assets/img/tel 1.png" alt="Imagen 3"
-                                                                class="img-thumbnail" width="50" height="50">
-                                                            Línea de atención telefónica:
-                                                            (604) 322 3785
-                                                        </li>
-                                                    </ul>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                    <!-- Agrega este código al final de tu HTML, fuera del contenedor existente -->
+                                    <div class="modal fade" id="editarModal" tabindex="-1"
+                                        aria-labelledby="editarModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <!-- Usa modal-lg para un modal más grande -->
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="editarModalLabel">Editar Información
+                                                    </h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <div class="col-md-7">
+                                                                <div class="card" style="width: 28rem;">
+                                                                    <div class="card-body"
+                                                                        style="background-color:#D9D9D9;">
+                                                                        <p class="card-text" contenteditable="true"
+                                                                            width="50" height="50">
+                                                                            <!-- Contenido editable, se mostrará en el textarea del modal -->
+                                                                            Siempre estaremos disponibles para brindarte
+                                                                            un gran servicio. Ofrecemos atención
+                                                                            veterinaria las 24/7, con un equipo
+                                                                            altamente capacitado y apasionado por los
+                                                                            animales. Tenemos experiencia en diversas
+                                                                            especialidades y creemos en la atención
+                                                                            personalizada para cada mascota,
+                                                                            garantizando nuestra disponibilidad en tus
+                                                                            momentos de necesidad.
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div style="width: 28rem;" style="margin-bottom: 10px">
+                                                                    <ul class="list-group list-group-flush">
+                                                                        <li class="list-group-item"
+                                                                            style="background-color:#D9D9D9; margin-bottom: 18px; ">
+                                                                            <img src="assets/img/img1.png"
+                                                                                alt="Imagen 3" class="img-thumbnail"
+                                                                                width="50" height="50">
+                                                                            Dirección: Calle 49B # 68-18 Neiva-Huila,
+                                                                            Colombia
+                                                                            <br>
+                                                                        </li>
+                                                                        <li class="list-group-item"
+                                                                            style="background-color:#D9D9D9; margin-bottom: 18px;">
+                                                                            <img src="assets/img/cel 1.png"
+                                                                                alt="Imagen 3" class="img-thumbnail"
+                                                                                width="50" height="50">
+                                                                            Línea de atención celular: (+57) 311 291
+                                                                            9198
+                                                                        </li>
+                                                                        <li class="list-group-item"
+                                                                            style="background-color:#D9D9D9; margin-bottom: 18px;">
+                                                                            <img src="assets/img/tel 1.png"
+                                                                                alt="Imagen 3" class="img-thumbnail"
+                                                                                width="50" height="50">
+                                                                            <text name="" id="" cols="30"
+                                                                                rows="10"></text>Línea
+                                                                            de atención telefónica: (604) 322 3785
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">Cerrar</button>
+                                                    <button type="button" class="btn principal"
+                                                        onclick="guardarCambios()">Guardar Cambios</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
                                 </div>
+
                                 <!--Fin información-->
 
                                 <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
                                     <!--Ver veterinarios-->
 
-                                    <div id="contenidoDinamico"> </div>
-                                    <div id="contenidoTabla">
-                                        <table class="table table-bordered text-center">
-                                            <thead>
-                                                <tr>
-                                                    <th scope="col" colspan="4">Nuestro equipo de veterinarios</th>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="col">Nombre</th>
-                                                    <th scope="col">Especialidad</th>
-                                                    <th scope="col">Puntuación</th>
-                                                    <th scope="col">Calificar</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <th scope="row">Dra. Laura Gonzáles</th>
-                                                    <td>Traumatología</td>
-                                                    <td id="puntuacionPromedio">
-                                                    </td>
-                                                    <td>
-                                                        <a href="javascript:void(0);" onclick="cargarNuevoContenido()"
-                                                            data-id="veterinario1">
-                                                            <i class="fa-solid fa-circle-plus"
-                                                                style="color: #4154F1;"></i>
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">Dr. Juan Perez</th>
-                                                    <td>Cirujano</td>
-                                                    <td>
-                                                        <div id="rating2"></div> <!-- Agregado para la puntuación -->
-                                                    </td>
-                                                    <td> <i class="fa-solid fa-circle-plus" style="color: #4154F1;"></i>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">Dr. Carlos Martinez</th>
-                                                    <td>Anestesiología</td>
-                                                    <td>
-                                                        <div id="rating3"></div> <!-- Agregado para la puntuación -->
-                                                    </td>
-                                                    <td><i class="fa-solid fa-circle-plus" style="color: #4154F1;"></i>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">Dr. Pedro Rodríguez</th>
-                                                    <td>Dermatología</td>
-                                                    <td>
-                                                        <div id="ratingd"></div> <!-- Agregado para la puntuación -->
-                                                    </td>
-                                                    <td><i class="fa-solid fa-circle-plus" style="color: #4154F1;"></i>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">Dra. Sandra Romero</th>
-                                                    <td>Auxiliar</td>
-                                                    <td>
-                                                        <div id="rating5"></div> <!-- Agregado para la puntuación -->
-                                                    </td>
-                                                    <td><i class="fa-solid fa-circle-plus" style="color: #4154F1;"></i>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                                    <div class="container-fluid mt-3">
+                                        <p class="textoNe">Veterinarios</p>
                                     </div>
-                                </div><!-- End Bordered Tabs -->
-                            </div>
+
+                                    <div class="container-fluid">
+
+
+                                        <div class="table-responsive">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Listado de veterinarios</h5>
+
+                                                <div class="row">
+                                                    <div class="col-lg-6 col-md-12">
+                                                        <form class="search-form d-flex align-items-center pb-3"
+                                                            method="POST" action="#">
+                                                            <input type="text" name="query" placeholder="Buscar"
+                                                                title="Enter search keyword">
+
+                                                            <button id="buscar" type="button" class="btn"><i
+                                                                    class="bi bi-search"></i></button>
+                                                            <button type="button" class="btn btn-success"
+                                                                data-bs-toggle="modal" data-bs-target="#agregarProv"><i
+                                                                    class="bi bi-person-plus-fill"></i></button>
+
+                                                            <!-- Modal agregar veterinario-->
+                                                            <div class="modal fade" id="agregarProv"
+                                                                data-bs-backdrop="static" data-bs-keyboard="false"
+                                                                tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                                                aria-hidden="true">
+                                                                <div class="modal-dialog">
+                                                                    <div class="modal-content">
+                                                                        <div class="modal-header"
+                                                                            style="background: #5DADE2;">
+                                                                            <h1 class="modal-title fs-5"
+                                                                                id="staticBackdropLabel"
+                                                                                style="color: #000;">
+                                                                                Agregar
+                                                                                Veterinario</h1>
+                                                                            <button type="button" class="btn-close"
+                                                                                data-bs-dismiss="modal"
+                                                                                aria-label="Close"></button>
+                                                                        </div>
+                                                                        <div class="modal-body">
+                                                                            <div class="row my-2">
+                                                                                <div class="col-6">
+                                                                                    <label
+                                                                                        class="form-label">Documento:</label>
+                                                                                    <input class="form-control"
+                                                                                        type="text" name="txtId"
+                                                                                        id="txtId">
+                                                                                </div>
+                                                                                <div class="col-6">
+                                                                                    <label
+                                                                                        class="form-label">Nombre:</label>
+                                                                                    <input class="form-control"
+                                                                                        type="text" name="txtNombre"
+                                                                                        id="txtNombre">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="row my-2">
+                                                                                <div class="col-6">
+                                                                                    <label
+                                                                                        class="form-label">Apellido:</label>
+                                                                                    <input class="form-control"
+                                                                                        type="text" name="txtApellido"
+                                                                                        id="txtApellido">
+                                                                                </div>
+                                                                                <div class="col-6">
+                                                                                    <label
+                                                                                        class="form-label">Especialidad:</label>
+                                                                                    <select class="form-select">
+                                                                                        <option>General</option>
+                                                                                        <option>Odontología</option>
+                                                                                        <option>Traumatología
+                                                                                        </option>
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="row my-2">
+                                                                                <div class="col-6">
+                                                                                    <label
+                                                                                        class="form-label">Teléfono:</label>
+                                                                                    <input class="form-control"
+                                                                                        type="text" name="txtTeléfono"
+                                                                                        id="txtTeléfono">
+                                                                                </div>
+                                                                                <div class="col-6">
+                                                                                    <label
+                                                                                        class="form-label">Email:</label>
+                                                                                    <input class="form-control"
+                                                                                        type="email" name="txtEmail"
+                                                                                        id="txtEmail">
+                                                                                </div>
+
+                                                                            </div>
+                                                                            <div class="row my-2">
+                                                                                <div class="col-6">
+                                                                                    <label
+                                                                                        class="form-label">Dirección:</label>
+                                                                                    <input class="form-control"
+                                                                                        type="text" name="txtDirección"
+                                                                                        id="txtDireccion">
+                                                                                </div>
+                                                                                <div class="col-6">
+                                                                                    <label
+                                                                                        class="form-label">Estado:</label>
+                                                                                    <br>
+                                                                                    <!--Activo-->
+                                                                                    <select class="form-select">
+                                                                                        <option>Activo</option>
+                                                                                        <option>Inactivo</option>
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="modal-footer"
+                                                                            style="background: #5DADE2;">
+                                                                            <button type="button"
+                                                                                class="btn btn-secondary"
+                                                                                data-bs-dismiss="modal">Cancelar</button>
+                                                                            <button type="button"
+                                                                                class="btn btn-success">Agregar</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </form>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Inicio Tabla -->
+                                                <table class="table table-striped table-hover text-start">
+                                                    <thead>
+                                                        <tr class="table-secondary">
+                                                            <th scope="col">Documento</th>
+                                                            <th scope="col">Nombre</th>
+                                                            <th scope="col">Apellido</th>
+                                                            <th scope="col">Especialidad</th>
+                                                            <th scope="col">Télefono</th>
+                                                            <th scope="col">Email</th>
+                                                            <th scope="col">Dirección</th>
+                                                            <th scope="col">Estado</th>
+                                                            <th scope="col">Opciones</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">1078678967</th>
+                                                            <td>Brandon</td>
+                                                            <td>Murcia</td>
+                                                            <td>General</td>
+                                                            <td>3228682012</td>
+                                                            <td>brandon@gmail.com</td>
+                                                            <td>Centro</td>
+                                                            <td>A</td>
+                                                            <td>
+                                                                <div style="display: flex; gap: 4px;">
+                                                                    <button type="button" class="btn btn-success"
+                                                                        data-bs-toggle="modal"
+                                                                        data-bs-target="#staticBackdrop"><i
+                                                                            class="bi bi-pencil-square"></i></button>
+
+                                                                    <!-- Modal editar fila 1-->
+                                                                    <div class="modal fade" id="staticBackdrop"
+                                                                        data-bs-backdrop="static"
+                                                                        data-bs-keyboard="false" tabindex="-1"
+                                                                        aria-labelledby="staticBackdropLabel"
+                                                                        aria-hidden="true">
+                                                                        <div class="modal-dialog">
+                                                                            <div class="modal-content">
+                                                                                <div class="modal-header"
+                                                                                    style="background: #5DADE2;">
+                                                                                    <h1 class="modal-title fs-5"
+                                                                                        id="staticBackdropLabel"
+                                                                                        style="color: white;">
+                                                                                        Modificar
+                                                                                        Veterinario</h1>
+                                                                                    <button type="button"
+                                                                                        class="btn-close"
+                                                                                        data-bs-dismiss="modal"
+                                                                                        aria-label="Close"></button>
+                                                                                </div>
+                                                                                <div class="modal-body">
+                                                                                    <div class="row my-2">
+                                                                                        <div class="col-6">
+                                                                                            <label
+                                                                                                class="form-label">Documento:</label>
+                                                                                            <input class="form-control"
+                                                                                                type="text" name="txtId"
+                                                                                                id="txtId">
+                                                                                        </div>
+                                                                                        <div class="col-6">
+                                                                                            <label
+                                                                                                class="form-label">Nombre:</label>
+                                                                                            <input class="form-control"
+                                                                                                type="text"
+                                                                                                name="txtNombre"
+                                                                                                id="txtNombre">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="row my-2">
+                                                                                        <div class="col-6">
+                                                                                            <label
+                                                                                                class="form-label">Apellido:</label>
+                                                                                            <input class="form-control"
+                                                                                                type="text"
+                                                                                                name="txtApellido"
+                                                                                                id="txtApellido">
+                                                                                        </div>
+                                                                                        <div class="col-6">
+                                                                                            <label
+                                                                                                class="form-label">Especialidad:</label>
+                                                                                            <select class="form-select">
+                                                                                                <option>General</option>
+                                                                                                <option>Odontología
+                                                                                                </option>
+                                                                                                <option>Traumatología
+                                                                                                </option>
+                                                                                            </select>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="row my-2">
+                                                                                        <div class="col-6">
+                                                                                            <label
+                                                                                                class="form-label">Teléfono:</label>
+                                                                                            <input class="form-control"
+                                                                                                type="text"
+                                                                                                name="txtTeléfono"
+                                                                                                id="txtTeléfono">
+                                                                                        </div>
+                                                                                        <div class="col-6">
+                                                                                            <label
+                                                                                                class="form-label">Email:</label>
+                                                                                            <input class="form-control"
+                                                                                                type="email"
+                                                                                                name="txtEmail"
+                                                                                                id="txtEmail">
+                                                                                        </div>
+
+                                                                                    </div>
+                                                                                    <div class="row my-2">
+                                                                                        <div class="col-6">
+                                                                                            <label
+                                                                                                class="form-label">Dirección:</label>
+                                                                                            <input class="form-control"
+                                                                                                type="text"
+                                                                                                name="txtDirección"
+                                                                                                id="txtDireccion">
+                                                                                        </div>
+                                                                                        <div class="col-6">
+                                                                                            <label
+                                                                                                class="form-label">Estado:</label>
+                                                                                            <select class="form-select">
+                                                                                                <option>Activo</option>
+                                                                                                <option>Inactivo
+                                                                                                </option>
+
+                                                                                            </select>
+                                                                                            <br>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="modal-footer"
+                                                                                    style="background: #5DADE2;">
+                                                                                    <button type="button"
+                                                                                        class="btn btn-secondary"
+                                                                                        data-bs-dismiss="modal">Cancelar</button>
+                                                                                    <button type="button"
+                                                                                        class="btn btn-success">Modificar</button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+
+
+
+                                                                    <!-- Modal eliminar fila 1 -->
+                                                                    <button onclick="eliminarVeterinario()"
+                                                                        type="button" class="btn btn-danger"><i
+                                                                            class="bi bi-trash3"></i></button>
+                                                                </div>
+                                                            </td>
+
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">12234509</th>
+                                                            <td>Aura María</td>
+                                                            <td>Silva</td>
+                                                            <td>Traumatología</td>
+                                                            <td>3103321189</td>
+                                                            <td>auraSilva@gmail.com</td>
+                                                            <td>Cra 7</td>
+                                                            <td>I</td>
+                                                            <td>
+
+                                                                <div style="display: flex; gap: 4px;">
+                                                                    <button type="button" class="btn btn-success"
+                                                                        data-bs-toggle="modal"
+                                                                        data-bs-target="#staticBackdrop">
+                                                                        <i class="bi bi-pencil-square"></i>
+                                                                    </button>
+                                                                    <button type="button" class="btn btn-danger">
+                                                                        <i class="bi bi-trash3"></i>
+                                                                    </button>
+                                                                </div>
+
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">55467908</th>
+                                                            <td>María C.</td>
+                                                            <td>Gutiérrez</td>
+                                                            <td>Odontología</td>
+                                                            <td>3144378402</td>
+                                                            <td>mariagut@gmail.com</td>
+                                                            <td>Cra 2 # 20-82</td>
+                                                            <td>A</td>
+                                                            <td>
+                                                                <div style="display: flex; gap: 4px;">
+                                                                    <button type="button" class="btn btn-success"
+                                                                        data-bs-toggle="modal"
+                                                                        data-bs-target="#staticBackdrop">
+                                                                        <i class="bi bi-pencil-square"></i>
+                                                                    </button>
+                                                                    <button type="button" class="btn btn-danger">
+                                                                        <i class="bi bi-trash3"></i>
+                                                                    </button>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <!-- End Table with stripped rows -->
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div><!-- End Bordered Tabs -->
                         </div>
                     </div>
                 </div>
-            </div>
+
         </section>
         <!--Fin ver veterinarios-->
 
@@ -479,51 +870,22 @@
 
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
             class="bi bi-arrow-up-short"></i></a>
-
     <script>
-        function cargarNuevoContenido(idVeterinario) {
-            // Ocultar la tabla
-            document.getElementById('contenidoTabla').style.display = 'none';
+        function guardarCambios() {
+            // Obtiene el texto editado del textarea dentro del modal
+            var nuevoTexto = document.querySelector('#editarModal .card-body p.card-text').innerText;
 
-            // Utilizar AJAX para cargar el contenido del nuevo HTML
-            $.get('calificar.html', function (data) {
-                // Mostrar el contenido cargado en el contenedor
-                $('#contenidoDinamico').html(data);
+            // Actualiza el contenido donde desees con el nuevo texto
+            // En este ejemplo, lo estamos actualizando en el primer párrafo dentro del primer card-body
+            document.querySelector('.card-body p.card-text').innerText = nuevoTexto;
 
-
-            });
+            // Cierra el modal
+            $('#editarModal').modal('hide');
         }
-
-        // Obtener la calificación almacenada en local storage
-        // Obtener la calificación almacenada en local storage
-        const storedRating = localStorage.getItem("rating");
-
-        // Mostrar la calificación en la tabla con iconos de Bootstrap
-        if (storedRating) {
-            const puntuacionPromedio = document.getElementById("puntuacionPromedio");
-            const rating = parseInt(storedRating);
-
-            // Crear un nuevo elemento span para cada estrella y agregarlo al td
-            for (let i = 0; i < rating; i++) {
-                const starIcon = document.createElement("i");
-                starIcon.classList.add("bi", "bi-star-fill", "text-warning");
-
-                const span = document.createElement("span");
-                span.appendChild(starIcon);
-
-                // Agregar el span al td
-                puntuacionPromedio.appendChild(span);
-            }
-        }
-
-        function regresar() {
-            // Mostrar la tabla nuevamente
-            document.getElementById('contenidoTabla').style.display = 'block';
-            // Limpiar el contenido dinámico
-            document.getElementById('contenidoDinamico').innerHTML = '';
-        }
-
     </script>
+
+
+
 
     <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

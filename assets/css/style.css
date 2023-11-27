@@ -56,7 +56,7 @@
   margin: auto;
   /* Centrar la imagen */
   border: 2px solid #000;
-  
+
   /* Agrega un contorno de 2px de ancho y color azul (#4154F1) */
 
 }
@@ -1523,4 +1523,42 @@ h6 {
   text-align: center;
   font-size: 13px;
   color: #012970;
+}
+
+/*Aca voy a poner todos los estilos de getion veterinaria*/
+.principal{
+  background-color: #5DADE2 ;
+}
+.textoNe {
+  padding: 5px;
+  background-color: #5DADE2;
+  color: black;
+
+
+  text-align: center;
+  font-size: 1.8em;
+  font-weight: 100;
+  letter-spacing: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: 1s;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.textoNeon:hover {
+  text-shadow: 0 0 8px #03e9f4,
+    0 0 25px #03e9f4,
+    0 0 50px #03e9f4,
+    0 0 100px#03e9f4
+}
+
+
+.hover-item:hover {
+  background: #d9d9d9;
+}
+
+.hover-effect:hover {
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 4);
+  transform: translateY(-3%);
+  transition: all 400ms ease;
 }
