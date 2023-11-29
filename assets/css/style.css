@@ -503,7 +503,55 @@ h6 {
   background: lightslategrey;
 }
 
+/*Cartas filtro pedidos*/
 
+.filtroTodo{
+  background: #03e9f4;
+}
+
+.filtroPendientes {
+  background: #9fbbee;
+}
+
+.filtroEntregados {
+  background: rgb(226, 226, 124);
+}
+
+.filtroCancelados {
+  background: rgb(229, 133, 133);
+}
+
+.filtroTodo:hover {
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 4);
+    transform: translateY(-3%);
+    transition: all 400ms ease;
+    background: #44ecf5;
+    color: white;
+}
+
+.filtroPendientes:hover {
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 4);
+    transform: translateY(-3%);
+    transition: all 400ms ease;
+    background: #95a9ce;
+    color: white;
+}
+
+.filtroEntregados:hover {
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 4);
+    transform: translateY(-3%);
+    transition: all 400ms ease;
+    background: rgb(241, 241, 155);
+    color: white;
+}
+
+.filtroCancelados:hover {
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 4);
+    transform: translateY(-3%);
+    transition: all 400ms ease;
+    background: rgb(212, 146, 146);
+    color: white;
+}
 
 /* Card */
 .card {
