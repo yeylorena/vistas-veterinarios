@@ -46,8 +46,6 @@
   height: auto; /* Mantener la proporción original de la imagen */
   border-radius: 30px; /* Si se desea mantener el borde redondeado */
 }
-<<<<<<< HEAD
-=======
 
 #perfil {
   max-width: 12rem;
@@ -130,4 +128,3 @@
   transform: scale(1.05);
   box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.8);
 }
->>>>>>> abbef0218ca97d46abb3c0a3c7ebb323d03b3b20
