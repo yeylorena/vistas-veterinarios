@@ -40,19 +40,16 @@
 .next-btn {
   right: 10px;
 }
-
 .card-img-top {
   width: 100%; /* Ancho del 100% para ocupar todo el espacio de la tarjeta */
   height: auto; /* Mantener la proporción original de la imagen */
   border-radius: 30px; /* Si se desea mantener el borde redondeado */
 }
-
 #perfil {
   max-width: 12rem;
   margin: 0 auto;
   height:auto; /* Por ejemplo, establecer una altura de 10rem */
 }
-
 
 .card-img{
   background-image: url('../img/imagenes_inicio/Diseño\ sin\ título\ \(32\).png');

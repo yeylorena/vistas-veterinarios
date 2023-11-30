@@ -349,25 +349,39 @@ function eliminarProv() {
 
 
 //Función eliminar cita historial
+//Función eliminar cita historial
 function eliminarcitah() {
   Swal.fire({
-    title: "Eliminar historial de cita",
-    text: "¿Está seguro de eliminarla?",
+    title: "Cancelar cita",
+    html: `
+      <p>¿Está seguro de desea cancelar la cita?, Recuerda que no se pueden modificar los cambios.</p>
+      <label for="motivo">Motivo de cancelación:</label>
+      <input type="text" id="motivo" class="swal2-input" placeholder="Escribe el motivo aquí...">`,
     icon: "warning",
     showCancelButton: true,
     confirmButtonColor: "#3085d6",
     cancelButtonColor: "#d33",
-    confirmButtonText: "¡Si, eliminar!"
+    confirmButtonText: "¡Si, eliminar!",
+    preConfirm: () => {
+      const motivo = document.getElementById('motivo').value;
+      if (!motivo) {
+        Swal.showValidationMessage('Por favor, ingresa el motivo de cancelación.');
+      }
+      return motivo;
+    }
   }).then((result) => {
     if (result.isConfirmed) {
+      const motivo = result.value;
       Swal.fire({
         title: "Eliminada!",
-        text: "Factura eliminada",
+        text: `Cita cancelada\nMotivo: ${motivo}`,
         icon: "success"
       });
     }
   });
 }
+
+
 //Función eliminar categoría
 function eliminarCat() {
   Swal.fire({
