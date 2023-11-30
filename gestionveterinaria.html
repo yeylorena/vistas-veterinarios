@@ -2,902 +2,826 @@
 <html lang="es">
 
 <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Información Veterinaria</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
+  <title>Información Veterinaria</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
 
-    <!-- Favicons -->
-    <link href="assets/img/logoGesVet.png" rel="icon">
-    <link href="assets/img/logoGesVet.png" rel="apple-touch-icon">
-    <!--SweetAlert-->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- Favicons -->
+  <link href="assets/img/logoGesVet.png" rel="icon">
+  <link href="assets/img/logoGesVet.png" rel="apple-touch-icon">
+  <!--SweetAlert-->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.gstatic.com" rel="preconnect">
-    <link
-        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-        rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
 
-    <!-- Vendor CSS Files -->
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
-    <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
-    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-    <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
+  <!-- Vendor CSS Files -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
 
 
-    <!-- Template Main CSS File -->
-    <link href="assets/css/style.css" rel="stylesheet">
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
 </head>
 
 <body style="background-color: #5DADE2;">
 
-    <!-- ======= Header ======= -->
-    <header id="header" class="header fixed-top d-flex align-items-center">
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
 
-        <div class="d-flex align-items-center justify-content-between">
-            <a href="index.html" class="logo d-flex align-items-center">
-                <img src="assets/img/logoGesVet.png">
-                <span class="d-none d-lg-block">GesVet</span>
-            </a>
-            <i class="bi bi-list toggle-sidebar-btn"></i>
-        </div><!-- End Logo -->
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logoGesVet.png">
+        <span class="d-none d-lg-block">GesVet</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
 
-        <div class="search-bar">
-            <form class="search-form d-flex align-items-center" method="POST" action="#">
-                <input type="text" name="query" placeholder="Search" title="Enter search keyword">
-                <button type="submit" title="Search"><i class="bi bi-search"></i></button>
-            </form>
-        </div><!-- End Search Bar -->
+    <div class="search-bar">
+      <form class="search-form d-flex align-items-center" method="POST" action="#">
+        <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+        <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+      </form>
+    </div><!-- End Search Bar -->
 
-        <nav class="header-nav ms-auto">
-            <ul class="d-flex align-items-center">
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
 
-                <li class="nav-item d-block d-lg-none">
-                    <a class="nav-link nav-icon search-bar-toggle " href="#">
-                        <i class="bi bi-search"></i>
-                    </a>
-                </li><!-- End Search Icon-->
-                <a class="nav-link nav-icon" href="manual-de-usuario.pdf" download="manual-de-usuario.pdf">
-                    <i class="bi bi-journal-bookmark-fill"></i>
-                    <span class="badge bg-primary badge-number"></span>
-                </a>
+        <li class="nav-item d-block d-lg-none">
+          <a class="nav-link nav-icon search-bar-toggle " href="#">
+            <i class="bi bi-search"></i>
+          </a>
+        </li><!-- End Search Icon-->
+        <a class="nav-link nav-icon" href="manual-de-usuario.pdf" download="manual-de-usuario.pdf">
+          <i class="bi bi-journal-bookmark-fill"></i>
+          <span class="badge bg-primary badge-number"></span>
+        </a>
 
-                <li class="nav-item dropdown">
+        <li class="nav-item dropdown">
 
-                    <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
-                        <i class="bi bi-bell"></i>
-                        <span class="badge bg-primary badge-number">4</span>
-                    </a><!-- End Notification Icon -->
+          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+            <i class="bi bi-bell"></i>
+            <span class="badge bg-primary badge-number">4</span>
+          </a><!-- End Notification Icon -->
 
-                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
-                        <li class="dropdown-header">
-                            You have 4 new notifications
-                            <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
-                        </li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-
-                        <li class="notification-item">
-                            <i class="bi bi-exclamation-circle text-warning"></i>
-                            <div>
-                                <h4>Lorem Ipsum</h4>
-                                <p>Quae dolorem earum veritatis oditseno</p>
-                                <p>30 min. ago</p>
-                            </div>
-                        </li>
-
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-
-                        <li class="notification-item">
-                            <i class="bi bi-x-circle text-danger"></i>
-                            <div>
-                                <h4>Atque rerum nesciunt</h4>
-                                <p>Quae dolorem earum veritatis oditseno</p>
-                                <p>1 hr. ago</p>
-                            </div>
-                        </li>
-
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-
-                        <li class="notification-item">
-                            <i class="bi bi-check-circle text-success"></i>
-                            <div>
-                                <h4>Sit rerum fuga</h4>
-                                <p>Quae dolorem earum veritatis oditseno</p>
-                                <p>2 hrs. ago</p>
-                            </div>
-                        </li>
-
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-
-                        <li class="notification-item">
-                            <i class="bi bi-info-circle text-primary"></i>
-                            <div>
-                                <h4>Dicta reprehenderit</h4>
-                                <p>Quae dolorem earum veritatis oditseno</p>
-                                <p>4 hrs. ago</p>
-                            </div>
-                        </li>
-
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li class="dropdown-footer">
-                            <a href="#">Show all notifications</a>
-                        </li>
-
-                    </ul><!-- End Notification Dropdown Items -->
-
-                </li><!-- End Notification Nav -->
-
-                <li class="nav-item dropdown">
-
-                    <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
-                        <i class="bi bi-chat-left-text"></i>
-                        <span class="badge bg-success badge-number">3</span>
-                    </a><!-- End Messages Icon -->
-
-                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
-                        <li class="dropdown-header">
-                            You have 3 new messages
-                            <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
-                        </li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-
-                        <li class="message-item">
-                            <a href="#">
-                                <img src="assets/img/messages-1.jpg" alt="" class="rounded-circle">
-                                <div>
-                                    <h4>Maria Hudson</h4>
-                                    <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
-                                    <p>4 hrs. ago</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-
-                        <li class="message-item">
-                            <a href="#">
-                                <img src="assets/img/messages-2.jpg" alt="" class="rounded-circle">
-                                <div>
-                                    <h4>Anna Nelson</h4>
-                                    <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
-                                    <p>6 hrs. ago</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-
-                        <li class="message-item">
-                            <a href="#">
-                                <img src="assets/img/messages-3.jpg" alt="" class="rounded-circle">
-                                <div>
-                                    <h4>David Muldon</h4>
-                                    <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
-                                    <p>8 hrs. ago</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-
-                        <li class="dropdown-footer">
-                            <a href="#">Show all messages</a>
-                        </li>
-
-                    </ul><!-- End Messages Dropdown Items -->
-
-                </li><!-- End Messages Nav -->
-
-                <li class="nav-item dropdown pe-3">
-
-                    <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-                        <img src="./img/image 20.png" alt="Profile" class="rounded-circle">
-                        <span class="d-none d-md-block dropdown-toggle ps-2">E. Carvajal</span>
-                    </a><!-- End Profile Iamge Icon -->
-
-                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
-                        <li class="dropdown-header">
-                            <h6>Esteban Carvajal</h6>
-                            <span>Usuario</span>
-                        </li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item d-flex align-items-center" href="perfil.html">
-                                <i class="bi bi-person"></i>
-                                <span>Mi perfil</span>
-                            </a>
-                        </li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item d-flex align-items-center" href="perfil.html">
-                                <i class="bi bi-gear"></i>
-                                <span>Configuracion de la Cuenta</span>
-                            </a>
-                        </li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item d-flex align-items-center" href="#">
-                                <i class="bi bi-question-circle"></i>
-                                <span>Nesecitas ayuda?</span>
-                            </a>
-                        </li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item d-flex align-items-center" href="index.html">
-                                <i class="bi bi-box-arrow-right"></i>
-                                <span>Salir</span>
-                            </a>
-                        </li>
-
-                    </ul><!-- End Profile Dropdown Items -->
-                </li><!-- End Profile Nav -->
-
-            </ul>
-        </nav><!-- End Icons Navigation -->
-
-    </header><!-- End Header -->
-
-    <!-- ======= Sidebar ======= -->
-    <aside id="sidebar" class="sidebar">
-
-        <ul class="sidebar-nav" id="sidebar-nav">
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="inicio_vet.html">
-                    <i class="bi bi-house"></i>
-                    <span>Inicio</span>
-                </a>
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
+            <li class="dropdown-header">
+              You have 4 new notifications
+              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="perfil_vet.html" .html>
-                    <i class="bi bi-person"></i>
-                    <span>Perfil</span>
-                </a>
+            <li>
+              <hr class="dropdown-divider">
             </li>
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="clientes.html">
-                    <i class="bi bi-people"></i>
-                    <span>Clientes</span>
-                </a>
+
+            <li class="notification-item">
+              <i class="bi bi-exclamation-circle text-warning"></i>
+              <div>
+                <h4>Lorem Ipsum</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>30 min. ago</p>
+              </div>
             </li>
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="citas_vet.html">
-                    <i class="bi bi-calendar-event"></i>
-                    <span>Gestión citas</span>
-                </a>
+
+            <li>
+              <hr class="dropdown-divider">
             </li>
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="gestionveterinaria.html">
-                    <i class="bi bi-briefcase"></i>
-                    <span>Gestión veterinaria</span>
-                </a>
+
+            <li class="notification-item">
+              <i class="bi bi-x-circle text-danger"></i>
+              <div>
+                <h4>Atque rerum nesciunt</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>1 hr. ago</p>
+              </div>
             </li>
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="Gestion_Compras.html">
-                    <i class="bi bi-bag-plus"></i>
-                    <span>Gestión compras</span>
-                </a>
+
+            <li>
+              <hr class="dropdown-divider">
             </li>
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="Gestion_Productos_Servicios.html">
-                    <i class="bi bi-box2-heart"></i>
-                    <span>Gestión productos_servicios</span>
-                </a>
+
+            <li class="notification-item">
+              <i class="bi bi-check-circle text-success"></i>
+              <div>
+                <h4>Sit rerum fuga</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>2 hrs. ago</p>
+              </div>
             </li>
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="ayuda.html">
-                    <i class="bi bi-question-circle"></i>
-                    <span>Ayuda y soporte</span>
-                </a>
-            </li><!-- End Profile Page Nav -->
-        </ul>
 
-    </aside><!-- End Sidebar-->
+            <li>
+              <hr class="dropdown-divider">
+            </li>
 
-    <main id="main" class="main">
+            <li class="notification-item">
+              <i class="bi bi-info-circle text-primary"></i>
+              <div>
+                <h4>Dicta reprehenderit</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>4 hrs. ago</p>
+              </div>
+            </li>
 
-        <div class="pagetitle">
-            <h1>Gestión veterinaria</h1>
-            <nav>
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="inicio_vet.html">Inicio</a></li>
-                    <li class="breadcrumb-item">Gestión veterinaria</li>
-                    <li class="breadcrumb-item active">Información</li>
-                    <li class="breadcrumb-item active">Veterinarios</li>
-                </ol>
-            </nav>
-        </div><!-- End Page Title -->
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li class="dropdown-footer">
+              <a href="#">Show all notifications</a>
+            </li>
 
-        <section class="section profile">
+          </ul><!-- End Notification Dropdown Items -->
 
-            <div class="row">
-                <div class="col-xl-12">
+        </li><!-- End Notification Nav -->
 
-                    <div class="card">
-                        <div class="card-body pt-3">
-                            <!-- Bordered Tabs -->
-                            <ul class="nav nav-tabs nav-tabs-bordered">
+        <li class="nav-item dropdown">
 
-                                <li class="nav-item">
-                                    <button class="nav-link active" data-bs-toggle="tab"
-                                        data-bs-target="#profile-overview">Información</button>
-                                </li>
+          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+            <i class="bi bi-chat-left-text"></i>
+            <span class="badge bg-success badge-number">3</span>
+          </a><!-- End Messages Icon -->
 
-                                <li class="nav-item">
-                                    <button class="nav-link" id="verVeterinariosBtn" data-bs-toggle="tab"
-                                        data-bs-target="#profile-edit">Veterinarios</button>
-                                </li>
-                            </ul>
-                            <div class="tab-content pt-2">
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
+            <li class="dropdown-header">
+              You have 3 new messages
+              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
 
+            <li class="message-item">
+              <a href="#">
+                <img src="assets/img/messages-1.jpg" alt="" class="rounded-circle">
+                <div>
+                  <h4>Maria Hudson</h4>
+                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
+                  <p>4 hrs. ago</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
 
-                                <div class="tab-pane fade show active profile-overview" id="profile-overview">
-                                    <!-- Informacion -->
-                                    <div class="container">
-                                        <br>
-                                        <div class="row">
-                                            <br>
-                                            <br>
-                                            <br>
-                                            <h6><strong>Siempre estaremos disponibles para brindarte un gran
-                                                    servicio</strong></h6>
-                                            <br>
-                                            <div class="col-md-6 ">
-                                                <div class="card row hover-effect" style="width: 28rem;">
-                                                    <div class="card-body" style="background-color:#D9D9D9;">
-                                                        <p class="card-text">
-                                                            <br><br>Ofrecemos atención veterinaria las 24/7, con un
-                                                            equipo altamente capacitado y apasionado por los
-                                                            animales. Tenemos
-                                                            experiencia en diversas especialidades y creemos en la
-                                                            atención personalizada
-                                                            para cada mascota, garantizando nuestra disponibilidad
-                                                            en tus momentos de necesidad.
-                                                        </p>
-                                                        <br>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6 ">
-                                                <div>
-                                                    <div class="list-group list-group-flush">
-                                                        <div class="list-group-item hover-item row hover-effect justify-content-center"
-                                                            style="background-color:#D9D9D9; margin-bottom: 18px; width: 445px; height: 67px;">
-                                                            <i class="bi bi-geo-alt-fill" style="font-size: 2rem;"></i>
-                                                            Dirección: Calle 49B # 68-18 Neiva-Huila, Colombia
-                                                            <br>
-                                                        </div>
-                                                        <div class="list-group-item hover-item row hover-effect justify-content-center"
-                                                            style="background-color:#D9D9D9; margin-bottom: 18px; width: 445px; height: 67px;">
-                                                            <i class="bi bi-phone-fill" style="font-size: 2rem;"></i>
-                                                            Línea de atención celular: (+57) 311 291 9198
-                                                        </div>
-                                                        <div class="list-group-item hover-item row hover-effect justify-content-center"
-                                                            style="background-color:#D9D9D9; margin-bottom: 18px; width: 445px; height: 67px;">
-                                                            <i class="bi bi-telephone-fill"
-                                                                style="font-size: 2rem;"></i>
-                                                            Línea de atención telefónica: (604) 322 3785
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-10"></div>
-                                                <div class="col-2">
-                                                    <button type="button"
-                                                        class="btn btn-success btn-outline-dark justify-content-end"
-                                                        data-bs-toggle="modal" data-bs-target="#editarModal"
-                                                        style="background-color: #D9D9D9; color: black;"><i
-                                                            class="bi bi-pencil-square"></i> Editar</button>
+            <li class="message-item">
+              <a href="#">
+                <img src="assets/img/messages-2.jpg" alt="" class="rounded-circle">
+                <div>
+                  <h4>Anna Nelson</h4>
+                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
+                  <p>6 hrs. ago</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
 
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Agrega este código al final de tu HTML, fuera del contenedor existente -->
-                                    <div class="modal fade" id="editarModal" tabindex="-1"
-                                        aria-labelledby="editarModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                            <!-- Usa modal-lg para un modal más grande -->
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="editarModalLabel">Editar Información
-                                                    </h5>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                        aria-label="Close"></button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <div class="container">
-                                                        <div class="row">
-                                                            <div class="col-md-7">
-                                                                <div class="card" style="width: 28rem;">
-                                                                    <div class="card-body"
-                                                                        style="background-color:#D9D9D9;">
-                                                                        <p class="card-text" contenteditable="true"
-                                                                            width="50" height="50">
-                                                                            <!-- Contenido editable, se mostrará en el textarea del modal -->
-                                                                            Siempre estaremos disponibles para brindarte
-                                                                            un gran servicio. Ofrecemos atención
-                                                                            veterinaria las 24/7, con un equipo
-                                                                            altamente capacitado y apasionado por los
-                                                                            animales. Tenemos experiencia en diversas
-                                                                            especialidades y creemos en la atención
-                                                                            personalizada para cada mascota,
-                                                                            garantizando nuestra disponibilidad en tus
-                                                                            momentos de necesidad.
-                                                                        </p>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-6">
-                                                                <div style="width: 28rem;" style="margin-bottom: 10px">
-                                                                    <ul class="list-group list-group-flush">
-                                                                        <li class="list-group-item"
-                                                                            style="background-color:#D9D9D9; margin-bottom: 18px; ">
-                                                                            <img src="assets/img/img1.png"
-                                                                                alt="Imagen 3" class="img-thumbnail"
-                                                                                width="50" height="50">
-                                                                            Dirección: Calle 49B # 68-18 Neiva-Huila,
-                                                                            Colombia
-                                                                            <br>
-                                                                        </li>
-                                                                        <li class="list-group-item"
-                                                                            style="background-color:#D9D9D9; margin-bottom: 18px;">
-                                                                            <img src="assets/img/cel 1.png"
-                                                                                alt="Imagen 3" class="img-thumbnail"
-                                                                                width="50" height="50">
-                                                                            Línea de atención celular: (+57) 311 291
-                                                                            9198
-                                                                        </li>
-                                                                        <li class="list-group-item"
-                                                                            style="background-color:#D9D9D9; margin-bottom: 18px;">
-                                                                            <img src="assets/img/tel 1.png"
-                                                                                alt="Imagen 3" class="img-thumbnail"
-                                                                                width="50" height="50">
-                                                                            <text name="" id="" cols="30"
-                                                                                rows="10"></text>Línea
-                                                                            de atención telefónica: (604) 322 3785
-                                                                        </li>
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary"
-                                                        data-bs-dismiss="modal">Cerrar</button>
-                                                    <button type="button" class="btn principal"
-                                                        onclick="guardarCambios()">Guardar Cambios</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+            <li class="message-item">
+              <a href="#">
+                <img src="assets/img/messages-3.jpg" alt="" class="rounded-circle">
+                <div>
+                  <h4>David Muldon</h4>
+                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
+                  <p>8 hrs. ago</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
 
+            <li class="dropdown-footer">
+              <a href="#">Show all messages</a>
+            </li>
 
-                                </div>
+          </ul><!-- End Messages Dropdown Items -->
 
-                                <!--Fin información-->
+        </li><!-- End Messages Nav -->
 
-                                <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
-                                    <!--Ver veterinarios-->
+        <li class="nav-item dropdown pe-3">
 
-                                    <div class="container-fluid mt-3">
-                                        <p class="textoNe">Veterinarios</p>
-                                    </div>
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <img src="./img/image 20.png" alt="Profile" class="rounded-circle">
+            <span class="d-none d-md-block dropdown-toggle ps-2">E. Carvajal</span>
+          </a><!-- End Profile Iamge Icon -->
 
-                                    <div class="container-fluid">
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              <h6>Esteban Carvajal</h6>
+              <span>Usuario</span>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
 
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="perfil.html">
+                <i class="bi bi-person"></i>
+                <span>Mi perfil</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
 
-                                        <div class="table-responsive">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Listado de veterinarios</h5>
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="perfil.html">
+                <i class="bi bi-gear"></i>
+                <span>Configuracion de la Cuenta</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
 
-                                                <div class="row">
-                                                    <div class="col-lg-6 col-md-12">
-                                                        <form class="search-form d-flex align-items-center pb-3"
-                                                            method="POST" action="#">
-                                                            <input type="text" name="query" placeholder="Buscar"
-                                                                title="Enter search keyword">
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <i class="bi bi-question-circle"></i>
+                <span>Nesecitas ayuda?</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
 
-                                                            <button id="buscar" type="button" class="btn"><i
-                                                                    class="bi bi-search"></i></button>
-                                                            <button type="button" class="btn btn-success"
-                                                                data-bs-toggle="modal" data-bs-target="#agregarProv"><i
-                                                                    class="bi bi-person-plus-fill"></i></button>
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="index.html">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Salir</span>
+              </a>
+            </li>
 
-                                                            <!-- Modal agregar veterinario-->
-                                                            <div class="modal fade" id="agregarProv"
-                                                                data-bs-backdrop="static" data-bs-keyboard="false"
-                                                                tabindex="-1" aria-labelledby="staticBackdropLabel"
-                                                                aria-hidden="true">
-                                                                <div class="modal-dialog">
-                                                                    <div class="modal-content">
-                                                                        <div class="modal-header"
-                                                                            style="background: #5DADE2;">
-                                                                            <h1 class="modal-title fs-5"
-                                                                                id="staticBackdropLabel"
-                                                                                style="color: #000;">
-                                                                                Agregar
-                                                                                Veterinario</h1>
-                                                                            <button type="button" class="btn-close"
-                                                                                data-bs-dismiss="modal"
-                                                                                aria-label="Close"></button>
-                                                                        </div>
-                                                                        <div class="modal-body">
-                                                                            <div class="row my-2">
-                                                                                <div class="col-6">
-                                                                                    <label
-                                                                                        class="form-label">Documento:</label>
-                                                                                    <input class="form-control"
-                                                                                        type="text" name="txtId"
-                                                                                        id="txtId">
-                                                                                </div>
-                                                                                <div class="col-6">
-                                                                                    <label
-                                                                                        class="form-label">Nombre:</label>
-                                                                                    <input class="form-control"
-                                                                                        type="text" name="txtNombre"
-                                                                                        id="txtNombre">
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="row my-2">
-                                                                                <div class="col-6">
-                                                                                    <label
-                                                                                        class="form-label">Apellido:</label>
-                                                                                    <input class="form-control"
-                                                                                        type="text" name="txtApellido"
-                                                                                        id="txtApellido">
-                                                                                </div>
-                                                                                <div class="col-6">
-                                                                                    <label
-                                                                                        class="form-label">Especialidad:</label>
-                                                                                    <select class="form-select">
-                                                                                        <option>General</option>
-                                                                                        <option>Odontología</option>
-                                                                                        <option>Traumatología
-                                                                                        </option>
-                                                                                    </select>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="row my-2">
-                                                                                <div class="col-6">
-                                                                                    <label
-                                                                                        class="form-label">Teléfono:</label>
-                                                                                    <input class="form-control"
-                                                                                        type="text" name="txtTeléfono"
-                                                                                        id="txtTeléfono">
-                                                                                </div>
-                                                                                <div class="col-6">
-                                                                                    <label
-                                                                                        class="form-label">Email:</label>
-                                                                                    <input class="form-control"
-                                                                                        type="email" name="txtEmail"
-                                                                                        id="txtEmail">
-                                                                                </div>
+          </ul><!-- End Profile Dropdown Items -->
+        </li><!-- End Profile Nav -->
 
-                                                                            </div>
-                                                                            <div class="row my-2">
-                                                                                <div class="col-6">
-                                                                                    <label
-                                                                                        class="form-label">Dirección:</label>
-                                                                                    <input class="form-control"
-                                                                                        type="text" name="txtDirección"
-                                                                                        id="txtDireccion">
-                                                                                </div>
-                                                                                <div class="col-6">
-                                                                                    <label
-                                                                                        class="form-label">Estado:</label>
-                                                                                    <br>
-                                                                                    <!--Activo-->
-                                                                                    <select class="form-select">
-                                                                                        <option>Activo</option>
-                                                                                        <option>Inactivo</option>
-                                                                                    </select>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="modal-footer"
-                                                                            style="background: #5DADE2;">
-                                                                            <button type="button"
-                                                                                class="btn btn-secondary"
-                                                                                data-bs-dismiss="modal">Cancelar</button>
-                                                                            <button type="button"
-                                                                                class="btn btn-success">Agregar</button>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+      </ul>
+    </nav><!-- End Icons Navigation -->
 
-                                                        </form>
-                                                    </div>
-                                                </div>
+  </header><!-- End Header -->
 
-                                                <!-- Inicio Tabla -->
-                                                <table class="table table-striped table-hover text-start">
-                                                    <thead>
-                                                        <tr class="table-secondary">
-                                                            <th scope="col">Documento</th>
-                                                            <th scope="col">Nombre</th>
-                                                            <th scope="col">Apellido</th>
-                                                            <th scope="col">Especialidad</th>
-                                                            <th scope="col">Télefono</th>
-                                                            <th scope="col">Email</th>
-                                                            <th scope="col">Dirección</th>
-                                                            <th scope="col">Estado</th>
-                                                            <th scope="col">Opciones</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <th scope="row">1078678967</th>
-                                                            <td>Brandon</td>
-                                                            <td>Murcia</td>
-                                                            <td>General</td>
-                                                            <td>3228682012</td>
-                                                            <td>brandon@gmail.com</td>
-                                                            <td>Centro</td>
-                                                            <td>A</td>
-                                                            <td>
-                                                                <div style="display: flex; gap: 4px;">
-                                                                    <button type="button" class="btn btn-success"
-                                                                        data-bs-toggle="modal"
-                                                                        data-bs-target="#staticBackdrop"><i
-                                                                            class="bi bi-pencil-square"></i></button>
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
 
-                                                                    <!-- Modal editar fila 1-->
-                                                                    <div class="modal fade" id="staticBackdrop"
-                                                                        data-bs-backdrop="static"
-                                                                        data-bs-keyboard="false" tabindex="-1"
-                                                                        aria-labelledby="staticBackdropLabel"
-                                                                        aria-hidden="true">
-                                                                        <div class="modal-dialog">
-                                                                            <div class="modal-content">
-                                                                                <div class="modal-header"
-                                                                                    style="background: #5DADE2;">
-                                                                                    <h1 class="modal-title fs-5"
-                                                                                        id="staticBackdropLabel"
-                                                                                        style="color: white;">
-                                                                                        Modificar
-                                                                                        Veterinario</h1>
-                                                                                    <button type="button"
-                                                                                        class="btn-close"
-                                                                                        data-bs-dismiss="modal"
-                                                                                        aria-label="Close"></button>
-                                                                                </div>
-                                                                                <div class="modal-body">
-                                                                                    <div class="row my-2">
-                                                                                        <div class="col-6">
-                                                                                            <label
-                                                                                                class="form-label">Documento:</label>
-                                                                                            <input class="form-control"
-                                                                                                type="text" name="txtId"
-                                                                                                id="txtId">
-                                                                                        </div>
-                                                                                        <div class="col-6">
-                                                                                            <label
-                                                                                                class="form-label">Nombre:</label>
-                                                                                            <input class="form-control"
-                                                                                                type="text"
-                                                                                                name="txtNombre"
-                                                                                                id="txtNombre">
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    <div class="row my-2">
-                                                                                        <div class="col-6">
-                                                                                            <label
-                                                                                                class="form-label">Apellido:</label>
-                                                                                            <input class="form-control"
-                                                                                                type="text"
-                                                                                                name="txtApellido"
-                                                                                                id="txtApellido">
-                                                                                        </div>
-                                                                                        <div class="col-6">
-                                                                                            <label
-                                                                                                class="form-label">Especialidad:</label>
-                                                                                            <select class="form-select">
-                                                                                                <option>General</option>
-                                                                                                <option>Odontología
-                                                                                                </option>
-                                                                                                <option>Traumatología
-                                                                                                </option>
-                                                                                            </select>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    <div class="row my-2">
-                                                                                        <div class="col-6">
-                                                                                            <label
-                                                                                                class="form-label">Teléfono:</label>
-                                                                                            <input class="form-control"
-                                                                                                type="text"
-                                                                                                name="txtTeléfono"
-                                                                                                id="txtTeléfono">
-                                                                                        </div>
-                                                                                        <div class="col-6">
-                                                                                            <label
-                                                                                                class="form-label">Email:</label>
-                                                                                            <input class="form-control"
-                                                                                                type="email"
-                                                                                                name="txtEmail"
-                                                                                                id="txtEmail">
-                                                                                        </div>
+    <ul class="sidebar-nav" id="sidebar-nav">
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="inicio_vet.html">
+          <i class="bi bi-house"></i>
+          <span>Inicio</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="perfil_vet.html" .html>
+          <i class="bi bi-person"></i>
+          <span>Perfil</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="clientes.html">
+          <i class="bi bi-people"></i>
+          <span>Clientes</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="citas_vet.html">
+          <i class="bi bi-calendar-event"></i>
+          <span>Gestión citas</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="Gestion_Productos_Servicios.html">
+          <i class="bi bi-box2-heart"></i>
+          <span>Gestión productos_servicios</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="Gestion_Compras.html">
+          <i class="bi bi-bag-plus"></i>
+          <span>Gestión compras</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="Gestion_Ventas.html">
+          <i class="bi bi-bag-plus"></i>
+          <span>Gestión ventas</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="gestionveterinaria.html">
+          <i class="bi bi-briefcase"></i>
+          <span>Gestión veterinaria</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="ayuda.html">
+          <i class="bi bi-question-circle"></i>
+          <span>Ayuda y soporte</span>
+        </a>
+      </li><!-- End Profile Page Nav -->
+    </ul>
 
-                                                                                    </div>
-                                                                                    <div class="row my-2">
-                                                                                        <div class="col-6">
-                                                                                            <label
-                                                                                                class="form-label">Dirección:</label>
-                                                                                            <input class="form-control"
-                                                                                                type="text"
-                                                                                                name="txtDirección"
-                                                                                                id="txtDireccion">
-                                                                                        </div>
-                                                                                        <div class="col-6">
-                                                                                            <label
-                                                                                                class="form-label">Estado:</label>
-                                                                                            <select class="form-select">
-                                                                                                <option>Activo</option>
-                                                                                                <option>Inactivo
-                                                                                                </option>
+  </aside><!-- End Sidebar-->
 
-                                                                                            </select>
-                                                                                            <br>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="modal-footer"
-                                                                                    style="background: #5DADE2;">
-                                                                                    <button type="button"
-                                                                                        class="btn btn-secondary"
-                                                                                        data-bs-dismiss="modal">Cancelar</button>
-                                                                                    <button type="button"
-                                                                                        class="btn btn-success">Modificar</button>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
+  <main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>Gestión veterinaria</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="inicio_vet.html">Inicio</a></li>
+          <li class="breadcrumb-item">Gestión veterinaria</li>
+          <li class="breadcrumb-item active">Información</li>
+          <li class="breadcrumb-item active">Veterinarios</li>
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+
+    <section class="section profile">
+
+      <div class="row">
+        <div class="col-xl-12">
+
+          <div class="card">
+            <div class="card-body pt-3">
+              <!-- Bordered Tabs -->
+              <ul class="nav nav-tabs nav-tabs-bordered">
+
+                <li class="nav-item">
+                  <button class="nav-link active" data-bs-toggle="tab"
+                    data-bs-target="#profile-overview">Información</button>
+                </li>
+
+                <li class="nav-item">
+                  <button class="nav-link" id="verVeterinariosBtn" data-bs-toggle="tab"
+                    data-bs-target="#profile-edit">Veterinarios</button>
+                </li>
+              </ul>
+              <div class="tab-content pt-2">
 
 
-
-
-                                                                    <!-- Modal eliminar fila 1 -->
-                                                                    <button onclick="eliminarVeterinario()"
-                                                                        type="button" class="btn btn-danger"><i
-                                                                            class="bi bi-trash3"></i></button>
-                                                                </div>
-                                                            </td>
-
-                                                        </tr>
-                                                        <tr>
-                                                            <th scope="row">12234509</th>
-                                                            <td>Aura María</td>
-                                                            <td>Silva</td>
-                                                            <td>Traumatología</td>
-                                                            <td>3103321189</td>
-                                                            <td>auraSilva@gmail.com</td>
-                                                            <td>Cra 7</td>
-                                                            <td>I</td>
-                                                            <td>
-
-                                                                <div style="display: flex; gap: 4px;">
-                                                                    <button type="button" class="btn btn-success"
-                                                                        data-bs-toggle="modal"
-                                                                        data-bs-target="#staticBackdrop">
-                                                                        <i class="bi bi-pencil-square"></i>
-                                                                    </button>
-                                                                    <button type="button" class="btn btn-danger">
-                                                                        <i class="bi bi-trash3"></i>
-                                                                    </button>
-                                                                </div>
-
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th scope="row">55467908</th>
-                                                            <td>María C.</td>
-                                                            <td>Gutiérrez</td>
-                                                            <td>Odontología</td>
-                                                            <td>3144378402</td>
-                                                            <td>mariagut@gmail.com</td>
-                                                            <td>Cra 2 # 20-82</td>
-                                                            <td>A</td>
-                                                            <td>
-                                                                <div style="display: flex; gap: 4px;">
-                                                                    <button type="button" class="btn btn-success"
-                                                                        data-bs-toggle="modal"
-                                                                        data-bs-target="#staticBackdrop">
-                                                                        <i class="bi bi-pencil-square"></i>
-                                                                    </button>
-                                                                    <button type="button" class="btn btn-danger">
-                                                                        <i class="bi bi-trash3"></i>
-                                                                    </button>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                                <!-- End Table with stripped rows -->
-                                            </div>
-
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div><!-- End Bordered Tabs -->
+                <div class="tab-pane fade show active profile-overview" id="profile-overview">
+                  <!-- Informacion -->
+                  <div class="container">
+                    <br>
+                    <div class="row">
+                      <br>
+                      <br>
+                      <br>
+                      <h6><strong>Siempre estaremos disponibles para brindarte un gran
+                          servicio</strong></h6>
+                      <br>
+                      <div class="col-md-6 ">
+                        <div class="card row hover-effect" style="width: 28rem;">
+                          <div class="card-body" style="background-color:#D9D9D9;">
+                            <p class="card-text">
+                              <br><br>Ofrecemos atención veterinaria las 24/7, con un
+                              equipo altamente capacitado y apasionado por los
+                              animales. Tenemos
+                              experiencia en diversas especialidades y creemos en la
+                              atención personalizada
+                              para cada mascota, garantizando nuestra disponibilidad
+                              en tus momentos de necesidad.
+                            </p>
+                            <br>
+                          </div>
                         </div>
+                      </div>
+                      <div class="col-md-6 ">
+                        <div>
+                          <div class="list-group list-group-flush">
+                            <div class="list-group-item hover-item row hover-effect justify-content-center"
+                              style="background-color:#D9D9D9; margin-bottom: 18px; width: 445px; height: 67px;">
+                              <i class="bi bi-geo-alt-fill" style="font-size: 2rem;"></i>
+                              Dirección: Calle 49B # 68-18 Neiva-Huila, Colombia
+                              <br>
+                            </div>
+                            <div class="list-group-item hover-item row hover-effect justify-content-center"
+                              style="background-color:#D9D9D9; margin-bottom: 18px; width: 445px; height: 67px;">
+                              <i class="bi bi-phone-fill" style="font-size: 2rem;"></i>
+                              Línea de atención celular: (+57) 311 291 9198
+                            </div>
+                            <div class="list-group-item hover-item row hover-effect justify-content-center"
+                              style="background-color:#D9D9D9; margin-bottom: 18px; width: 445px; height: 67px;">
+                              <i class="bi bi-telephone-fill" style="font-size: 2rem;"></i>
+                              Línea de atención telefónica: (604) 322 3785
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-10"></div>
+                        <div class="col-2">
+                          <button type="button" class="btn btn-success btn-outline-dark justify-content-end"
+                            data-bs-toggle="modal" data-bs-target="#editarModal"
+                            style="background-color: #D9D9D9; color: black;"><i class="bi bi-pencil-square"></i>
+                            Editar</button>
+
+                        </div>
+                      </div>
                     </div>
+                  </div>
+                  <!-- Agrega este código al final de tu HTML, fuera del contenedor existente -->
+                  <div class="modal fade" id="editarModal" tabindex="-1" aria-labelledby="editarModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                      <!-- Usa modal-lg para un modal más grande -->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="editarModalLabel">Editar Información
+                          </h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="container">
+                            <div class="row">
+                              <div class="col-md-7">
+                                <div class="card" style="width: 28rem;">
+                                  <div class="card-body" style="background-color:#D9D9D9;">
+                                    <p class="card-text" contenteditable="true" width="50" height="50">
+                                      <!-- Contenido editable, se mostrará en el textarea del modal -->
+                                      Siempre estaremos disponibles para brindarte
+                                      un gran servicio. Ofrecemos atención
+                                      veterinaria las 24/7, con un equipo
+                                      altamente capacitado y apasionado por los
+                                      animales. Tenemos experiencia en diversas
+                                      especialidades y creemos en la atención
+                                      personalizada para cada mascota,
+                                      garantizando nuestra disponibilidad en tus
+                                      momentos de necesidad.
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div style="width: 28rem;" style="margin-bottom: 10px">
+                                  <ul class="list-group list-group-flush">
+                                    <li class="list-group-item" style="background-color:#D9D9D9; margin-bottom: 18px; ">
+                                      <img src="assets/img/img1.png" alt="Imagen 3" class="img-thumbnail" width="50"
+                                        height="50">
+                                      Dirección: Calle 49B # 68-18 Neiva-Huila,
+                                      Colombia
+                                      <br>
+                                    </li>
+                                    <li class="list-group-item" style="background-color:#D9D9D9; margin-bottom: 18px;">
+                                      <img src="assets/img/cel 1.png" alt="Imagen 3" class="img-thumbnail" width="50"
+                                        height="50">
+                                      Línea de atención celular: (+57) 311 291
+                                      9198
+                                    </li>
+                                    <li class="list-group-item" style="background-color:#D9D9D9; margin-bottom: 18px;">
+                                      <img src="assets/img/tel 1.png" alt="Imagen 3" class="img-thumbnail" width="50"
+                                        height="50">
+                                      <text name="" id="" cols="30" rows="10"></text>Línea
+                                      de atención telefónica: (604) 322 3785
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                          <button type="button" class="btn principal" onclick="guardarCambios()">Guardar
+                            Cambios</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
                 </div>
 
-        </section>
-        <!--Fin ver veterinarios-->
+                <!--Fin información-->
 
-    </main><!-- End #main -->
+                <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
+                  <!--Ver veterinarios-->
 
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-            class="bi bi-arrow-up-short"></i></a>
-    <script>
-        function guardarCambios() {
-            // Obtiene el texto editado del textarea dentro del modal
-            var nuevoTexto = document.querySelector('#editarModal .card-body p.card-text').innerText;
+                  <div class="container-fluid mt-3">
+                    <p class="textoNe">Veterinarios</p>
+                  </div>
 
-            // Actualiza el contenido donde desees con el nuevo texto
-            // En este ejemplo, lo estamos actualizando en el primer párrafo dentro del primer card-body
-            document.querySelector('.card-body p.card-text').innerText = nuevoTexto;
-
-            // Cierra el modal
-            $('#editarModal').modal('hide');
-        }
-    </script>
+                  <div class="container-fluid">
 
 
+                    <div class="table-responsive">
+                      <div class="card-body">
+                        <h5 class="card-title">Listado de veterinarios</h5>
+
+                        <div class="row">
+                          <div class="col-lg-6 col-md-12">
+                            <form class="search-form d-flex align-items-center pb-3" method="POST" action="#">
+                              <input type="text" name="query" placeholder="Buscar" title="Enter search keyword">
+
+                              <button id="buscar" type="button" class="btn"><i class="bi bi-search"></i></button>
+                              <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                                data-bs-target="#agregarProv"><i class="bi bi-person-plus-fill"></i></button>
+
+                              <!-- Modal agregar veterinario-->
+                              <div class="modal fade" id="agregarProv" data-bs-backdrop="static"
+                                data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                  <div class="modal-content">
+                                    <div class="modal-header" style="background: #5DADE2;">
+                                      <h1 class="modal-title fs-5" id="staticBackdropLabel" style="color: #000;">
+                                        Agregar
+                                        Veterinario</h1>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                      <div class="row my-2">
+                                        <div class="col-6">
+                                          <label class="form-label">Documento:</label>
+                                          <input class="form-control" type="text" name="txtId" id="txtId">
+                                        </div>
+                                        <div class="col-6">
+                                          <label class="form-label">Nombre:</label>
+                                          <input class="form-control" type="text" name="txtNombre" id="txtNombre">
+                                        </div>
+                                      </div>
+                                      <div class="row my-2">
+                                        <div class="col-6">
+                                          <label class="form-label">Apellido:</label>
+                                          <input class="form-control" type="text" name="txtApellido" id="txtApellido">
+                                        </div>
+                                        <div class="col-6">
+                                          <label class="form-label">Especialidad:</label>
+                                          <select class="form-select">
+                                            <option>General</option>
+                                            <option>Odontología</option>
+                                            <option>Traumatología
+                                            </option>
+                                          </select>
+                                        </div>
+                                      </div>
+                                      <div class="row my-2">
+                                        <div class="col-6">
+                                          <label class="form-label">Teléfono:</label>
+                                          <input class="form-control" type="text" name="txtTeléfono" id="txtTeléfono">
+                                        </div>
+                                        <div class="col-6">
+                                          <label class="form-label">Email:</label>
+                                          <input class="form-control" type="email" name="txtEmail" id="txtEmail">
+                                        </div>
+
+                                      </div>
+                                      <div class="row my-2">
+                                        <div class="col-6">
+                                          <label class="form-label">Dirección:</label>
+                                          <input class="form-control" type="text" name="txtDirección" id="txtDireccion">
+                                        </div>
+                                        <div class="col-6">
+                                          <label class="form-label">Estado:</label>
+                                          <br>
+                                          <!--Activo-->
+                                          <select class="form-select">
+                                            <option>Activo</option>
+                                            <option>Inactivo</option>
+                                          </select>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="modal-footer" style="background: #5DADE2;">
+                                      <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Cancelar</button>
+                                      <button type="button" class="btn btn-success">Agregar</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                            </form>
+                          </div>
+                        </div>
+
+                        <!-- Inicio Tabla -->
+                        <table class="table table-striped table-hover text-start">
+                          <thead>
+                            <tr class="table-secondary">
+                              <th scope="col">Documento</th>
+                              <th scope="col">Nombre</th>
+                              <th scope="col">Apellido</th>
+                              <th scope="col">Especialidad</th>
+                              <th scope="col">Télefono</th>
+                              <th scope="col">Email</th>
+                              <th scope="col">Dirección</th>
+                              <th scope="col">Estado</th>
+                              <th scope="col">Opciones</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row">1078678967</th>
+                              <td>Brandon</td>
+                              <td>Murcia</td>
+                              <td>General</td>
+                              <td>3228682012</td>
+                              <td>brandon@gmail.com</td>
+                              <td>Centro</td>
+                              <td>A</td>
+                              <td>
+                                <div style="display: flex; gap: 4px;">
+                                  <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop"><i class="bi bi-pencil-square"></i></button>
+
+                                  <!-- Modal editar fila 1-->
+                                  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                    data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog">
+                                      <div class="modal-content">
+                                        <div class="modal-header" style="background: #5DADE2;">
+                                          <h1 class="modal-title fs-5" id="staticBackdropLabel" style="color: white;">
+                                            Modificar
+                                            Veterinario</h1>
+                                          <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                          <div class="row my-2">
+                                            <div class="col-6">
+                                              <label class="form-label">Documento:</label>
+                                              <input class="form-control" type="text" name="txtId" id="txtId">
+                                            </div>
+                                            <div class="col-6">
+                                              <label class="form-label">Nombre:</label>
+                                              <input class="form-control" type="text" name="txtNombre" id="txtNombre">
+                                            </div>
+                                          </div>
+                                          <div class="row my-2">
+                                            <div class="col-6">
+                                              <label class="form-label">Apellido:</label>
+                                              <input class="form-control" type="text" name="txtApellido"
+                                                id="txtApellido">
+                                            </div>
+                                            <div class="col-6">
+                                              <label class="form-label">Especialidad:</label>
+                                              <select class="form-select">
+                                                <option>General</option>
+                                                <option>Odontología
+                                                </option>
+                                                <option>Traumatología
+                                                </option>
+                                              </select>
+                                            </div>
+                                          </div>
+                                          <div class="row my-2">
+                                            <div class="col-6">
+                                              <label class="form-label">Teléfono:</label>
+                                              <input class="form-control" type="text" name="txtTeléfono"
+                                                id="txtTeléfono">
+                                            </div>
+                                            <div class="col-6">
+                                              <label class="form-label">Email:</label>
+                                              <input class="form-control" type="email" name="txtEmail" id="txtEmail">
+                                            </div>
+
+                                          </div>
+                                          <div class="row my-2">
+                                            <div class="col-6">
+                                              <label class="form-label">Dirección:</label>
+                                              <input class="form-control" type="text" name="txtDirección"
+                                                id="txtDireccion">
+                                            </div>
+                                            <div class="col-6">
+                                              <label class="form-label">Estado:</label>
+                                              <select class="form-select">
+                                                <option>Activo</option>
+                                                <option>Inactivo
+                                                </option>
+
+                                              </select>
+                                              <br>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="modal-footer" style="background: #5DADE2;">
+                                          <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Cancelar</button>
+                                          <button type="button" class="btn btn-success">Modificar</button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
 
 
-    <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/chart.js/chart.umd.js"></script>
-    <script src="assets/vendor/echarts/echarts.min.js"></script>
-    <script src="assets/vendor/quill/quill.min.js"></script>
-    <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
-    <script src="assets/vendor/tinymce/tinymce.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
 
-    <!-- Template Main JS File -->
-    <script src="assets/js/main.js"></script>
+
+                                  <!-- Modal eliminar fila 1 -->
+                                  <button onclick="eliminarVeterinario()" type="button" class="btn btn-danger"><i
+                                      class="bi bi-trash3"></i></button>
+                                </div>
+                              </td>
+
+                            </tr>
+                            <tr>
+                              <th scope="row">12234509</th>
+                              <td>Aura María</td>
+                              <td>Silva</td>
+                              <td>Traumatología</td>
+                              <td>3103321189</td>
+                              <td>auraSilva@gmail.com</td>
+                              <td>Cra 7</td>
+                              <td>I</td>
+                              <td>
+
+                                <div style="display: flex; gap: 4px;">
+                                  <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop">
+                                    <i class="bi bi-pencil-square"></i>
+                                  </button>
+                                  <button type="button" class="btn btn-danger">
+                                    <i class="bi bi-trash3"></i>
+                                  </button>
+                                </div>
+
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">55467908</th>
+                              <td>María C.</td>
+                              <td>Gutiérrez</td>
+                              <td>Odontología</td>
+                              <td>3144378402</td>
+                              <td>mariagut@gmail.com</td>
+                              <td>Cra 2 # 20-82</td>
+                              <td>A</td>
+                              <td>
+                                <div style="display: flex; gap: 4px;">
+                                  <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop">
+                                    <i class="bi bi-pencil-square"></i>
+                                  </button>
+                                  <button type="button" class="btn btn-danger">
+                                    <i class="bi bi-trash3"></i>
+                                  </button>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <!-- End Table with stripped rows -->
+                      </div>
+
+                    </div>
+                  </div>
+
+                </div>
+              </div><!-- End Bordered Tabs -->
+            </div>
+          </div>
+        </div>
+
+    </section>
+    <!--Fin ver veterinarios-->
+
+  </main><!-- End #main -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+  <script>
+    function guardarCambios() {
+      // Obtiene el texto editado del textarea dentro del modal
+      var nuevoTexto = document.querySelector('#editarModal .card-body p.card-text').innerText;
+
+      // Actualiza el contenido donde desees con el nuevo texto
+      // En este ejemplo, lo estamos actualizando en el primer párrafo dentro del primer card-body
+      document.querySelector('.card-body p.card-text').innerText = nuevoTexto;
+
+      // Cierra el modal
+      $('#editarModal').modal('hide');
+    }
+  </script>
+
+
+
+
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/quill/quill.min.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
 
 </body>
 
