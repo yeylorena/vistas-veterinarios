@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Admin/Gestión productos_servicios</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!--SweetAlert-->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <!-- Favicons -->
+  <link href="../img/productos_servicios/logo.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
+
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: NiceAdmin
+  * Updated: Sep 18 2023 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logoGesVet.png">
+        <span class="d-none d-lg-block">GesVet</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+
+    <div class="search-bar">
+      <form class="search-form d-flex align-items-center" method="POST" action="#">
+        <input type="text" name="query" placeholder="Buscar" title="Enter search keyword">
+        <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+      </form>
+    </div><!-- End Search Bar -->
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+
+        <li class="nav-item d-block d-lg-none">
+          <a class="nav-link nav-icon search-bar-toggle " href="#">
+            <i class="bi bi-search"></i>
+          </a>
+        </li><!-- End Search Icon-->
+        <a class="nav-link nav-icon" href="manual-de-usuario.pdf" download="manual-de-usuario.pdf">
+          <i class="bi bi-journal-bookmark-fill"></i>
+          <span class="badge bg-primary badge-number"></span>
+        </a>
+
+        <li class="nav-item dropdown">
+
+          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+            <i class="bi bi-bell"></i>
+            <span class="badge bg-primary badge-number">4</span>
+          </a><!-- End Notification Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
+            <li class="dropdown-header">
+              You have 4 new notifications
+              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-exclamation-circle text-warning"></i>
+              <div>
+                <h4>Lorem Ipsum</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>30 min. ago</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-x-circle text-danger"></i>
+              <div>
+                <h4>Atque rerum nesciunt</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>1 hr. ago</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-check-circle text-success"></i>
+              <div>
+                <h4>Sit rerum fuga</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>2 hrs. ago</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-info-circle text-primary"></i>
+              <div>
+                <h4>Dicta reprehenderit</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>4 hrs. ago</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li class="dropdown-footer">
+              <a href="#">Show all notifications</a>
+            </li>
+
+          </ul><!-- End Notification Dropdown Items -->
+
+        </li><!-- End Notification Nav -->
+
+        <li class="nav-item dropdown">
+
+          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+            <i class="bi bi-chat-left-text"></i>
+            <span class="badge bg-success badge-number">3</span>
+          </a><!-- End Messages Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
+            <li class="dropdown-header">
+              You have 3 new messages
+              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="message-item">
+              <a href="#">
+                <img src="assets/img/messages-1.jpg" alt="" class="rounded-circle">
+                <div>
+                  <h4>Maria Hudson</h4>
+                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut.</p>
+                  <p>4 hrs. ago</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="message-item">
+              <a href="#">
+                <img src="assets/img/messages-2.jpg" alt="" class="rounded-circle">
+                <div>
+                  <h4>Anna Nelson</h4>
+                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
+                  <p>6 hrs. ago</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="message-item">
+              <a href="#">
+                <img src="assets/img/messages-3.jpg" alt="" class="rounded-circle">
+                <div>
+                  <h4>David Muldon</h4>
+                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
+                  <p>8 hrs. ago</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="dropdown-footer">
+              <a href="#">Show all messages</a>
+            </li>
+
+          </ul><!-- End Messages Dropdown Items -->
+
+        </li><!-- End Messages Nav -->
+
+        <li class="nav-item dropdown pe-3">
+
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <img src="./img/image 20.png" alt="Profile" class="rounded-circle">
+            <span class="d-none d-md-block dropdown-toggle ps-2">Herley Puentes</span>
+          </a><!-- End Profile Iamge Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              <h6>Herley Puentes</h6>
+              <span>Administrador</span>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="perfil_vet.html">
+                <i class="bi bi-person"></i>
+                <span>Mi perfil</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="perfil_vet.html">
+                <i class="bi bi-gear"></i>
+                <span>Configuracion de la Cuenta</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <i class="bi bi-question-circle"></i>
+                <span>Nesecitas ayuda?</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="index.html">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Salir</span>
+              </a>
+            </li>
+
+          </ul><!-- End Profile Dropdown Items -->
+        </li><!-- End Profile Nav -->
+
+      </ul>
+    </nav><!-- End Icons Navigation -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="inicio_vet.html">
+          <i class="bi bi-house"></i>
+          <span>Inicio</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="perfil_vet.html" .html>
+          <i class="bi bi-person"></i>
+          <span>Perfil</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="clientes.html">
+          <i class="bi bi-people"></i>
+          <span>Clientes</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="citas_vet.html">
+          <i class="bi bi-calendar-event"></i>
+          <span>Gestión citas</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="Gestion_Productos_Servicios.html">
+          <i class="bi bi-box2-heart"></i>
+          <span>Gestión productos_servicios</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="Gestion_Compras.html">
+          <i class="bi bi-bag-plus"></i>
+          <span>Gestión compras</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="Gestion_Ventas.html">
+          <i class="bi bi-bag-plus"></i>
+          <span>Gestión ventas</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="Raza_Especie.html">
+          <i class="bi bi-calendar-plus-fill"></i>
+          <span>Gestión Raza_Especie</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="gestionveterinaria.html">
+          <i class="bi bi-briefcase"></i>
+          <span>Gestión veterinaria</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="ayuda.html">
+          <i class="bi bi-question-circle"></i>
+          <span>Ayuda y soporte</span>
+        </a>
+      </li>
+      <!-- End Profile Page Nav -->
+
+    </ul>
+  </aside><!-- End Sidebar-->
+
+  <main id="main" class="main" style="background-color: #5c5db4;">
+
+    <div class="pagetitle">
+      <h1>Gestión Raza_Especie</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="inicio_vet.html">Inicio</a></li>
+          <li class="breadcrumb-item">Gestión Razas</li>
+          <li class="breadcrumb-item active">Gestión especie</li>
+          
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+
+    <section class="section profile">
+      <div class="col-xl-12">
+
+        <div class="card">
+          <div class="card-body pt-3">
+            <!-- Bordered Tabs -->
+            <ul class="nav nav-tabs nav-tabs-bordered">
+
+              <li class="nav-item">
+                <button class="nav-link active" data-bs-toggle="tab"
+                  data-bs-target="#profile-overview">Raza</button>
+              </li>
+
+              <li class="nav-item">
+                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#especies">Especie
+                </button>
+              </li>
+
+            </ul>
+            <div class="tab-content pt-2">
+
+
+              <!--Razas-->
+              <div class="tab-pane fade show active profile-overview" id="profile-overview">
+
+                <div class="container-fluid mt-3">
+                  <p class="textoNeon">Raza</p>
+                </div>
+
+                <div class="container-fluid">
+                  <div>
+
+                    <div class="table-responsive">
+                      <div class="card-body">
+
+                        <div class="row">
+                          <div class="col-lg-6 col-md-12">
+                            <form class="search-form d-flex align-items-center pb-1" method="POST" action="#">
+                              <input type="text" name="query" placeholder="Buscar" title="Enter search keyword">
+
+                              <button id="buscar" type="button" class="btn"><i class="bi bi-search"></i></button>
+                              <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                                data-bs-target="#agregarCat"><i class="bi bi-building-add"></i></button>
+
+                              <!-- Modal agregar categoría-->
+                              <div class="modal fade" id="agregarCat" data-bs-backdrop="static" data-bs-keyboard="false"
+                                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                  <div class="modal-content">
+                                    <div class="modal-header" style="background: #5c5db4;">
+                                      <h1 class="modal-title fs-5" id="staticBackdropLabel" style="color: white;">
+                                        Agregar
+                                        raza</h1>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                      <div class="row my-2">
+                                        <div class="col-6">
+                                          <label class="form-label">Código:</label>
+                                          <input class="form-control" type="text" name="txtCodigo" id="txtCodigo">
+                                        </div>
+                                        <div class="col-6">
+                                            <label class="form-label">Nombre:</label>
+                                            <input class="form-control" type="text" name="txtNombre" id="txtNombre">
+                                          </div>
+                                    
+                                      </div>
+                                      <div class="row my-2">
+                                        <div class="">
+                                          <label class="form-label">Descripción:</label>
+                                          <input class="form-control" type="text" name="txtDescripcion"
+                                            id="txtDescripcion">
+                                        </div>
+                                      </div>
+                                      <div class="row my-2">
+                                        <div class="col-6">
+                                          <label class="form-label">Estado:</label>
+                                          <br>
+                                          <!--Activo-->
+                                          <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="radA" id="radA"
+                                              value="M">
+                                            <label class="form-check-label">Activo</label>
+                                          </div>
+                                          <!--Inactivo-->
+                                          <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="radI" id="radI"
+                                              value="F">
+                                            <label class="form-check-label">Inactivo</label>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="modal-footer" style="background: #5c5db4;">
+                                      <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Cancelar</button>
+                                      <button type="button" class="btn btn-success">Agregar</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                            </form>
+                          </div>
+                        </div>
+
+                        <!-- Inicio Tabla -->
+                        <table class="table table-striped table-hover text-start">
+                          <thead>
+                            <tr class="table-secondary">
+                              <th scope="col">Código</th>
+                              <th scope="col">Nombre</th>
+                              <th scope="col">Descripción</th>
+                              <th scope="col">Estado</th>
+                              <th scope="col">Opciones</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row">RAZ01</th>
+                              <td>Bulldog</td>
+                              <td>Raza del perro.....</td>
+                              <td>A</td>
+                              <td>
+                                <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                                  data-bs-target="#modCat"><i class="bi bi-pencil-square"></i></button>
+
+                                <!-- Modal editar raza-->
+                                <div class="modal fade" id="modCat" data-bs-backdrop="static" data-bs-keyboard="false"
+                                  tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                  <div class="modal-dialog">
+                                    <div class="modal-content">
+                                      <div class="modal-header" style="background: #5c5db4;">
+                                        <h1 class="modal-title fs-5" id="staticBackdropLabel" style="color: white;">
+                                          Modificar
+                                          Raza</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                          aria-label="Close"></button>
+                                      </div>
+                                      <div class="modal-body">
+                                        <div class="row my-2">
+                                          <div class="col-6">
+                                            <label class="form-label">Código:</label>
+                                            <input class="form-control" type="text" name="txtCodigo" id="txtCodigo">
+                                          </div>
+                                          <div class="col-6">
+                                            <label class="form-label">Nombre:</label>
+                                            <input class="form-control" type="text" name="txtNombre" id="txtNombre">
+                                          </div>
+                                        </div>
+                                        <div class="row my-2">
+                                          <div class="">
+                                            <label class="form-label">Descripción:</label>
+                                            <input class="form-control" type="text" name="txtDescripcion"
+                                              id="txtDescripcion">
+                                          </div>
+                                        </div>
+                                        <div class="row my-2">
+                                          <div class="col-6">
+                                            <label class="form-label">Estado:</label>
+                                            <br>
+                                            <!--Activo-->
+                                            <div class="form-check form-check-inline">
+                                              <input class="form-check-input" type="radio" name="radA" id="radA"
+                                                value="M">
+                                              <label class="form-check-label">Activo</label>
+                                            </div>
+                                            <!--Inactivo-->
+                                            <div class="form-check form-check-inline">
+                                              <input class="form-check-input" type="radio" name="radI" id="radI"
+                                                value="F">
+                                              <label class="form-check-label">Inactivo</label>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="modal-footer" style="background: #5c5db4;">
+                                        <button type="button" class="btn btn-secondary"
+                                          data-bs-dismiss="modal">Cancelar</button>
+                                        <button type="button" class="btn btn-success">Modificar</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <!-- eliminar Raza-->
+                                <button onclick="eliminarRaza()" type="button" class="btn btn-danger"><i
+                                    class="bi bi-trash3"></i></button>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">RAZ02</th>
+                              <td>Labrador</td>
+                              <td>Raza perro</td>
+                              <td>A</td>
+                              <td>
+                                <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                                  data-bs-target="#modCat"><i class="bi bi-pencil-square"></i></button>
+                                <!-- eliminar raza -->
+                                <button onclick="eliminarRaza()" type="button" class="btn btn-danger"><i
+                                    class="bi bi-trash3"></i></button>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">RAZ03</th>
+                              <td>Americano</td>
+                              <td>Raza del gato</td>
+                              <td>A</td>
+                              <td>
+                                <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                                  data-bs-target="#modCat"><i class="bi bi-pencil-square"></i></button>
+                                <!-- eliminar raza -->
+                                <button onclick="eliminarRAza()" type="button" class="btn btn-danger"><i
+                                    class="bi bi-trash3"></i></button>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <!-- End Table with stripped rows -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <!--Especies-->
+              <div class="tab-pane fade pt-1" id="especies">
+
+                <div class="container-fluid mt-3">
+                  <p class="textoNeon">Especies</p>
+                </div>
+
+                <div class="container-fluid">
+                  <div>
+
+                    <div class="table-responsive">
+                      <div class="card-body">
+
+                        <div class="row">
+                          <div class="col-lg-6 col-md-12">
+                            <form class="search-form d-flex align-items-center pb-1" method="POST" action="#">
+                              <input type="text" name="query" placeholder="Buscar" title="Enter search keyword">
+
+                              <button id="buscar" type="button" class="btn"><i class="bi bi-search"></i></button>
+                              <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                                data-bs-target="#agregarProd"><i class="bi bi-plus-square"></i></button>
+
+                              <!-- Modal agregar especies-->
+                              <div class="modal fade" id="agregarProd" data-bs-backdrop="static"
+                                data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                  <div class="modal-content">
+                                    <div class="modal-header" style="background: #5c5db4;">
+                                      <h1 class="modal-title fs-5" id="staticBackdropLabel" style="color: white;">
+                                        Agregar
+                                        especie</h1>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                      <div class="row my-2">
+                                        <div class="col-6">
+                                          <label class="form-label">Código:</label>
+                                          <input class="form-control" type="text" name="txtCodigo" id="txtCodigo">
+                                        </div>
+                                        <div class="col-6">
+                                            <label class="form-label">Nombre:</label>
+                                            <input class="form-control" type="text" name="txtNombre" id="txtNombre">
+                                          </div>
+                                      </div>
+                                      <div class="row my-2">
+                                        <div class="">
+                                          <label class="form-label">Deescripción:</label>
+                                          <input class="form-control" type="text" name="txtPresentacion"
+                                            id="txtPresentacion">
+                                        </div>
+                                      </div>
+                                        <div class="col-6">
+                                          <label class="form-label">Estado:</label>
+                                          <br>
+                                          <!--Activo-->
+                                          <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="radA" id="radA"
+                                              value="M">
+                                            <label class="form-check-label">Activo</label>
+                                          </div>
+                                          <!--Inactivo-->
+                                          <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="radI" id="radI"
+                                              value="F">
+                                            <label class="form-check-label">Inactivo</label>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="modal-footer" style="background: #5c5db4;">
+                                      <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Cancelar</button>
+                                      <button type="button" class="btn btn-success">Agregar</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                            </form>
+                          </div>
+                        </div>
+
+                        <!-- Inicio Tabla -->
+                        <table class="table table-striped table-hover text-start mt-3">
+                          <thead>
+                            <tr class="table-secondary">
+                              <th scope="col">Código</th>
+                              <th scope="col">Nombre</th>
+                              <th scope="col">Deescripción</th>
+                              <th scope="col">Estado</th>
+                              <th scope="col">Opciones</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row">ES01</th>
+                              <td>Perro</td>
+                              <td>Animal perro</td>
+                              <td>A</td>
+
+                              <td>
+                                <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                                  data-bs-target="#modProd"><i class="bi bi-pencil-square"></i></button>
+
+                                <!-- Modal editar especie-->
+                                <div class="modal fade" id="modProd" data-bs-backdrop="static" data-bs-keyboard="false"
+                                  tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                  <div class="modal-dialog">
+                                    <div class="modal-content">
+                                      <div class="modal-header" style="background: #5c5db4;">
+                                        <h1 class="modal-title fs-5" id="staticBackdropLabel" style="color: white;">
+                                          Modificar
+                                          especie</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                          aria-label="Close"></button>
+                                      </div>
+                                      <div class="modal-body">
+                                        <div class="row my-2">
+                                          <div class="col-6">
+                                            <label class="form-label">Código:</label>
+                                            <input class="form-control" type="text" name="txtCodigo" id="txtCodigo">
+                                          </div>
+                                                                            <div class="col-6">
+                                            <label class="form-label">Nombre:</label>
+                                            <input class="form-control" type="text" name="txtNombre" id="txtNombre">
+                                          </div>
+                                        </div>
+                                        <div class="row my-2">
+                                          <div class="">
+                                            <label class="form-label">Deescripción:</label>
+                                            <input class="form-control" type="text" name="txtPresentacion"
+                                              id="txtPresentacion">
+                                          </div>
+                                        </div>
+                                        <div class="row my-2">
+                                          <div class="col-6">
+                                            <label class="form-label">Estado:</label>
+                                            <br>
+                                            <!--Activo-->
+                                            <div class="form-check form-check-inline">
+                                              <input class="form-check-input" type="radio" name="radA" id="radA"
+                                                value="M">
+                                              <label class="form-check-label">Activo</label>
+                                            </div>
+                                            <!--Inactivo-->
+                                            <div class="form-check form-check-inline">
+                                              <input class="form-check-input" type="radio" name="radI" id="radI"
+                                                value="F">
+                                              <label class="form-check-label">Inactivo</label>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="modal-footer" style="background: #5c5db4;">
+                                        <button type="button" class="btn btn-secondary"
+                                          data-bs-dismiss="modal">Cancelar</button>
+                                        <button type="button" class="btn btn-success">Modificar</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <!-- eliminar producto -->
+                                <button onclick="eliminarEspe()" type="button" class="btn btn-danger"><i
+                                    class="bi bi-trash3"></i></button>
+                              </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">ES02</th>
+                                <td>Ave</td>
+                                <td>Animal ave</td>
+                                <td>A</td>
+                              <td>
+                                <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                                  data-bs-target="#modProd"><i class="bi bi-pencil-square"></i></button>
+                                <!-- eliminar producto -->
+                                <button onclick="eliminarEspe()" type="button" class="btn btn-danger"><i
+                                    class="bi bi-trash3"></i></button>
+                              </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">ES03</th>
+                                <td>Gato</td>
+                                <td>Animal gato</td>
+                                <td>A</td>
+                              <td>
+                                <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                                  data-bs-target="#modProd"><i class="bi bi-pencil-square"></i></button>
+                                <!-- eliminar especie -->
+                                <button onclick="eliminarEspe()" type="button" class="btn btn-danger"><i
+                                    class="bi bi-trash3"></i></button>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <!-- End Table with stripped rows -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--fin-->
+    
+            </div><!-- End Bordered Tabs -->
+
+          </div>
+        </div>
+
+      </div>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/quill/quill.min.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
