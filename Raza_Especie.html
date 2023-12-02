@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Admin/Gestión_Compras</title>
+  <title>Admin/Gestión productos_servicios</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -329,6 +329,12 @@
         </a>
       </li>
       <li class="nav-item">
+        <a class="nav-link collapsed" href="Raza_Especie.html">
+          <i class="bi bi-calendar-plus-fill"></i>
+          <span>Gestión Raza_Especie</span>
+        </a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link collapsed" href="gestionveterinaria.html">
           <i class="bi bi-briefcase"></i>
           <span>Gestión veterinaria</span>
@@ -340,7 +346,6 @@
           <span>Ayuda y soporte</span>
         </a>
       </li>
-
       <!-- End Profile Page Nav -->
 
     </ul>
@@ -349,13 +354,13 @@
   <main id="main" class="main" style="background-color: #5c5db4;">
 
     <div class="pagetitle">
-      <h1>Gestion Compras</h1>
+      <h1>Gestión Raza_Especie</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="inicio_vet.html">Inicio</a></li>
-          <li class="breadcrumb-item">Gestión Compras</li>
-          <li class="breadcrumb-item active">Proveedores</li>
-          <li class="breadcrumb-item active">Facturas</li>
+          <li class="breadcrumb-item">Gestión Razas</li>
+          <li class="breadcrumb-item active">Gestión especie</li>
+          
         </ol>
       </nav>
     </div><!-- End Page Title -->
@@ -370,25 +375,28 @@
 
               <li class="nav-item">
                 <button class="nav-link active" data-bs-toggle="tab"
-                  data-bs-target="#profile-overview">Proveedores</button>
+                  data-bs-target="#profile-overview">Raza</button>
               </li>
 
               <li class="nav-item">
-                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#facturas">Facturas</button>
+                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#especies">Especie
+                </button>
               </li>
+
             </ul>
             <div class="tab-content pt-2">
 
 
-              <!--proveedores-->
+              <!--Razas-->
               <div class="tab-pane fade show active profile-overview" id="profile-overview">
 
-                <div class="container-fluid mt-2">
-                  <p class="textoNeon">Proveedores</p>
+                <div class="container-fluid mt-3">
+                  <p class="textoNeon">Raza</p>
                 </div>
 
                 <div class="container-fluid">
                   <div>
+
                     <div class="table-responsive">
                       <div class="card-body">
 
@@ -399,50 +407,37 @@
 
                               <button id="buscar" type="button" class="btn"><i class="bi bi-search"></i></button>
                               <button type="button" class="btn btn-success" data-bs-toggle="modal"
-                                data-bs-target="#agregarProv"><i class="bi bi-person-plus-fill"></i></button>
+                                data-bs-target="#agregarCat"><i class="bi bi-building-add"></i></button>
 
-                              <!-- Modal agregar proveedor-->
-                              <div class="modal fade" id="agregarProv" data-bs-backdrop="static"
-                                data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
-                                aria-hidden="true">
+                              <!-- Modal agregar categoría-->
+                              <div class="modal fade" id="agregarCat" data-bs-backdrop="static" data-bs-keyboard="false"
+                                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                                 <div class="modal-dialog">
                                   <div class="modal-content">
                                     <div class="modal-header" style="background: #5c5db4;">
                                       <h1 class="modal-title fs-5" id="staticBackdropLabel" style="color: white;">
                                         Agregar
-                                        proveedor</h1>
+                                        raza</h1>
                                       <button type="button" class="btn-close" data-bs-dismiss="modal"
                                         aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
                                       <div class="row my-2">
                                         <div class="col-6">
-                                          <label class="form-label">Documento:</label>
-                                          <input class="form-control" type="text" name="txtId" id="txtId">
+                                          <label class="form-label">Código:</label>
+                                          <input class="form-control" type="text" name="txtCodigo" id="txtCodigo">
                                         </div>
                                         <div class="col-6">
-                                          <label class="form-label">Nombre:</label>
-                                          <input class="form-control" type="text" name="txtNombre" id="txtNombre">
-                                        </div>
+                                            <label class="form-label">Nombre:</label>
+                                            <input class="form-control" type="text" name="txtNombre" id="txtNombre">
+                                          </div>
+                                    
                                       </div>
                                       <div class="row my-2">
-                                        <div class="col-6">
-                                          <label class="form-label">Apellido:</label>
-                                          <input class="form-control" type="text" name="txtApellido" id="txtApellido">
-                                        </div>
-                                        <div class="col-6">
-                                          <label class="form-label">Teléfono:</label>
-                                          <input class="form-control" type="text" name="txtTeléfono" id="txtTeléfono">
-                                        </div>
-                                      </div>
-                                      <div class="row my-2">
-                                        <div class="col-6">
-                                          <label class="form-label">Email:</label>
-                                          <input class="form-control" type="email" name="txtEmail" id="txtEmail">
-                                        </div>
-                                        <div class="col-6">
-                                          <label class="form-label">Dirección:</label>
-                                          <input class="form-control" type="text" name="txtDirección" id="txtDireccion">
+                                        <div class="">
+                                          <label class="form-label">Descripción:</label>
+                                          <input class="form-control" type="text" name="txtDescripcion"
+                                            id="txtDescripcion">
                                         </div>
                                       </div>
                                       <div class="row my-2">
@@ -453,14 +448,10 @@
                                           <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" name="radA" id="radA"
                                               value="M">
-                                            <input class="form-check-input" type="radio" name="radA" id="radA"
-                                              value="M">
                                             <label class="form-check-label">Activo</label>
                                           </div>
                                           <!--Inactivo-->
                                           <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="radI" id="radI"
-                                              value="F">
                                             <input class="form-check-input" type="radio" name="radI" id="radI"
                                               value="F">
                                             <label class="form-check-label">Inactivo</label>
@@ -485,47 +476,40 @@
                         <table class="table table-striped table-hover text-start">
                           <thead>
                             <tr class="table-secondary">
-                              <th scope="col">Documento</th>
+                              <th scope="col">Código</th>
                               <th scope="col">Nombre</th>
-                              <th scope="col">Apellido</th>
-                              <th scope="col">Télefono</th>
-                              <th scope="col">Email</th>
-                              <th scope="col">Dirección</th>
+                              <th scope="col">Descripción</th>
                               <th scope="col">Estado</th>
                               <th scope="col">Opciones</th>
                             </tr>
                           </thead>
                           <tbody>
                             <tr>
-                              <th scope="row">1</th>
-                              <td>Brandon</td>
-                              <td>Murcia</td>
-                              <td>3228682012</td>
-                              <td>brandon@gmail.com</td>
-                              <td>Centro</td>
+                              <th scope="row">RAZ01</th>
+                              <td>Bulldog</td>
+                              <td>Raza del perro.....</td>
                               <td>A</td>
                               <td>
                                 <button type="button" class="btn btn-success" data-bs-toggle="modal"
-                                  data-bs-target="#staticBackdrop"><i class="bi bi-pencil-square"></i></button>
+                                  data-bs-target="#modCat"><i class="bi bi-pencil-square"></i></button>
 
-                                <!-- Modal editar fila 1-->
-                                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
-                                  data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
-                                  aria-hidden="true">
+                                <!-- Modal editar raza-->
+                                <div class="modal fade" id="modCat" data-bs-backdrop="static" data-bs-keyboard="false"
+                                  tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                                   <div class="modal-dialog">
                                     <div class="modal-content">
                                       <div class="modal-header" style="background: #5c5db4;">
                                         <h1 class="modal-title fs-5" id="staticBackdropLabel" style="color: white;">
                                           Modificar
-                                          proveedor</h1>
+                                          Raza</h1>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                           aria-label="Close"></button>
                                       </div>
                                       <div class="modal-body">
                                         <div class="row my-2">
                                           <div class="col-6">
-                                            <label class="form-label">Documento:</label>
-                                            <input class="form-control" type="text" name="txtId" id="txtId">
+                                            <label class="form-label">Código:</label>
+                                            <input class="form-control" type="text" name="txtCodigo" id="txtCodigo">
                                           </div>
                                           <div class="col-6">
                                             <label class="form-label">Nombre:</label>
@@ -533,24 +517,10 @@
                                           </div>
                                         </div>
                                         <div class="row my-2">
-                                          <div class="col-6">
-                                            <label class="form-label">Apellido:</label>
-                                            <input class="form-control" type="text" name="txtApellido" id="txtApellido">
-                                          </div>
-                                          <div class="col-6">
-                                            <label class="form-label">Teléfono:</label>
-                                            <input class="form-control" type="text" name="txtTeléfono" id="txtTeléfono">
-                                          </div>
-                                        </div>
-                                        <div class="row my-2">
-                                          <div class="col-6">
-                                            <label class="form-label">Email:</label>
-                                            <input class="form-control" type="email" name="txtEmail" id="txtEmail">
-                                          </div>
-                                          <div class="col-6">
-                                            <label class="form-label">Dirección:</label>
-                                            <input class="form-control" type="text" name="txtDirección"
-                                              id="txtDireccion">
+                                          <div class="">
+                                            <label class="form-label">Descripción:</label>
+                                            <input class="form-control" type="text" name="txtDescripcion"
+                                              id="txtDescripcion">
                                           </div>
                                         </div>
                                         <div class="row my-2">
@@ -581,42 +551,35 @@
                                   </div>
                                 </div>
 
-                                <!-- Modal eliminar fila 1 -->
-                                <button onclick="eliminarProv()" type="button" class="btn btn-danger"><i
+                                <!-- eliminar Raza-->
+                                <button onclick="eliminarRaza()" type="button" class="btn btn-danger"><i
                                     class="bi bi-trash3"></i></button>
                               </td>
                             </tr>
                             <tr>
-                              <th scope="row">2</th>
-                              <td>Aura María</td>
-                              <td>Silva</td>
-                              <td>3103321189</td>
-                              <td>auraSilva@gmail.com</td>
-                              <td>Cra 7</td>
-                              <td>I</td>
+                              <th scope="row">RAZ02</th>
+                              <td>Labrador</td>
+                              <td>Raza perro</td>
+                              <td>A</td>
                               <td>
-
                                 <button type="button" class="btn btn-success" data-bs-toggle="modal"
-                                  data-bs-target="#staticBackdrop"><i class="bi bi-pencil-square"></i></button>
-
-
-                                <button type="button" class="btn btn-danger"><i class="bi bi-trash3"></i></button>
+                                  data-bs-target="#modCat"><i class="bi bi-pencil-square"></i></button>
+                                <!-- eliminar raza -->
+                                <button onclick="eliminarRaza()" type="button" class="btn btn-danger"><i
+                                    class="bi bi-trash3"></i></button>
                               </td>
                             </tr>
                             <tr>
-                              <th scope="row">3</th>
-                              <td>María C.</td>
-                              <td>Gutiérrez</td>
-                              <td>3144378402</td>
-                              <td>mariagut@gmail.com</td>
-                              <td>Cra 2 # 20-82</td>
+                              <th scope="row">RAZ03</th>
+                              <td>Americano</td>
+                              <td>Raza del gato</td>
                               <td>A</td>
                               <td>
-
                                 <button type="button" class="btn btn-success" data-bs-toggle="modal"
-                                  data-bs-target="#staticBackdrop"><i class="bi bi-pencil-square"></i></button>
-
-                                <button type="button" class="btn btn-danger"><i class="bi bi-trash3"></i></button>
+                                  data-bs-target="#modCat"><i class="bi bi-pencil-square"></i></button>
+                                <!-- eliminar raza -->
+                                <button onclick="eliminarRAza()" type="button" class="btn btn-danger"><i
+                                    class="bi bi-trash3"></i></button>
                               </td>
                             </tr>
                           </tbody>
@@ -629,11 +592,11 @@
               </div>
 
 
-              <!--Facturación-->
-              <div class="tab-pane fade pt-1" id="facturas">
+              <!--Especies-->
+              <div class="tab-pane fade pt-1" id="especies">
 
-                <div class="container-fluid mt-2">
-                  <p class="textoNeon">Facturas</p>
+                <div class="container-fluid mt-3">
+                  <p class="textoNeon">Especies</p>
                 </div>
 
                 <div class="container-fluid">
@@ -641,165 +604,146 @@
 
                     <div class="table-responsive">
                       <div class="card-body">
+
                         <div class="row">
                           <div class="col-lg-6 col-md-12">
-                            <form class="search-form d-flex align-items-center pb-3" method="POST" action="#">
+                            <form class="search-form d-flex align-items-center pb-1" method="POST" action="#">
                               <input type="text" name="query" placeholder="Buscar" title="Enter search keyword">
 
                               <button id="buscar" type="button" class="btn"><i class="bi bi-search"></i></button>
                               <button type="button" class="btn btn-success" data-bs-toggle="modal"
-                                data-bs-target="#agregarFact"><i class="bi bi-file-earmark-plus"></i></button>
+                                data-bs-target="#agregarProd"><i class="bi bi-plus-square"></i></button>
 
-                              <!-- Modal agregar factura-->
-                              <div class="modal fade" id="agregarFact" data-bs-backdrop="static"
+                              <!-- Modal agregar especies-->
+                              <div class="modal fade" id="agregarProd" data-bs-backdrop="static"
                                 data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
                                 aria-hidden="true">
                                 <div class="modal-dialog">
                                   <div class="modal-content">
                                     <div class="modal-header" style="background: #5c5db4;">
                                       <h1 class="modal-title fs-5" id="staticBackdropLabel" style="color: white;">
-                                        Registrar
-                                        Factura</h1>
+                                        Agregar
+                                        especie</h1>
                                       <button type="button" class="btn-close" data-bs-dismiss="modal"
                                         aria-label="Close"></button>
                                     </div>
-
-                                    <!--Inicio modal registrar-->
                                     <div class="modal-body">
                                       <div class="row my-2">
                                         <div class="col-6">
-                                          <label class="form-label">Cod. Compra:</label>
-                                          <input class="form-control" type="text" name="txtCodC" id="txtCodC">
+                                          <label class="form-label">Código:</label>
+                                          <input class="form-control" type="text" name="txtCodigo" id="txtCodigo">
                                         </div>
                                         <div class="col-6">
-                                          <label class="form-label">Fecha:</label>
-                                          <input class="form-control" type="date" name="txtFecha" id="txtFecha">
-                                        </div>
+                                            <label class="form-label">Nombre:</label>
+                                            <input class="form-control" type="text" name="txtNombre" id="txtNombre">
+                                          </div>
                                       </div>
                                       <div class="row my-2">
-                                        <div class="col-6">
-                                          <label class="form-label">Proveedor:</label>
-                                          <input class="form-control" type="text" name="txtProv" id="txtProv">
-                                        </div>
-                                        <div class="col-6">
-                                          <label class="form-label">Cod. Producto:</label>
-                                          <input class="form-control" type="text" name="txtCodP" id="txtCodP">
+                                        <div class="">
+                                          <label class="form-label">Deescripción:</label>
+                                          <input class="form-control" type="text" name="txtPresentacion"
+                                            id="txtPresentacion">
                                         </div>
                                       </div>
-                                      <div class="row my-2">
                                         <div class="col-6">
-                                          <label class="form-label">Producto:</label>
-                                          <input class="form-control" type="text" name="txtProducto" id="txtProducto">
-                                        </div>
-                                        <div class="col-6">
-                                          <label class="form-label">Cantidad:</label>
-                                          <input class="form-control" type="number" name="txtCantidad" id="txtCantidad">
-                                        </div>
-                                      </div>
-                                      <div class="row my-2">
-                                        <div class="col-6">
-                                          <label class="form-label">Precio:</label>
-                                          <input class="form-control" type="text" name="txtPrecio" id="txtPrecio">
-                                        </div>
-                                        <div class="col-6">
-                                          <label class="form-label">Último Precio:</label>
-                                          <input class="form-control" type="text" name="txtUltimoP" id="txtUltimoP">
+                                          <label class="form-label">Estado:</label>
+                                          <br>
+                                          <!--Activo-->
+                                          <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="radA" id="radA"
+                                              value="M">
+                                            <label class="form-check-label">Activo</label>
+                                          </div>
+                                          <!--Inactivo-->
+                                          <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="radI" id="radI"
+                                              value="F">
+                                            <label class="form-check-label">Inactivo</label>
+                                          </div>
                                         </div>
                                       </div>
                                     </div>
                                     <div class="modal-footer" style="background: #5c5db4;">
                                       <button type="button" class="btn btn-secondary"
                                         data-bs-dismiss="modal">Cancelar</button>
-                                      <button type="button" class="btn btn-success">Registrar</button>
+                                      <button type="button" class="btn btn-success">Agregar</button>
                                     </div>
                                   </div>
                                 </div>
                               </div>
+
                             </form>
                           </div>
                         </div>
 
-                        <!-- Inicio Tabla facturas-->
-                        <table class="table table-striped table-hover text-start">
+                        <!-- Inicio Tabla -->
+                        <table class="table table-striped table-hover text-start mt-3">
                           <thead>
                             <tr class="table-secondary">
-                              <th scope="col">Codigo</th>
-                              <th scope="col">Fecha</th>
-                              <th scope="col">Proveedor</th>
-                              <th scope="col">Cod. Pdto</th>
-                              <th scope="col">Producto</th>
-                              <th scope="col">Cantidad</th>
-                              <th scope="col">Precio</th>
-                              <th scope="col">Ultimo P.</th>
+                              <th scope="col">Código</th>
+                              <th scope="col">Nombre</th>
+                              <th scope="col">Deescripción</th>
+                              <th scope="col">Estado</th>
                               <th scope="col">Opciones</th>
                             </tr>
                           </thead>
                           <tbody>
                             <tr>
-                              <th scope="row">1</th>
-                              <td>2023-11-02</td>
-                              <td>Aura M. Silva</td>
-                              <td>PRD01</td>
-                              <td>Shampoo</td>
-                              <td>12</td>
-                              <td>8500</td>
-                              <td>8400</td>
+                              <th scope="row">ES01</th>
+                              <td>Perro</td>
+                              <td>Animal perro</td>
+                              <td>A</td>
+
                               <td>
                                 <button type="button" class="btn btn-success" data-bs-toggle="modal"
-                                  data-bs-target="#factura"><i class="bi bi-pencil-square"></i></button>
+                                  data-bs-target="#modProd"><i class="bi bi-pencil-square"></i></button>
 
-                                <!-- Modal editar factura-->
-                                <div class="modal fade" id="factura" data-bs-backdrop="static" data-bs-keyboard="false"
+                                <!-- Modal editar especie-->
+                                <div class="modal fade" id="modProd" data-bs-backdrop="static" data-bs-keyboard="false"
                                   tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                                   <div class="modal-dialog">
                                     <div class="modal-content">
                                       <div class="modal-header" style="background: #5c5db4;">
                                         <h1 class="modal-title fs-5" id="staticBackdropLabel" style="color: white;">
                                           Modificar
-                                          factura</h1>
+                                          especie</h1>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                           aria-label="Close"></button>
                                       </div>
                                       <div class="modal-body">
                                         <div class="row my-2">
                                           <div class="col-6">
-                                            <label class="form-label">Cod. Compra:</label>
-                                            <input class="form-control" type="text" name="txtCodC" id="txtCodC">
+                                            <label class="form-label">Código:</label>
+                                            <input class="form-control" type="text" name="txtCodigo" id="txtCodigo">
                                           </div>
-                                          <div class="col-6">
-                                            <label class="form-label">Fecha:</label>
-                                            <input class="form-control" type="date" name="txtFecha" id="txtFecha">
+                                                                            <div class="col-6">
+                                            <label class="form-label">Nombre:</label>
+                                            <input class="form-control" type="text" name="txtNombre" id="txtNombre">
+                                          </div>
+                                        </div>
+                                        <div class="row my-2">
+                                          <div class="">
+                                            <label class="form-label">Deescripción:</label>
+                                            <input class="form-control" type="text" name="txtPresentacion"
+                                              id="txtPresentacion">
                                           </div>
                                         </div>
                                         <div class="row my-2">
                                           <div class="col-6">
-                                            <label class="form-label">Proveedor:</label>
-                                            <input class="form-control" type="text" name="txtProv" id="txtProv">
-                                          </div>
-                                          <div class="col-6">
-                                            <label class="form-label">Cod. Producto:</label>
-                                            <input class="form-control" type="text" name="txtCodP" id="txtCodP">
-                                          </div>
-                                        </div>
-                                        <div class="row my-2">
-                                          <div class="col-6">
-                                            <label class="form-label">Producto:</label>
-                                            <input class="form-control" type="text" name="txtProducto" id="txtProducto">
-                                          </div>
-                                          <div class="col-6">
-                                            <label class="form-label">Cantidad:</label>
-                                            <input class="form-control" type="number" name="txtCantidad"
-                                              id="txtCantidad">
-                                          </div>
-                                        </div>
-                                        <div class="row my-2">
-                                          <div class="col-6">
-                                            <label class="form-label">Precio:</label>
-                                            <input class="form-control" type="text" name="txtPrecio" id="txtPrecio">
-                                          </div>
-                                          <div class="col-6">
-                                            <label class="form-label">Último Precio:</label>
-                                            <input class="form-control" type="text" name="txtUltimoP" id="txtUltimoP">
+                                            <label class="form-label">Estado:</label>
+                                            <br>
+                                            <!--Activo-->
+                                            <div class="form-check form-check-inline">
+                                              <input class="form-check-input" type="radio" name="radA" id="radA"
+                                                value="M">
+                                              <label class="form-check-label">Activo</label>
+                                            </div>
+                                            <!--Inactivo-->
+                                            <div class="form-check form-check-inline">
+                                              <input class="form-check-input" type="radio" name="radI" id="radI"
+                                                value="F">
+                                              <label class="form-check-label">Inactivo</label>
+                                            </div>
                                           </div>
                                         </div>
                                       </div>
@@ -811,178 +755,56 @@
                                     </div>
                                   </div>
                                 </div>
+
+                                <!-- eliminar producto -->
+                                <button onclick="eliminarEspe()" type="button" class="btn btn-danger"><i
+                                    class="bi bi-trash3"></i></button>
                               </td>
                             </tr>
-
                             <tr>
-                              <th scope="row">2</th>
-                              <td>2023-10-10</td>
-                              <td>Aura M. Silva</td>
-                              <td>PRD02</td>
-                              <td>Jabón</td>
-                              <td>12</td>
-                              <td>6800</td>
-                              <td>6800</td>
+                                <th scope="row">ES02</th>
+                                <td>Ave</td>
+                                <td>Animal ave</td>
+                                <td>A</td>
                               <td>
                                 <button type="button" class="btn btn-success" data-bs-toggle="modal"
-                                  data-bs-target="#factura"><i class="bi bi-pencil-square"></i></button>
-
-                                <!-- Modal editar factura-->
-                                <div class="modal fade" id="factura" data-bs-backdrop="static" data-bs-keyboard="false"
-                                  tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                  <div class="modal-dialog">
-                                    <div class="modal-content">
-                                      <div class="modal-header" style="background: #5c5db4;">
-                                        <h1 class="modal-title fs-5" id="staticBackdropLabel" style="color: white;">
-                                          Modificar
-                                          factura</h1>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                          aria-label="Close"></button>
-                                      </div>
-                                      <div class="modal-body">
-                                        <div class="row my-2">
-                                          <div class="col-6">
-                                            <label class="form-label">Cod. Compra:</label>
-                                            <input class="form-control" type="text" name="txtCodC" id="txtCodC">
-                                          </div>
-                                          <div class="col-6">
-                                            <label class="form-label">Fecha:</label>
-                                            <input class="form-control" type="date" name="txtFecha" id="txtFecha">
-                                          </div>
-                                        </div>
-                                        <div class="row my-2">
-                                          <div class="col-6">
-                                            <label class="form-label">Proveedor:</label>
-                                            <input class="form-control" type="text" name="txtProv" id="txtProv">
-                                          </div>
-                                          <div class="col-6">
-                                            <label class="form-label">Cod. Producto:</label>
-                                            <input class="form-control" type="text" name="txtCodP" id="txtCodP">
-                                          </div>
-                                        </div>
-                                        <div class="row my-2">
-                                          <div class="col-6">
-                                            <label class="form-label">Producto:</label>
-                                            <input class="form-control" type="text" name="txtProducto" id="txtProducto">
-                                          </div>
-                                          <div class="col-6">
-                                            <label class="form-label">Cantidad:</label>
-                                            <input class="form-control" type="number" name="txtCantidad"
-                                              id="txtCantidad">
-                                          </div>
-                                        </div>
-                                        <div class="row my-2">
-                                          <div class="col-6">
-                                            <label class="form-label">Precio:</label>
-                                            <input class="form-control" type="text" name="txtPrecio" id="txtPrecio">
-                                          </div>
-                                          <div class="col-6">
-                                            <label class="form-label">Último Precio:</label>
-                                            <input class="form-control" type="text" name="txtUltimoP" id="txtUltimoP">
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <div class="modal-footer" style="background: #5c5db4;">
-                                        <button type="button" class="btn btn-secondary"
-                                          data-bs-dismiss="modal">Cancelar</button>
-                                        <button type="button" class="btn btn-success">Modificar</button>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-
+                                  data-bs-target="#modProd"><i class="bi bi-pencil-square"></i></button>
+                                <!-- eliminar producto -->
+                                <button onclick="eliminarEspe()" type="button" class="btn btn-danger"><i
+                                    class="bi bi-trash3"></i></button>
                               </td>
                             </tr>
-
                             <tr>
-                              <th scope="row">3</th>
-                              <td>2023-10-02</td>
-                              <td>María C. Gutiérrez</td>
-                              <td>PRD03</td>
-                              <td>Dow Chow</td>
-                              <td>24</td>
-                              <td>20500</td>
-                              <td>20600</td>
+                                <th scope="row">ES03</th>
+                                <td>Gato</td>
+                                <td>Animal gato</td>
+                                <td>A</td>
                               <td>
                                 <button type="button" class="btn btn-success" data-bs-toggle="modal"
-                                  data-bs-target="#factura"><i class="bi bi-pencil-square"></i></button>
-
-                                <!-- Modal editar factura-->
-                                <div class="modal fade" id="factura" data-bs-backdrop="static" data-bs-keyboard="false"
-                                  tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                  <div class="modal-dialog">
-                                    <div class="modal-content">
-                                      <div class="modal-header" style="background: #5c5db4;">
-                                        <h1 class="modal-title fs-5" id="staticBackdropLabel" style="color: white;">
-                                          Modificar
-                                          factura</h1>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                          aria-label="Close"></button>
-                                      </div>
-                                      <div class="modal-body">
-                                        <div class="row my-2">
-                                          <div class="col-6">
-                                            <label class="form-label">Cod. Compra:</label>
-                                            <input class="form-control" type="text" name="txtCodC" id="txtCodC">
-                                          </div>
-                                          <div class="col-6">
-                                            <label class="form-label">Fecha:</label>
-                                            <input class="form-control" type="date" name="txtFecha" id="txtFecha">
-                                          </div>
-                                        </div>
-                                        <div class="row my-2">
-                                          <div class="col-6">
-                                            <label class="form-label">Proveedor:</label>
-                                            <input class="form-control" type="text" name="txtProv" id="txtProv">
-                                          </div>
-                                          <div class="col-6">
-                                            <label class="form-label">Cod. Producto:</label>
-                                            <input class="form-control" type="text" name="txtCodP" id="txtCodP">
-                                          </div>
-                                        </div>
-                                        <div class="row my-2">
-                                          <div class="col-6">
-                                            <label class="form-label">Producto:</label>
-                                            <input class="form-control" type="text" name="txtProducto" id="txtProducto">
-                                          </div>
-                                          <div class="col-6">
-                                            <label class="form-label">Cantidad:</label>
-                                            <input class="form-control" type="number" name="txtCantidad"
-                                              id="txtCantidad">
-                                          </div>
-                                        </div>
-                                        <div class="row my-2">
-                                          <div class="col-6">
-                                            <label class="form-label">Precio:</label>
-                                            <input class="form-control" type="text" name="txtPrecio" id="txtPrecio">
-                                          </div>
-                                          <div class="col-6">
-                                            <label class="form-label">Último Precio:</label>
-                                            <input class="form-control" type="text" name="txtUltimoP" id="txtUltimoP">
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <div class="modal-footer" style="background: #5c5db4;">
-                                        <button type="button" class="btn btn-secondary"
-                                          data-bs-dismiss="modal">Cancelar</button>
-                                        <button type="button" class="btn btn-success">Modificar</button>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-
+                                  data-bs-target="#modProd"><i class="bi bi-pencil-square"></i></button>
+                                <!-- eliminar especie -->
+                                <button onclick="eliminarEspe()" type="button" class="btn btn-danger"><i
+                                    class="bi bi-trash3"></i></button>
                               </td>
                             </tr>
                           </tbody>
                         </table>
+                        <!-- End Table with stripped rows -->
                       </div>
-                    </div><!-- End Bordered Tabs -->
-
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+
+              <!--fin-->
+    
+            </div><!-- End Bordered Tabs -->
+
           </div>
+        </div>
+
+      </div>
+      </div>
     </section>
 
   </main><!-- End #main -->

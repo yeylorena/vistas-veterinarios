@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Admin/Gestión_Ventas</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!--SweetAlert-->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <!-- Favicons -->
+  <link href="../img/productos_servicios/logo.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
+
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: NiceAdmin
+  * Updated: Sep 18 2023 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logoGesVet.png">
+        <span class="d-none d-lg-block">GesVet</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+
+    <div class="search-bar">
+      <form class="search-form d-flex align-items-center" method="POST" action="#">
+        <input type="text" name="query" placeholder="Buscar" title="Enter search keyword">
+        <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+      </form>
+    </div><!-- End Search Bar -->
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+
+        <li class="nav-item d-block d-lg-none">
+          <a class="nav-link nav-icon search-bar-toggle " href="#">
+            <i class="bi bi-search"></i>
+          </a>
+        </li><!-- End Search Icon-->
+
+        <li class="nav-item dropdown">
+
+          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+            <i class="bi bi-bell"></i>
+            <span class="badge bg-primary badge-number">4</span>
+          </a><!-- End Notification Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
+            <li class="dropdown-header">
+              You have 4 new notifications
+              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-exclamation-circle text-warning"></i>
+              <div>
+                <h4>Lorem Ipsum</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>30 min. ago</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-x-circle text-danger"></i>
+              <div>
+                <h4>Atque rerum nesciunt</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>1 hr. ago</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-check-circle text-success"></i>
+              <div>
+                <h4>Sit rerum fuga</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>2 hrs. ago</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-info-circle text-primary"></i>
+              <div>
+                <h4>Dicta reprehenderit</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>4 hrs. ago</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li class="dropdown-footer">
+              <a href="#">Show all notifications</a>
+            </li>
+
+          </ul><!-- End Notification Dropdown Items -->
+
+        </li><!-- End Notification Nav -->
+
+        <li class="nav-item dropdown">
+
+          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+            <i class="bi bi-chat-left-text"></i>
+            <span class="badge bg-success badge-number">3</span>
+          </a><!-- End Messages Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
+            <li class="dropdown-header">
+              You have 3 new messages
+              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="message-item">
+              <a href="#">
+                <img src="assets/img/messages-1.jpg" alt="" class="rounded-circle">
+                <div>
+                  <h4>Maria Hudson</h4>
+                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut.</p>
+                  <p>4 hrs. ago</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="message-item">
+              <a href="#">
+                <img src="assets/img/messages-2.jpg" alt="" class="rounded-circle">
+                <div>
+                  <h4>Anna Nelson</h4>
+                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
+                  <p>6 hrs. ago</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="message-item">
+              <a href="#">
+                <img src="assets/img/messages-3.jpg" alt="" class="rounded-circle">
+                <div>
+                  <h4>David Muldon</h4>
+                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
+                  <p>8 hrs. ago</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="dropdown-footer">
+              <a href="#">Show all messages</a>
+            </li>
+
+          </ul><!-- End Messages Dropdown Items -->
+
+        </li><!-- End Messages Nav -->
+
+        <li class="nav-item dropdown pe-3">
+
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <img src="./img/image 20.png" alt="Profile" class="rounded-circle">
+            <span class="d-none d-md-block dropdown-toggle ps-2">Herley Puentes</span>
+          </a><!-- End Profile Iamge Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              <h6>Herley Puentes</h6>
+              <span>Administrador</span>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="perfil_vet.html">
+                <i class="bi bi-person"></i>
+                <span>Mi perfil</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="perfil_vet.html">
+                <i class="bi bi-gear"></i>
+                <span>Configuracion de la Cuenta</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <i class="bi bi-question-circle"></i>
+                <span>Nesecitas ayuda?</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="index.html">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Salir</span>
+              </a>
+            </li>
+
+          </ul><!-- End Profile Dropdown Items -->
+        </li><!-- End Profile Nav -->
+
+      </ul>
+    </nav><!-- End Icons Navigation -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="inicio_vet.html">
+          <i class="bi bi-house"></i>
+          <span>Inicio</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="perfil_vet.html" .html>
+          <i class="bi bi-person"></i>
+          <span>Perfil</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="clientes.html">
+          <i class="bi bi-people"></i>
+          <span>Clientes</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="citas_vet.html">
+          <i class="bi bi-calendar-event"></i>
+          <span>Gestión citas</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="Gestion_Productos_Servicios.html">
+          <i class="bi bi-box2-heart"></i>
+          <span>Gestión productos_servicios</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="Gestion_Compras.html">
+          <i class="bi bi-bag-plus"></i>
+          <span>Gestión compras</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="Gestion_Ventas.html">
+          <i class="bi bi-bag-plus"></i>
+          <span>Gestión ventas</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="gestionveterinaria.html">
+          <i class="bi bi-briefcase"></i>
+          <span>Gestión veterinaria</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="ayuda.html">
+          <i class="bi bi-question-circle"></i>
+          <span>Ayuda y soporte</span>
+        </a>
+      </li>
+
+      <!-- End Profile Page Nav -->
+
+    </ul>
+  </aside><!-- End Sidebar-->
+
+  <main id="main" class="main" style="background-color: #5c5db4;">
+
+    <div class="pagetitle">
+      <h1>Gestion Ventas</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="inicio.html">Inicio</a></li>
+          <li class="breadcrumb-item">Gestión Ventas</li>
+          <li class="breadcrumb-item active">Registrar</li>
+          <li class="breadcrumb-item active">Listar Ventas</li>
+          <li class="breadcrumb-item active">Pedidos</li>
+          <li class="breadcrumb-item active">Listar Pedidos</li>
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+
+    <section class="section profile">
+      <div class="col-xl-12">
+
+        <div class="card">
+          <div class="card-body pt-3">
+            <!-- Bordered Tabs -->
+            <ul class="nav nav-tabs nav-tabs-bordered">
+
+              <li class="nav-item">
+                <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#profile-overview">Registrar
+                </button>
+              </li>
+              <li class="nav-item">
+                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#ventas">Listar Ventas</button>
+              </li>
+              <li class="nav-item">
+                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#pedidos">Pedidos</button>
+              </li>
+              <li class="nav-item">
+                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#historial">Historial</button>
+              </li>
+            </ul>
+            <div class="tab-content pt-2">
+
+
+              <!--Registrar venta-->
+              <div class="tab-pane fade show active profile-overview" id="profile-overview">
+
+                <div class="container-fluid mt-3">
+                  <p class="textoNeon">Registrar</p>
+                </div>
+
+                <div class="container-fluid">
+                  <div>
+
+                    <div class="row">
+                      <div class="col-lg-12 col-md-12">
+
+                        <div class="row my-2">
+                          <h5 class="mb-3">Datos del cliente</h5>
+                          <div class="col-4">
+                            <label class="form-label">Documento:</label>
+                            <input class="form-control" type="text" name="txtDoc" id="txtDoc">
+                          </div>
+                          <div class="col-4">
+                            <label class="form-label">Nombre:</label>
+                            <input class="form-control" type="text" name="txtNombre" id="txtNombre">
+                          </div>
+                          <div class="col-4">
+                            <label class="form-label">Apellido:</label>
+                            <input class="form-control" type="text" name="txtApellido" id="txtApellido">
+                          </div>
+                        </div>
+
+                        <div class="row my-2">
+                          <div class="col-4">
+                            <label class="form-label">Teléfono:</label>
+                            <input class="form-control" type="text" name="txtTeléfono" id="txtTeléfono">
+                          </div>
+                          <div class="col-4">
+                            <label class="form-label">Dirección:</label>
+                            <input class="form-control" type="text" name="txtDirección" id="txtDireccion">
+                          </div>
+                          <div class="col-4">
+                            <label class="form-label">Email:</label>
+                            <input class="form-control" type="email" name="txtEmail" id="txtEmail">
+                          </div>
+                        </div>
+
+                        <div class="row my-2">
+                          <h5 class="mt-3 pb-2">Datos del producto/servicio</h5>
+                          <div class="col-4">
+                            <label for="tipo"><strong>Categoría:</strong></label>
+                            <select class="form-select">
+                              <option>Seleccionar</option>
+                              <option>Alimentos </option>
+                              <option>Accesorior</option>
+                              <option>Vacunación</option>
+                              <option>Citas</option>
+                            </select>
+                          </div>
+                          <div class="col-4">
+                            <label class="form-label">Producto:</label>
+                            <input class="form-control" type="text" name="txtProducto" id="txtProducto">
+                          </div>
+                          <div class="col-4">
+                            <label class="form-label">Cantidad:</label>
+                            <input class="form-control" type="number" name="txtCantidad" id="txtCantidad">
+                          </div>
+                        </div>
+
+                        <div class="row my-2">
+                          <div class="col-4">
+                            <label class="form-label">Valor unitario:</label>
+                            <input class="form-control" type="text" name="txtPrecio" id="txtPrecio">
+                          </div>
+
+                        </div>
+
+                        <div class="row my-2">
+                          <div class="d-grid gap-2">
+                            <button class="mt-3 btn btn-success" type="button">Agregar más</button>
+                          </div>
+                        </div>
+                      </div>
+                      </form>
+                    </div>
+                  </div>
+
+                  <div class="container-fluid">
+                    <div class="table-responsive">
+
+                      <!-- Inicio Tabla -->
+                      <table class="table table-striped table-hover text-start">
+                        <thead>
+                          <tr class="table-secondary">
+                            <h5 class="text-center mb-4">Lista de productos/servicios</h5>
+                            <th scope="col">Código</th>
+                            <th scope="col">Producto</th>
+                            <th scope="col">Categoría</th>
+                            <th scope="col">Cantidad</th>
+                            <th scope="col">V/unitario</th>
+                            <th scope="col">V/total</th>
+                            <th scope="col">Opciones</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">SR01</th>
+                            <td>Parvovirosis</td>
+                            <td>Vacunación</td>
+                            <td>1</td>
+                            <td>40000</td>
+                            <td>40000</td>
+                            <td>
+                              <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop"><i class="bi bi-pencil-square"></i></button>
+
+                              <!-- Modal editar venta producto-->
+                              <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                  <div class="modal-content">
+                                    <div class="modal-header" style="background: #5c5db4;">
+                                      <h1 class="modal-title fs-5" id="staticBackdropLabel" style="color: white;">
+                                        Modificar producto o servicio</h1>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                      <div class="row my-2">
+                                        <div class="col-6">
+                                          <label class="form-label">Código:</label>
+                                          <input class="form-control" type="text" name="txtCod" id="txtCod">
+                                        </div>
+                                        <div class="col-6">
+                                          <label class="form-label">Producto:</label>
+                                          <input class="form-control" type="text" name="txtProducto" id="txtProducto">
+                                        </div>
+                                      </div>
+                                      <div class="row my-2">
+                                        <div class="col-6">
+                                          <label for="tipo"><strong>Categoría:</strong></label>
+                                          <select class="form-select">
+                                            <option>Seleccionar</option>
+                                            <option>Alimentos </option>
+                                            <option>Accesorior</option>
+                                            <option>Vacunación</option>
+                                            <option>Citas</option>
+                                          </select>
+                                        </div>
+                                        <div class="col-6">
+                                          <label class="form-label">Cantidad:</label>
+                                          <input class="form-control" type="number" name="txtCantidad" id="txtCantidad">
+                                        </div>
+                                      </div>
+                                      <div class="row my-2">
+                                        <div class="col-6">
+                                          <label class="form-label">V/Unitario:</label>
+                                          <input class="form-control" type="text" name="txtValorU" id="txtValorU">
+                                        </div>
+                                        <div class="col-6">
+                                          <label class="form-label">V/Total:</label>
+                                          <input class="form-control" type="text" name="txtTotal" id="txtTotal">
+                                        </div>
+                                      </div>
+
+                                    </div>
+                                    <div class="modal-footer" style="background: #5c5db4;">
+                                      <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Cancelar</button>
+                                      <button type="button" class="btn btn-success">Modificar</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <!-- Modal eliminar producto -->
+                              <button onclick="eliminarProd()" type="button" class="btn btn-danger"><i
+                                  class="bi bi-trash3"></i></button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">PR02</th>
+                            <td>Arena gatos</td>
+                            <td>Accesorios</td>
+                            <td>2</td>
+                            <td>25000</td>
+                            <td>50000</td>
+                            <td>
+                              <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop"><i class="bi bi-pencil-square"></i></button>
+                              <!-- Modal eliminar producto -->
+                              <button onclick="eliminarProd()" type="button" class="btn btn-danger"><i
+                                  class="bi bi-trash3"></i></button>
+                          </tr>
+                          <tr>
+                            <th scope="row">PR06</th>
+                            <td>Pelota goma</td>
+                            <td>Accesorios</td>
+                            <td>1</td>
+                            <td>8000</td>
+                            <td>8000</td>
+                            <td>
+                              <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop"><i class="bi bi-pencil-square"></i></button>
+                              <!-- Modal eliminar producto -->
+                              <button onclick="eliminarProd()" type="button" class="btn btn-danger"><i
+                                  class="bi bi-trash3"></i></button>
+                          </tr>
+
+                          <tr class="table-light">
+                            <th scope="row"></th>
+                            <td></td>
+                            <td>TOTAL</td>
+                            <td>4</td>
+                            <td>73000</td>
+                            <td>98000</td>
+                            <td></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <!-- End Table with stripped rows -->
+
+                    </div>
+                    <div class="row my-2">
+                      <h5 class="text-center mb-4">Confirmar venta</h5>
+                      <div class="col-3">
+                        <label class="form-label">Total:</label>
+                        <input class="form-control" type="text" name="txtTotalVenta" id="txtTotalVenta">
+                      </div>
+                      <div class="col-3">
+                        <label for="tipo"><strong>Servicio:</strong></label>
+                        <select class="form-select">
+                          <option>Seleccionar</option>
+                          <option>Presencial</option>
+                          <option>Domicilio</option>
+                        </select>
+                      </div>
+                      <div class="col-3">
+                        <label for="tipo"><strong>Pago:</strong></label>
+                        <select class="form-select">
+                          <option>Seleccionar</option>
+                          <option>Efectivo</option>
+                          <option>Tarjeta</option>
+                          <option>Nequi</option>
+                          <option>Daviplata</option>
+                        </select>
+                      </div>
+                      <div class="col-3">
+                        <div class="d-grid gap-2">
+                          <button class="mt-3 btn btn-success" type="button">Finalizar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <!--Listar ventas-->
+              <div class="tab-pane fade pt-2" id="ventas">
+
+                <div class="container-fluid mt-3">
+                  <p class="textoNeon">Historial Ventas</p>
+                </div>
+
+                <div class="container-fluid">
+                  <div class="div">
+                    <div class="table-responsive">
+                      <div class="card-body">
+
+                        <div class="row">
+                          <div class="col-lg-6 col-md-12">
+                            <form class="search-form d-flex align-items-center pb-3" method="POST" action="#">
+                              <input type="text" name="query" placeholder="Buscar" title="Enter search keyword">
+
+                              <button id="buscar" type="button" class="btn"><i class="bi bi-search"></i></button>
+
+
+                            </form>
+                          </div>
+                        </div>
+
+                        <!-- Inicio Tabla facturas-->
+                        <table class="table table-striped table-hover text-start">
+                          <thead>
+                            <tr class="table-secondary">
+                              <th scope="col">N° Fact.</th>
+                              <th scope="col">Fecha</th>
+                              <th scope="col">Cliente</th>
+                              <th scope="col">Valor</th>
+                              <th scope="col">Servicio</th>
+                              <th scope="col">Pago</th>
+                              <th scope="col">Opciones</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row">F001</th>
+                              <td>2023-11-02</td>
+                              <td>Maria C. Gutiérrez</td>
+                              <td>120000</td>
+                              <td>Domicilio</td>
+                              <td>Nequi</td>
+                              <td>
+                                <a href="Historial_Ventas.html" class="btn  btn-success"
+                                  title="Upload new profile image"><i class="bi bi-filetype-pdf"></i></a>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <th scope="row">F001</th>
+                              <td>2023-11-02</td>
+                              <td>Cristian Guzman</td>
+                              <td>88500</td>
+                              <td>Presencial</td>
+                              <td>Efectivo</td>
+                              <td>
+                                <a href="Historial_Ventas.html" class="btn  btn-success"
+                                  title="Upload new profile image"><i class="bi bi-filetype-pdf"></i></a>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <th scope="row">F001</th>
+                              <td>2023-11-02</td>
+                              <td>Juliana López</td>
+                              <td>35000</td>
+                              <td>Domicilio</td>
+                              <td>Tarjeta</td>
+                              <td>
+                                <a href="Historial_Ventas.html" class="btn  btn-success"
+                                  title="Upload new profile image"><i class="bi bi-filetype-pdf"></i></a>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <!--Pedidos-->
+              <div class="tab-pane fade pt-2" id="pedidos">
+
+                <div class="container-fluid mt-3">
+                  <p class="textoNeon">Pedidos</p>
+                </div>
+
+                <div class="container py-4 ">
+                
+                  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-5 g-4 justify-content-center">
+                    <div class="col">
+                      <div class="card h-93 card-img card-hover filtroTodo">
+                        <div class="card-body card-img ">
+                          <h5 id="card-left" class="card-title text-center">Todos</h5>
+                        </div>
+                        <button id="masinfo" type="button" class="btn card-img-2">Consultar</button>
+                      </div>
+                    </div>
+
+                    <div class="col">
+                      <div class="card h-93 img-green card-hover filtroPendientes">
+                        <div class="card-body img-green">
+                          <h5 id="card-left" class="card-title text-center">Pendientes</h5>
+                        </div>
+                        <button id="masinfo" type="button" class="btn img-green-2">Consultar</button>
+                      </div>
+                    </div>
+
+                    <div class="col">
+                      <div  class="card h-93 img-yellow card-hover filtroEntregados">
+                        <div class="card-body img-yellow">
+                          <h5 id="card-left" class="card-title text-center">Entregados</h5>
+                        </div>
+                        <button id="masinfo" type="button" class="btn img-yellow-2">Consultar</button>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-93 img-red card-hover filtroCancelados">
+                        <div class="card-body img-red ">
+                          <h5 id="card-left" class="card-title text-center">Cancelados</h5>
+                        </div>
+                        <button id="masinfo" type="button" class="btn img-red-2">Consultar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="container-fluid">
+                  <div class="div">
+                    <div class="table-responsive">
+                      <div class="card-body">
+
+                        <div class="row">
+                          <div class="col-lg-6 col-md-12">
+                            <form class="search-form d-flex align-items-center pb-3" method="POST" action="#">
+                              <input type="text" name="query" placeholder="Buscar" title="Enter search keyword">
+
+                              <button id="buscar" type="button" class="btn"><i class="bi bi-search"></i></button>
+
+
+                            </form>
+                          </div>
+                        </div>
+
+                        <!-- Inicio Tabla facturas-->
+                        <table class="table table-striped table-hover text-start">
+                          <thead>
+                            <tr class="table-secondary">
+                              <th scope="col">N° Fact.</th>
+                              <th scope="col">Fecha</th>
+                              <th scope="col">Cliente</th>
+                              <th scope="col">Valor</th>
+                              <th scope="col">Servicio</th>
+                              <th scope="col">Pago</th>
+                              <th scope="col">Opciones</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row">F001</th>
+                              <td>2023-11-02</td>
+                              <td>Maria C. Gutiérrez</td>
+                              <td>120000</td>
+                              <td>Domicilio</td>
+                              <td>Nequi</td>
+                              <td>
+                                <a href="#" class="btn  btn-success"
+                                  title="Upload new profile image"><i class="bi bi-filetype-pdf"></i></a>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <th scope="row">F001</th>
+                              <td>2023-11-02</td>
+                              <td>Cristian Guzman</td>
+                              <td>88500</td>
+                              <td>Presencial</td>
+                              <td>Efectivo</td>
+                              <td>
+                                <a href="#" class="btn  btn-success"
+                                  title="Upload new profile image"><i class="bi bi-filetype-pdf"></i></a>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <th scope="row">F001</th>
+                              <td>2023-11-02</td>
+                              <td>Juliana López</td>
+                              <td>35000</td>
+                              <td>Domicilio</td>
+                              <td>Tarjeta</td>
+                              <td>
+                                <a href="#" class="btn  btn-success"
+                                  title="Upload new profile image"><i class="bi bi-filetype-pdf"></i></a>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+                        <!--Listar Pedidos-->
+                        <div class="tab-pane fade pt-2" id="historial">
+                        
+                          <div class="container-fluid mt-3">
+                            <p class="textoNeon">Historial Pedidos</p>
+                          </div>
+                        
+                          <div class="container-fluid">
+                            <div class="div">
+                              <div class="table-responsive">
+                                <div class="card-body">
+                        
+                                  <div class="row">
+                                    <div class="col-lg-6 col-md-12">
+                                      <form class="search-form d-flex align-items-center pb-3" method="POST" action="#">
+                                        <input type="text" name="query" placeholder="Buscar" title="Enter search keyword">
+                        
+                                        <button id="buscar" type="button" class="btn"><i class="bi bi-search"></i></button>
+                        
+                        
+                                      </form>
+                                    </div>
+                                  </div>
+                        
+                                  <!-- Inicio Tabla facturas-->
+                                  <table class="table table-striped table-hover text-start">
+                                    <thead>
+                                      <tr class="table-secondary">
+                                        <th scope="col">Documento</th>
+                                        <th scope="col">Nombre</th>
+                                        <th scope="col">Apellido</th>
+                                        <th scope="col">Opciones</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <th scope="row">4007865</th>
+                                        <td>Veronica</td>
+                                        <td>Castro Murillo</td>
+                                        <td>
+                                          <a href="Historial_Ventas.html" class="btn  btn-success" title="Upload new profile image"><i
+                                              class="bi bi-filetype-pdf"></i></a>
+                                        </td>
+                                      </tr>
+                        
+                                      <tr>
+                                        <th scope="row">36301257</th>
+                                        <td>Steven</td>
+                                        <td>Valencia</td>
+                                        <td>
+                                          <a href="Historial_Ventas.html" class="btn  btn-success" title="Upload new profile image"><i
+                                              class="bi bi-filetype-pdf"></i></a>
+                                        </td>
+                                      </tr>
+                        
+                                      <tr>
+                                        <th scope="row">40774374</th>
+                                        <td>Allan</td>
+                                        <td>Ochoa</td>
+                                        <td>
+                                          <a href="Historial_Ventas.html" class="btn  btn-success" title="Upload new profile image"><i
+                                              class="bi bi-filetype-pdf"></i></a>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                      </div><!-- End Bordered Tabs -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/quill/quill.min.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

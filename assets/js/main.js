@@ -465,3 +465,43 @@ function eliminarVeterinario() {
     }
   });
 }
+//Función eliminar raza 
+function eliminarRaza() {
+  Swal.fire({
+    title: "Eliminar Raza",
+    text: "¿Está seguro de eliminarla?",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "¡Si, eliminar!"
+  }).then((result) => {
+    if (result.isConfirmed) {
+      Swal.fire({
+        title: "Eliminada!",
+        text: "Raza eliminada",
+        icon: "success"
+      });
+    }
+  });
+}
+//Función eliminar especie
+function eliminarEspe() {
+  Swal.fire({
+    title: "Eliminar Especie",
+    text: "¿Está seguro de eliminarla?",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "¡Si, eliminar!"
+  }).then((result) => {
+    if (result.isConfirmed) {
+      Swal.fire({
+        title: "Eliminada!",
+        text: "Especie eliminada",
+        icon: "success"
+      });
+    }
+  });
+}
