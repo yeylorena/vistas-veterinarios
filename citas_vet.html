@@ -532,70 +532,73 @@
                   <p class="textoNeon">Citas</p>
                 </div>
                 <form>
-                  <table class="table table-striped table-hover text-start">
-                    <thead>
-                      <tr class="table-secondary">
-                        <th scope="col">Dueño</th>
-                        <th scope="col">Mascota</th>
-                        <th scope="col">Fecha</th>
-                        <th scope="col">Hora</th>
-                        <th scope="col">Tipo de Servicio</th>
-                        <th scope="col">Tipo de cita</th>
-                        <th scope="col">Médico</th>
-                        <th scope="col">Estado</th>
-                        <th scope="col">Opciones</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        
-                        <td>Esteban carvajal</td>
-                        <td>David</td>
-                        <td>12/12/2023</td>
-                        <td>10:20 AM</td>
-                        <td>Presencial</td>
-                        <td>Estetica</td>
-                        <td>Herley Puentes</td>
-                        <td style="color: red;">Pendiente</td>
-                        <td>
-                          <button onclick="eliminarcitah()" type="button" class="btn btn-danger"><i
-                            class="bi bi-trash3"></i></button>
-                        </td>
-                      </tr>
-  
-                      <tr>
-                        <td>Esteban carvajal</td>
-                        <td>David</td>
-                        <td>12/12/2023</td>
-                        <td>10:20 AM</td>
-                        <td>Presencial</td>
-                        <td>Estetica</td>
-                        <td>Herley Puentes</td>
-                        <td style="color: red;">Pendiente</td>
-                        <td>
+                  <div class="table-responsive">
+                    <table class="table table-striped table-hover text-start">
+                      <thead>
+                        <tr class="table-secondary">
+                          <th scope="col">Dueño</th>
+                          <th scope="col">Mascota</th>
+                          <th scope="col">Fecha</th>
+                          <th scope="col">Hora</th>
+                          <th scope="col">Tipo de Servicio</th>
+                          <th scope="col">Tipo de cita</th>
+                          <th scope="col">Médico</th>
+                          <th scope="col">Estado</th>
+                          <th scope="col">Opciones</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
                           
-                          <button onclick="eliminarcitah()" type="button" class="btn btn-danger"><i
-                            class="bi bi-trash3"></i></button>
-                        </td>
-
-                      </tr>
+                          <td>Esteban carvajal</td>
+                          <td>David</td>
+                          <td>12/12/2023</td>
+                          <td>10:20 AM</td>
+                          <td>Presencial</td>
+                          <td>Estetica</td>
+                          <td>Herley Puentes</td>
+                          <td style="color: red;">Pendiente</td>
+                          <td>
+                            <button onclick="eliminarcitah()" type="button" class="btn btn-danger"><i
+                              class="bi bi-trash3"></i></button>
+                          </td>
+                        </tr>
+    
+                        <tr>
+                          <td>Esteban carvajal</td>
+                          <td>David</td>
+                          <td>12/12/2023</td>
+                          <td>10:20 AM</td>
+                          <td>Presencial</td>
+                          <td>Estetica</td>
+                          <td>Herley Puentes</td>
+                          <td style="color: red;">Pendiente</td>
+                          <td>
+                            
+                            <button onclick="eliminarcitah()" type="button" class="btn btn-danger"><i
+                              class="bi bi-trash3"></i></button>
+                          </td>
   
-                      <tr>
-                        <td>Esteban carvajal</td>
-                        <td>David</td>
-                        <td>12/12/2023</td>
-                        <td>10:20 AM</td>
-                        <td>Presencial</td>
-                        <td>Estetica</td>
-                        <td>Herley Puentes</td>
-                        <td style="color: red;">Pendiente</td>
-                        <td>
-                          <button onclick="eliminarcitah()" type="button" class="btn btn-danger"><i
-                            class="bi bi-trash3"></i></button>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                        </tr>
+    
+                        <tr>
+                          <td>Esteban carvajal</td>
+                          <td>David</td>
+                          <td>12/12/2023</td>
+                          <td>10:20 AM</td>
+                          <td>Presencial</td>
+                          <td>Estetica</td>
+                          <td>Herley Puentes</td>
+                          <td style="color: red;">Pendiente</td>
+                          <td>
+                            <button onclick="eliminarcitah()" type="button" class="btn btn-danger"><i
+                              class="bi bi-trash3"></i></button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                 
               </div>
               </form>
 
@@ -614,154 +617,29 @@
                 </div>
                 <br>
                 <!-- Inicio tabla histotial -->
-                <table class="table table-striped table-hover text-start">
-                  <thead>
-                    <tr class="table-secondary">
-                      
-                      <th scope="col">Mascota</th>
-                      <th scope="col">Fecha</th>
-                      <th scope="col">Tipo Servicio</th>
-                      <th scope="col">Tipo cita</th>
-                      <th scope="col">Valor</th>
-                      <th scope="col">Detalles</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      
-                      <td>David</td>
-                      <td>2023-10-10</td>
-                      <td>Presencial</td>
-                      <td>Urgencias</td>
-                      <td>20.000</td>
-
-                      <td>
-                        <button type="button" class="btn btn-success" data-bs-toggle="modal"
-                          data-bs-target="#staticBackdrop" data-target="staticBackdrop"><img
-                            src="./img/imagen_cliente_cita/archivo.png" height="30px" width="30px">
-                        </button>
-                       
-                        <!-- Modal detalles  -->
-                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
-                          tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                          <div class="modal-dialog">
-                            <div class="modal-content">
-                              <div class="modal-header" style="background: #9FAFE8;">
-                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Detalles
-                                </h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                  aria-label="Close"></button>
-                              </div>
-                              <div class="modal-body">
-
-                                <img src="./img/imagen_cliente_cita/perro.png" class="mx-auto d-block img-fluid"
-                                  style="height: 100px; width: 100px;">
-                                <div class="row my-2">
-
-                                  <div class="col-6">
-                                    <label class="form-label"><strong>Dueño:</strong></label>
-                                    <input class="form-control" type="text" name="txtId" id="txtId"
-                                      value="Esteban Carvajal" readonly>
-                                  </div>
-                                  <div class="col-6">
-                                    <label class="form-label"><strong>Télefono:</strong></label>
-                                    <input class="form-control" type="text" name="txtId" id="txtId" value="3214508730"
-                                      readonly>
-                                  </div>
-
-                                </div>
-                                <div class="row my-2">
-                                  <div class="col-6">
-                                    <label class="form-label"><strong>Dirección:</strong></label>
-                                    <input class="form-control" type="text" name="txtId" id="txtId"
-                                      value="Cll 24 A #40-52" readonly>
-                                  </div>
-                                  <div class="col-6">
-                                    <label class="form-label"><strong>Email:</strong></label>
-                                    <input class="form-control" type="text" name="txtId" id="txtId"
-                                      value="estebancarvajal@gmail.com" readonly>
-                                  </div>
-
-                                </div>
-                                <div class="row my-2">
-                                  <div class="col-6">
-                                    <label class="form-label"><strong>Mascota:</strong></label>
-                                    <input class="form-control" type="text" name="txtId" id="txtId" value="David"
-                                      readonly>
-                                  </div>
-                                  <div class="col-6">
-                                    <label class="form-label"><strong>Especie:</strong></label>
-                                    <input class="form-control" type="text" name="txtId" id="txtId" value="Perro"
-                                      readonly>
-                                  </div>
-
-                                </div>
-                                <div class="row my-2">
-                                  <div class="col-6">
-                                    <label class="form-label"><strong>Edad:</strong></label>
-                                    <input class="form-control" type="text" name="txtId" id="txtId" value="1 año"
-                                      readonly>
-                                  </div>
-                                  <div class="col-6">
-                                    <label class="form-label"> <strong>Color:</strong></label>
-                                    <input class="form-control" type="text" name="txtId" id="txtId"
-                                      value="Cafe y blanco" readonly>
-                                  </div>
-
-                                </div>
-                                <div class="row my-2">
-                                  <div class="col-6">
-                                    <label class="form-label"><strong>Tipo de cita:</strong></label>
-                                    <input class="form-control" type="text" name="txtId" id="txtId" value="Urgencias"
-                                      readonly>
-                                  </div>
-                                  <div class="col-6">
-                                    <label class="form-label"><strong>Médico:</strong></label>
-                                    <input class="form-control" type="text" name="txtId" id="txtId"
-                                      value="Herley Puentes" readonly>
-                                  </div>
-                                </div>
-                                <div class="row my-2">
-                                  <div class="col-6">
-                                    <label class="form-label"> <strong>Tipo de servicio:</strong></label>
-                                    <input class="form-control" type="text" name="txtId" id="txtId" value="Domiclio"
-                                      readonly>
-                                  </div>
-                                  <div class="col-6">
-                                    <label class="form-label"><strong>Fecha:</strong></label>
-                                    <input class="form-control" type="text" name="txtId" id="txtId" value="12/10/2023"
-                                      readonly>
-                                  </div>
-                                </div>
-                                <div class="row my-2">
-                                  <div class="col-6">
-                                    <label class="form-label"><strong>Hora:</strong></label>
-                                    <input class="form-control" type="text" name="txtId" id="txtId" value="08:30 AM"
-                                      readonly>
-                                  </div>
-                                  <div class="col-6">
-                                    <label class="form-label"><strong>Estado:</strong></label>
-                                    <input class="form-control" type="text" name="txtId" id="txtId" value="Finalizado"
-                                      readonly>
-                                  </div>
-                                </div>
-
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <!-- fin del modal detalles  -->
-                      </td>
-                    </tr>
-
-                    <tr>
-                     
-                      <td>Pelusa</td>
-                      <td>2023-10-10</td>
-                      <td>Presencial</td>
-                      <td>Urgencias</td>
-                      <td>30.000</td>
-                      <td>
+                <div class="table-responsive">
+                  <table class="table table-striped table-hover text-start">
+                    <thead>
+                      <tr class="table-secondary">
+                        
+                        <th scope="col">Mascota</th>
+                        <th scope="col">Fecha</th>
+                        <th scope="col">Tipo Servicio</th>
+                        <th scope="col">Tipo cita</th>
+                        <th scope="col">Valor</th>
+                        <th scope="col">Detalles</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        
+                        <td>David</td>
+                        <td>2023-10-10</td>
+                        <td>Presencial</td>
+                        <td>Urgencias</td>
+                        <td>20.000</td>
+  
+                        <td>
                           <button type="button" class="btn btn-success" data-bs-toggle="modal"
                             data-bs-target="#staticBackdrop" data-target="staticBackdrop"><img
                               src="./img/imagen_cliente_cita/archivo.png" height="30px" width="30px">
@@ -878,137 +756,265 @@
                           </div>
                           <!-- fin del modal detalles  -->
                         </td>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>Paco</td>
-                      <td>2023-10-12</td>
-                      <td>Presencial</td>
-                      <td>Urgencias</td>
-                      <td>50.000</td>
-                      <td>
-                      
-                        <button type="button" class="btn btn-success" data-bs-toggle="modal"
-                        data-bs-target="#staticBackdrop" data-target="staticBackdrop"><img
-                          src="./img/imagen_cliente_cita/archivo.png" height="30px" width="30px">
-                      </button>
-                     
-                      <!-- Modal detalles  -->
-                      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
-                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                          <div class="modal-content">
-                            <div class="modal-header" style="background: #9FAFE8;">
-                              <h1 class="modal-title fs-5" id="staticBackdropLabel">Detalles
-                              </h1>
-                              <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                aria-label="Close"></button>
+                      </tr>
+  
+                      <tr>
+                       
+                        <td>Pelusa</td>
+                        <td>2023-10-10</td>
+                        <td>Presencial</td>
+                        <td>Urgencias</td>
+                        <td>30.000</td>
+                        <td>
+                            <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                              data-bs-target="#staticBackdrop" data-target="staticBackdrop"><img
+                                src="./img/imagen_cliente_cita/archivo.png" height="30px" width="30px">
+                            </button>
+                           
+                            <!-- Modal detalles  -->
+                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                              tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                              <div class="modal-dialog">
+                                <div class="modal-content">
+                                  <div class="modal-header" style="background: #9FAFE8;">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Detalles
+                                    </h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                      aria-label="Close"></button>
+                                  </div>
+                                  <div class="modal-body">
+    
+                                    <img src="./img/imagen_cliente_cita/perro.png" class="mx-auto d-block img-fluid"
+                                      style="height: 100px; width: 100px;">
+                                    <div class="row my-2">
+    
+                                      <div class="col-6">
+                                        <label class="form-label"><strong>Dueño:</strong></label>
+                                        <input class="form-control" type="text" name="txtId" id="txtId"
+                                          value="Esteban Carvajal" readonly>
+                                      </div>
+                                      <div class="col-6">
+                                        <label class="form-label"><strong>Télefono:</strong></label>
+                                        <input class="form-control" type="text" name="txtId" id="txtId" value="3214508730"
+                                          readonly>
+                                      </div>
+    
+                                    </div>
+                                    <div class="row my-2">
+                                      <div class="col-6">
+                                        <label class="form-label"><strong>Dirección:</strong></label>
+                                        <input class="form-control" type="text" name="txtId" id="txtId"
+                                          value="Cll 24 A #40-52" readonly>
+                                      </div>
+                                      <div class="col-6">
+                                        <label class="form-label"><strong>Email:</strong></label>
+                                        <input class="form-control" type="text" name="txtId" id="txtId"
+                                          value="estebancarvajal@gmail.com" readonly>
+                                      </div>
+    
+                                    </div>
+                                    <div class="row my-2">
+                                      <div class="col-6">
+                                        <label class="form-label"><strong>Mascota:</strong></label>
+                                        <input class="form-control" type="text" name="txtId" id="txtId" value="David"
+                                          readonly>
+                                      </div>
+                                      <div class="col-6">
+                                        <label class="form-label"><strong>Especie:</strong></label>
+                                        <input class="form-control" type="text" name="txtId" id="txtId" value="Perro"
+                                          readonly>
+                                      </div>
+    
+                                    </div>
+                                    <div class="row my-2">
+                                      <div class="col-6">
+                                        <label class="form-label"><strong>Edad:</strong></label>
+                                        <input class="form-control" type="text" name="txtId" id="txtId" value="1 año"
+                                          readonly>
+                                      </div>
+                                      <div class="col-6">
+                                        <label class="form-label"> <strong>Color:</strong></label>
+                                        <input class="form-control" type="text" name="txtId" id="txtId"
+                                          value="Cafe y blanco" readonly>
+                                      </div>
+    
+                                    </div>
+                                    <div class="row my-2">
+                                      <div class="col-6">
+                                        <label class="form-label"><strong>Tipo de cita:</strong></label>
+                                        <input class="form-control" type="text" name="txtId" id="txtId" value="Urgencias"
+                                          readonly>
+                                      </div>
+                                      <div class="col-6">
+                                        <label class="form-label"><strong>Médico:</strong></label>
+                                        <input class="form-control" type="text" name="txtId" id="txtId"
+                                          value="Herley Puentes" readonly>
+                                      </div>
+                                    </div>
+                                    <div class="row my-2">
+                                      <div class="col-6">
+                                        <label class="form-label"> <strong>Tipo de servicio:</strong></label>
+                                        <input class="form-control" type="text" name="txtId" id="txtId" value="Domiclio"
+                                          readonly>
+                                      </div>
+                                      <div class="col-6">
+                                        <label class="form-label"><strong>Fecha:</strong></label>
+                                        <input class="form-control" type="text" name="txtId" id="txtId" value="12/10/2023"
+                                          readonly>
+                                      </div>
+                                    </div>
+                                    <div class="row my-2">
+                                      <div class="col-6">
+                                        <label class="form-label"><strong>Hora:</strong></label>
+                                        <input class="form-control" type="text" name="txtId" id="txtId" value="08:30 AM"
+                                          readonly>
+                                      </div>
+                                      <div class="col-6">
+                                        <label class="form-label"><strong>Estado:</strong></label>
+                                        <input class="form-control" type="text" name="txtId" id="txtId" value="Finalizado"
+                                          readonly>
+                                      </div>
+                                    </div>
+    
+                                  </div>
+                                </div>
+                              </div>
                             </div>
-                            <div class="modal-body">
-
-                              <img src="./img/imagen_cliente_cita/perro.png" class="mx-auto d-block img-fluid"
-                                style="height: 100px; width: 100px;">
-                              <div class="row my-2">
-
-                                <div class="col-6">
-                                  <label class="form-label"><strong>Dueño:</strong></label>
-                                  <input class="form-control" type="text" name="txtId" id="txtId"
-                                    value="Esteban Carvajal" readonly>
-                                </div>
-                                <div class="col-6">
-                                  <label class="form-label"><strong>Télefono:</strong></label>
-                                  <input class="form-control" type="text" name="txtId" id="txtId" value="3214508730"
-                                    readonly>
-                                </div>
-
+                            <!-- fin del modal detalles  -->
+                          </td>
+                        </td>
+                      </tr>
+  
+                      <tr>
+                        <td>Paco</td>
+                        <td>2023-10-12</td>
+                        <td>Presencial</td>
+                        <td>Urgencias</td>
+                        <td>50.000</td>
+                        <td>
+                        
+                          <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                          data-bs-target="#staticBackdrop" data-target="staticBackdrop"><img
+                            src="./img/imagen_cliente_cita/archivo.png" height="30px" width="30px">
+                        </button>
+                       
+                        <!-- Modal detalles  -->
+                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                          tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header" style="background: #9FAFE8;">
+                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Detalles
+                                </h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                  aria-label="Close"></button>
                               </div>
-                              <div class="row my-2">
-                                <div class="col-6">
-                                  <label class="form-label"><strong>Dirección:</strong></label>
-                                  <input class="form-control" type="text" name="txtId" id="txtId"
-                                    value="Cll 24 A #40-52" readonly>
+                              <div class="modal-body">
+  
+                                <img src="./img/imagen_cliente_cita/perro.png" class="mx-auto d-block img-fluid"
+                                  style="height: 100px; width: 100px;">
+                                <div class="row my-2">
+  
+                                  <div class="col-6">
+                                    <label class="form-label"><strong>Dueño:</strong></label>
+                                    <input class="form-control" type="text" name="txtId" id="txtId"
+                                      value="Esteban Carvajal" readonly>
+                                  </div>
+                                  <div class="col-6">
+                                    <label class="form-label"><strong>Télefono:</strong></label>
+                                    <input class="form-control" type="text" name="txtId" id="txtId" value="3214508730"
+                                      readonly>
+                                  </div>
+  
                                 </div>
-                                <div class="col-6">
-                                  <label class="form-label"><strong>Email:</strong></label>
-                                  <input class="form-control" type="text" name="txtId" id="txtId"
-                                    value="estebancarvajal@gmail.com" readonly>
+                                <div class="row my-2">
+                                  <div class="col-6">
+                                    <label class="form-label"><strong>Dirección:</strong></label>
+                                    <input class="form-control" type="text" name="txtId" id="txtId"
+                                      value="Cll 24 A #40-52" readonly>
+                                  </div>
+                                  <div class="col-6">
+                                    <label class="form-label"><strong>Email:</strong></label>
+                                    <input class="form-control" type="text" name="txtId" id="txtId"
+                                      value="estebancarvajal@gmail.com" readonly>
+                                  </div>
+  
                                 </div>
-
+                                <div class="row my-2">
+                                  <div class="col-6">
+                                    <label class="form-label"><strong>Mascota:</strong></label>
+                                    <input class="form-control" type="text" name="txtId" id="txtId" value="David"
+                                      readonly>
+                                  </div>
+                                  <div class="col-6">
+                                    <label class="form-label"><strong>Especie:</strong></label>
+                                    <input class="form-control" type="text" name="txtId" id="txtId" value="Perro"
+                                      readonly>
+                                  </div>
+  
+                                </div>
+                                <div class="row my-2">
+                                  <div class="col-6">
+                                    <label class="form-label"><strong>Edad:</strong></label>
+                                    <input class="form-control" type="text" name="txtId" id="txtId" value="1 año"
+                                      readonly>
+                                  </div>
+                                  <div class="col-6">
+                                    <label class="form-label"> <strong>Color:</strong></label>
+                                    <input class="form-control" type="text" name="txtId" id="txtId"
+                                      value="Cafe y blanco" readonly>
+                                  </div>
+  
+                                </div>
+                                <div class="row my-2">
+                                  <div class="col-6">
+                                    <label class="form-label"><strong>Tipo de cita:</strong></label>
+                                    <input class="form-control" type="text" name="txtId" id="txtId" value="Urgencias"
+                                      readonly>
+                                  </div>
+                                  <div class="col-6">
+                                    <label class="form-label"><strong>Médico:</strong></label>
+                                    <input class="form-control" type="text" name="txtId" id="txtId"
+                                      value="Herley Puentes" readonly>
+                                  </div>
+                                </div>
+                                <div class="row my-2">
+                                  <div class="col-6">
+                                    <label class="form-label"> <strong>Tipo de servicio:</strong></label>
+                                    <input class="form-control" type="text" name="txtId" id="txtId" value="Domiclio"
+                                      readonly>
+                                  </div>
+                                  <div class="col-6">
+                                    <label class="form-label"><strong>Fecha:</strong></label>
+                                    <input class="form-control" type="text" name="txtId" id="txtId" value="12/10/2023"
+                                      readonly>
+                                  </div>
+                                </div>
+                                <div class="row my-2">
+                                  <div class="col-6">
+                                    <label class="form-label"><strong>Hora:</strong></label>
+                                    <input class="form-control" type="text" name="txtId" id="txtId" value="08:30 AM"
+                                      readonly>
+                                  </div>
+                                  <div class="col-6">
+                                    <label class="form-label"><strong>Estado:</strong></label>
+                                    <input class="form-control" type="text" name="txtId" id="txtId" value="Finalizado"
+                                      readonly>
+                                  </div>
+                                </div>
+  
                               </div>
-                              <div class="row my-2">
-                                <div class="col-6">
-                                  <label class="form-label"><strong>Mascota:</strong></label>
-                                  <input class="form-control" type="text" name="txtId" id="txtId" value="David"
-                                    readonly>
-                                </div>
-                                <div class="col-6">
-                                  <label class="form-label"><strong>Especie:</strong></label>
-                                  <input class="form-control" type="text" name="txtId" id="txtId" value="Perro"
-                                    readonly>
-                                </div>
-
-                              </div>
-                              <div class="row my-2">
-                                <div class="col-6">
-                                  <label class="form-label"><strong>Edad:</strong></label>
-                                  <input class="form-control" type="text" name="txtId" id="txtId" value="1 año"
-                                    readonly>
-                                </div>
-                                <div class="col-6">
-                                  <label class="form-label"> <strong>Color:</strong></label>
-                                  <input class="form-control" type="text" name="txtId" id="txtId"
-                                    value="Cafe y blanco" readonly>
-                                </div>
-
-                              </div>
-                              <div class="row my-2">
-                                <div class="col-6">
-                                  <label class="form-label"><strong>Tipo de cita:</strong></label>
-                                  <input class="form-control" type="text" name="txtId" id="txtId" value="Urgencias"
-                                    readonly>
-                                </div>
-                                <div class="col-6">
-                                  <label class="form-label"><strong>Médico:</strong></label>
-                                  <input class="form-control" type="text" name="txtId" id="txtId"
-                                    value="Herley Puentes" readonly>
-                                </div>
-                              </div>
-                              <div class="row my-2">
-                                <div class="col-6">
-                                  <label class="form-label"> <strong>Tipo de servicio:</strong></label>
-                                  <input class="form-control" type="text" name="txtId" id="txtId" value="Domiclio"
-                                    readonly>
-                                </div>
-                                <div class="col-6">
-                                  <label class="form-label"><strong>Fecha:</strong></label>
-                                  <input class="form-control" type="text" name="txtId" id="txtId" value="12/10/2023"
-                                    readonly>
-                                </div>
-                              </div>
-                              <div class="row my-2">
-                                <div class="col-6">
-                                  <label class="form-label"><strong>Hora:</strong></label>
-                                  <input class="form-control" type="text" name="txtId" id="txtId" value="08:30 AM"
-                                    readonly>
-                                </div>
-                                <div class="col-6">
-                                  <label class="form-label"><strong>Estado:</strong></label>
-                                  <input class="form-control" type="text" name="txtId" id="txtId" value="Finalizado"
-                                    readonly>
-                                </div>
-                              </div>
-
                             </div>
                           </div>
                         </div>
-                      </div>
-                      <!-- fin del modal detalles  -->
-                    
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+                        <!-- fin del modal detalles  -->
+                      
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+             
               </div>
 
 
